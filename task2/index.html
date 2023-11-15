@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <!-- font link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!--external css link-->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary navbar-dark px-4 fixed-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="images/Logo.png" alt="" class="img-fluid" width="180px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item mx-2">
+              <a class="nav-link text-white" aria-current="page" href="#"
+                >ABOUT</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-white" href="#">SERVICES</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-white" href="#">PORTFOLIO</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-white" href="#">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbarEnd -->
+
+    <!-- banner containerStart -->
+    <div class="container-fluid" id="banner">
+      <img src="images/Bannerbg.jpg" alt="" class="img-fluid" />
+    </div>
+    <!-- banner contaienrEnd -->
+
+    <!-- about section -->
+    <div class="container-fluid" style="background-color: #f1f1f1">
+      <div class="row justify-content-center py-2 py-md-4">
+        <div class="col-md-8 text-center pt-3 pb-4 px-5">
+          <img
+            src="images/Logo-Black.png"
+            alt="about logo"
+            class="img-fluid"
+            width="250px"
+          />
+        </div>
+        <div class="row text-center justify-content-center mb-3">
+          <div class="col-md-8 px-5">
+            <p>
+              When it comes to car accessories in the India, One name towers
+              over rest - Nippon Autiotronix Ltd. A name synonymous with world
+              class quality and value for money products, Nippon is preferred
+              choice for the biggest names in the automobile sector
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about section end -->
+
+    <!-- services section start -->
+    <div class="container-fluid" id="banner">
+      <div class="row">
+        <div class="col-md-6 eraseP">
+          <img src="images/shutterstock.jpg" alt="" class="img-fluid" />
+        </div>
+        <div class="col-md-5 mx-auto my-auto py-4 px-5 ePW">
+          <div class="row flex-column">
+            <div class="col">
+              <h3 class="head-font">Technology</h3>
+            </div>
+            <div class="col">
+              <h5 class="ser-text-font">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Laudantium excepturi doloremque amet, nobis nostrum cum
+                voluptatibus fugit eum, cumque temporibus dolore consequatur?
+                Recusandae?
+              </h5>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#techModal"
+              >
+                Explore More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 mx-auto my-auto py-4 px-5 ePW order-2 order-md-1">
+          <div class="row flex-column">
+            <!--  px-xl-5 py-xl-5 -->
+            <div class="col">
+              <h3 class="head-font">R&D</h3>
+            </div>
+            <div class="col">
+              <h5 class="ser-text-font">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Laudantium excepturi doloremque amet, nobis nostrum cum
+                voluptatibus fugit eum, cumque temporibus dolore consequatur?
+                Recusandae?
+              </h5>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#rdModal"
+              >
+                Explore More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 eraseP order-1 order-md-2">
+          <img src="images/bg-showcase-3.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <!-- services end -->
+
+    <!-- model section start -->
+
+    <!-- For technology -->
+    <div
+      class="modal fade"
+      id="techModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      style="padding-right: 0 !important;"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Technology</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            corrupti ad deleniti dignissimos, in voluptate nam facere
+            consequatur accusantium magni? Aut doloremque dolor rem vero.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- for R&D -->
+    <div
+      class="modal fade"
+      id="rdModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">R&D</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- <div class="modal-body">rd</div> -->
+          <video controls>
+            <source src="images/techvideo.mp4" type="video/mp4" />
+          </video>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- model section end -->
+
+    <!-- item start -->
+    <div class="container-fluid" style="background-color: #f1f1f1">
+      <div class="row justify-content-evenly pt-4">
+        <div class="col-md-2 text-center py-3 py-md-5">
+          <img src="images/img1.png" alt="" class="img-fluid" />
+        </div>
+        <div class="col-md-2 text-center py-3 py-md-5">
+          <img src="images/img2.png" alt="" class="img-fluid"/>
+        </div>
+        <div class="col-md-2 text-center py-3 py-md-5">
+          <img src="images/img3.png" alt="" class="img-fluid" />
+        </div>
+        <div class="col-md-2 text-center py-3 py-md-5">
+          <img src="images/img4.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col text-center pb-4">
+          <button type="button" class="btn btn-danger btn-lg btn-color">
+            Explore More
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- item end -->
+
+    <!-- first slider start -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center flex-column flex-md-row">
+            <div class="col-4 text-center py-5 mx-auto mx-md-0">
+              <img
+                src="images/download.png"
+                alt=""
+                class="text-center img-fluid"
+              />
+            </div>
+            <div class="col-10 col-md-4 text-center my-auto mx-auto mx-md-0">
+              <div class="row flex-column pb-4 pb-mb-0">
+                <div class="col">
+                  <h3 class="head-font text-danger">Did you know?</h3>
+                </div>
+                <div class="col">
+                  <h5 class="text-font">
+                    How your battery drains out even <br />
+                    when engine is not running.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center flex-column flex-md-row">
+            <div class="col-4 text-center py-5 mx-auto mx-md-0">
+              <img
+                src="images/download.png"
+                alt=""
+                class="text-center img-fluid"
+              />
+            </div>
+            <div class="col-10 col-md-4 text-center my-auto mx-auto mx-md-0">
+              <div class="row flex-column pb-4 pb-mb-0">
+                <div class="col">
+                  <h3 class="head-font text-danger">Did you know?</h3>
+                </div>
+                <div class="col">
+                  <h5 class="text-font">
+                    How your battery drains out even <br />
+                    when engine is not running.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- first slider end -->
+    <!-- second slider start -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active indBtn"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+          class="indBtn"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+          class="indBtn"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" id="carBg">
+          <img src="images/bg.jpg" class="d-block w-100 img-fluid" alt="..." />
+          <div class="carousel-caption d-sm-block my-auto">
+            <h5 class="pt-3 head-font" id="carh5">
+              "Outstanding job and exceed all exceptions. It was a pleasure to
+              work with them on a sizable first project and am looking forword
+              to start the next one asap."
+            </h5>
+            <p class="pt-lg-5 pt-sm-3">Raj Ranjan Srivastav</p>
+          </div>
+        </div>
+        <div class="carousel-item active" id="carBg">
+          <img src="images/bg.jpg" class="d-block w-100 img-fluid" alt="..." />
+          <div class="carousel-caption d-sm-block my-auto">
+            <h5 class="pt-3 head-font" id="carh5">
+              "Outstanding job and exceed all exceptions. It was a pleasure to
+              work with them on a sizable first project and am looking forword
+              to start the next one asap."
+            </h5>
+            <p class="pt-lg-5 pt-sm-3">Raj Ranjan Srivastav</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- second slider end -->
+
+    <!-- brands -->
+    <div class="container-fluid px-3">
+      <div class="row justify-content-center mt-5 mb-5 text-center">
+        <div class="col-md-2 py-4">
+          <img
+            src="images/hyundai.png"
+            class="img-fluid brandimg"
+            width="150px"
+          />
+        </div>
+        <div class="col-md-2 py-4">
+          <img
+            src="images/renault.png"
+            class="img-fluid brandimg"
+            width="150px"
+          />
+        </div>
+        <div class="col-md-2 py-4">
+          <img
+            src="images/Ford-Logo.png"
+            class="img-fluid brandimg"
+            width="150px"
+          />
+        </div>
+        <div class="col-md-2 py-4">
+          <img
+            src="images/mahindra.png"
+            class="img-fluid brandimg"
+            width="150px"
+          />
+        </div>
+        <div class="col-md-2 py-4">
+          <img
+            src="images/isuzu.png"
+            class="img-fluid brandimg"
+            width="150px"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- brands end -->
+
+    <!-- footer -->
+    <div class="container-fluid" style="background-color: black">
+      <div
+        class="row py-5 px-3 justify-content-between flex-column flex-md-row"
+        id="foot1"
+      >
+        <div class="col col-md-3 text-center py-1 px-2">
+          <div class="row flex-column">
+            <div class="col">
+              <img
+                src="images/footer-logo.png"
+                alt=""
+                class="img-fluid brandimg"
+                width="200px"
+              />
+            </div>
+            <div class="col text-white">
+              <p class="text-center">©2023 Nippon all rights reserved.</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-3 col-md-1 text-start mx-auto ms-md-auto me-md-5 py-2 px-2"
+        >
+          <div class="row text-white flex-column">
+            <div class="col">hello@nippon.com</div>
+            <div class="col">+917007500546</div>
+          </div>
+        </div>
+        <div
+          class="col-2 col-md-1 text-start py-2 px-2 mx-auto ms-md-5 me-md-0"
+        >
+          <div class="row text-white flex-column">
+            <div class="col"> <a href="#" style="text-decoration: none; color: white;">About</a> </div>
+            <div class="col"> <a href="#" style="text-decoration: none; color: white;">Clinet</a> </div>
+            <div class="col"> <a href="#" style="text-decoration: none; color: white;">Products</a> </div>
+            <div class="col"> <a href="#" style="text-decoration: none; color: white;">Infrastructure</a> </div>
+          </div>
+        </div>
+        <div
+          class="col-2 col-md-1 text-start mx-auto ms-md-5 me-md-0 py-2 px-2"
+        >
+          <div class="row text-white flex-column">
+            <div class="col">R&D</div>
+            <div class="col">Blog</div>
+            <div class="col">Content</div>
+            <div class="col">News</div>
+          </div>
+        </div>
+        <div class="col-2 text-start mx-auto ms-md-4 me-md-0 py-2 px-2">
+          <div class="row text-white flex-column">
+            <div class="col"><a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color:white"><i class="bi bi-facebook pe-2"></i>Facebook</a></div>
+            <div class="col"><a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color:white"><i class="bi bi-instagram pe-2"></i>Instagram</a></div>
+            <div class="col"><a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color:white"><i class="bi bi-twitter pe-2"></i>Twitter</a></div>
+            <div class="col"><a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color:white"><i class="bi bi-youtube pe-2"></i>Youtube</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer end -->
+
+    <div class="row" id="fix">
+      <div class="col">
+        <img src="images/Group 16200.png" width="100px" class="img-fluid" alt="">
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>

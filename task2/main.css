@@ -1,0 +1,147 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-right: 0 !important;
+}
+/* #fix{
+  position: fixed;
+  right: 2px;
+  bottom: 2px;
+} */
+.nav-link {
+  font-size: 1rem;
+}
+#banner {
+  --bs-gutter-x: 0;
+}
+.navbar {
+  background-color: black !important;
+}
+
+.eraseP {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* services */
+.head-font {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.ser-text-font{
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.text-font {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.btn-color {
+  border-color: red;
+}
+
+.indBtn{
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 100%;
+}
+
+.carousel-caption{
+  bottom: 7.5rem;
+}
+#carh5{
+  font-size: 1.6rem;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%, 100%;
+  border-radius: 50%;
+}
+
+
+/* responsivness */
+
+@media screen and (max-width: 1100px) {
+  .head-font {
+    font-size: 1.6rem;
+  }
+  .ser-text-font{
+    font-size: 0.8rem;
+  }
+  .text-font {
+    font-size: 0.8rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  .carousel-caption{
+    bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .head-font {
+    font-size: 1.8rem;
+  }
+  .ser-text-font{
+    font-size: 1.2rem;
+  }
+  .text-font {
+    font-size: 1.4rem;
+  }
+  .btn {
+    height: 40px;
+    font-size: 0.8rem;
+  }
+  .ePW {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .ePW {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+  .carousel-caption{
+    bottom: 1.6rem;
+  }
+  #carh5{
+    font-size: 1rem;
+  }
+
+}
+
+
+@media screen and (max-width:520px) {
+  .carousel-caption{
+    bottom: 0rem;
+  }
+  .carousel-caption p{
+    font-size: 0.5rem;
+  }
+
+  #carh5{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .carousel-caption{
+    bottom: -1.5rem;
+  }
+  .carousel-caption p{
+    font-size: 0.5rem;
+  }
+
+  #carh5{
+    font-size: 0.8rem;
+  }
+}
