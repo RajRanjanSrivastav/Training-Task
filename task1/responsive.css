@@ -1,0 +1,447 @@
+/* ----- for all body ----- */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---- 1200px ---- */
+@media screen and (max-width: 1200px) {
+  /* ---- container 2-------- */
+  .boxcontainer {
+    width: 100%;
+  }
+
+  /* ---- container 4-------- */
+  .srt {
+    width: 96%;
+  }
+  .end {
+    width: 96%;
+  }
+  .datacont4 {
+    min-width: 0;
+    /* background-color: rebeccapurple; */
+  }
+  .first {
+    width: 27rem;
+    height: 11rem;
+  }
+  .data4 {
+    width: 11rem;
+    height: 11rem;
+  }
+  .circle {
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  /* --container 2-- */
+
+  /* container 4 */
+  .first {
+    width: 26rem;
+    height: 10rem;
+  }
+  .data4 {
+    width: 10rem;
+    height: 10rem;
+  }
+  .circle {
+    margin-left: 3.6rem;
+    margin-top: -1.7rem;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  /* container 4 */
+  .first {
+    width: 24rem;
+    height: 9rem;
+  }
+  .data4 {
+    width: 9rem;
+    height: 9rem;
+  }
+  .circle {
+    margin-left: 3.6rem;
+    margin-top: -1.7rem;
+  }
+  .fpara {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding: 1.1rem;
+  }
+  .td4 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .sectd4 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .f1 {
+    font-size: 2.6rem;
+  }
+  .circle {
+    margin-left: 3.1rem;
+  }
+}
+
+/* ----- vertical------ */
+@media screen and (max-width: 880px) {
+  /* for container 2 */
+
+  #t1::after {
+    left: 14.5rem;
+    width: 17.7rem;
+  }
+  .para2 {
+    width: 100%;
+  }
+
+  .boxcontainer {
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .innerbox {
+    display: flex;
+    width: 90%;
+  }
+  .innerbox div {
+    font-size: 1.6rem;
+  }
+  #innerImg {
+    width: 30%;
+    height: 90%;
+    text-align: center;
+  }
+  #innerImg img {
+    width: 6.5rem;
+    margin-top: 2rem;
+  }
+
+  /*---------------------------------------------  */
+  /* contnainer 3 */
+
+  #t3 {
+    font-size: 3.2rem;
+  }
+  #t3::after {
+    left: 4.5rem;
+    width: 7.7rem;
+  }
+  .container3 {
+    height: 65rem;
+  }
+  .datacontainer {
+    height: 50rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .data {
+    font-size: 2.1rem;
+  }
+  .f1 {
+    font-size: 4rem;
+  }
+  .databox {
+    padding: 1.2rem;
+    width: 24rem;
+  }
+  .last-stats {
+    width: 26rem;
+  }
+  #f13 {
+    margin-left: -1rem;
+  }
+  .stats::after {
+    left: 8rem;
+    bottom: -10px;
+    height: 4px;
+    width: 10rem;
+  }
+  .next::before {
+    content: "";
+    white-space: pre;
+  }
+
+  /* ----------------------------------------------------------- */
+  /* for container 4 */
+
+  #t4 {
+    font-size: 3.2rem;
+  }
+  #t4::after {
+    width: 11rem;
+    left: 6.5rem;
+  }
+  .srt {
+    flex-direction: column;
+  }
+  .end {
+    flex-direction: column-reverse;
+    overflow: hidden;
+  }
+  .datacont4 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .first {
+    display: flex;
+    justify-content: space-evenly;
+    height: 22rem;
+    width: 96%;
+  }
+  .fcopy {
+    margin-top: 7rem;
+  }
+  .search {
+    margin-bottom: 8rem;
+    justify-content: center;
+  }
+  .search input {
+    width: 18rem;
+    margin-right: 0;
+  }
+  .data4 {
+    display: flex;
+    margin-top: 4rem;
+    height: 22rem;
+    width: 96%;
+  }
+  .circle {
+    position: absolute;
+    top: 40px;
+    width: 6rem;
+    margin-left: 0;
+    height: 6rem;
+  }
+
+  .fpara {
+    font-size: 1.82rem;
+    margin-top: 5rem;
+    margin-bottom: 0;
+  }
+  .td4 {
+    font-size: 2.1rem;
+  }
+  .sectd4 {
+    font-size: 2.1rem;
+  }
+
+  .logo {
+    margin-top: -8rem;
+    margin-left: -5rem;
+  }
+
+  .logo img {
+    width: 15rem;
+    height: 13rem;
+  }
+  .circle img {
+    width: 4.1rem;
+    margin-left: 0.9rem;
+    margin-top: 1.2rem;
+  }
+  .circle i {
+    font-size: 4.1rem;
+    margin-top: 1rem;
+  }
+  .token {
+    font-size: 1.2rem;
+  }
+  .token::before {
+    font-size: 1.3rem;
+  }
+
+  /* footer------------------- */
+
+  .list {
+    flex-wrap: wrap;
+  }
+  .fl {
+    font-size: 1.2rem;
+  }
+  .seclast p {
+    font-size: 1.2rem;
+  }
+}
+
+/* 760 */
+@media screen and (max-width: 760px) {
+  #t1::after {
+    left: 11.5rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #t1::after {
+    left: 8.5rem;
+  }
+  .token {
+    flex-direction: column;
+  }
+  .tbefore {
+    position: relative;
+    left: -4.5rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  #t1::after {
+    left: 6.5rem;
+  }
+}
+
+/* 530 */
+@media screen and (max-width: 538px) {
+  #t1::after {
+    left: 4.5rem;
+  }
+
+  .firstlast {
+    width: 93%;
+  }
+}
+
+@media screen and (max-width: 506px) {
+  #t1::after {
+    left: 3.5rem;
+  }
+  #innerImg img {
+    width: 5.6rem;
+  }
+}
+
+@media screen and (max-width: 494px) {
+  #t4 {
+    font-size: 2.8rem;
+  }
+  #t3 {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 475px) {
+  #t4 {
+    font-size: 2.6rem;
+  }
+  #t3 {
+    font-size: 2.6rem;
+  }
+  #t3::after {
+    margin-left: -1rem;
+  }
+  .fa-windows {
+    margin-right: 2rem;
+  }
+}
+
+/* for 460 */
+@media screen and (max-width: 456px) {
+  .heading {
+    margin: 2rem;
+  }
+  #t1::after {
+    left: 2.5rem;
+  }
+  /* container 4 */
+  .para4 {
+    margin-top: 1rem;
+    width: 78%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #t4::after {
+    left: 5.5rem;
+  }
+  .search {
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  .search input {
+    margin-right: 0;
+  }
+
+  .fcopy {
+    margin-top: 9rem;
+  }
+}
+
+/* 417 */
+@media screen and (max-width: 417px) {
+  #t1::after {
+    left: 0.5rem;
+  }
+  #t4 {
+    font-size: 2.4rem;
+  }
+  #t3 {
+    font-size: 2.4rem;
+  }
+  .logo {
+    margin-top: -6rem;
+  }
+  #t4::after {
+    left: 4.5rem;
+  }
+  .container3 {
+    margin-top: 2rem;
+  }
+}
+
+/* for 388px */
+@media screen and (max-width: 388px) {
+  #t4 {
+    font-size: 2rem;
+  }
+}
+/* for 376px */
+@media screen and (max-width: 376px) {
+  #t1::after {
+    left: 1.5rem;
+    width: 14rem;
+  }
+  .container3 {
+    margin-top: 1.7rem;
+  }
+  #innerImg {
+    width: 42%;
+  }
+  .innerbox div {
+    font-size: 1.5rem;
+  }
+  .firstlast {
+    width: 94%;
+  }
+  #fl1 {
+    font-size: 1.6rem;
+    letter-spacing: 0;
+  }
+  #t4::after {
+    left: 3.5rem;
+  }
+  .data {
+    font-size: 1.8rem;
+  }
+  .f1 {
+    font-size: 3.2rem;
+  }
+  .sectd4 {
+    font-size: 2.1rem;
+  }
+}
