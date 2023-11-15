@@ -1,0 +1,173 @@
+:root {
+  --t1: 1.2rem;
+  --t2: 1.3rem;
+  --t3: 1.5rem;
+  --t4: 2rem;
+}
+
+.navText {
+  font-size: var(--t1);
+}
+
+.adminText {
+  font-size: var(--t2);
+}
+
+/* navbar */
+.navCusList {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  /* border: 2px solid red; */
+  padding-left: 0;
+}
+
+.selcText {
+  font-size: 0.8rem !important;
+}
+
+.colP {
+  padding-left: 0;
+  padding-right: 8px;
+}
+.colP:nth-child(6) {
+  padding-right: 0;
+}
+
+.text3 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.text4 {
+  font-size: var(--t4);
+  font-weight: 700;
+}
+.boxCircle {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.boxCircle i {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+.manpower {
+  width: 60%;
+}
+
+/* #imgtarget {
+  width: 4rem;
+  height:  4rem;
+} */
+
+.table-active {
+  background-color: blue !important;
+  border-radius: 50%;
+}
+
+.blist {
+  text-align: left;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.blist li {
+  padding: 4px;
+  font-size: 0.9rem;
+}
+
+.innerC::before {
+  content: "> ";
+  display: inline;
+  width: 40px;
+  height: 50px;
+  font-weight: 800;
+}
+
+#tableTarg {
+  width: 50px;
+  border: 2px solid red !important;
+}
+
+.imgTarg img {
+  margin-top: 3rem;
+}
+
+#listTarg {
+  color: orange;
+}
+
+#listTarg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 36px;
+  margin-top: -2.4rem;
+  margin-left: 6rem;
+  background-color: black;
+}
+#listTarg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 36px;
+  margin-top: 0.4rem;
+  margin-left: -1rem;
+  background-color: black;
+}
+
+#monthTarg::after{
+  content: ">";
+  margin-left: 4rem;
+}
+#monthTarg::before{
+  content: "<";
+  margin-right: 4rem;
+}
+
+
+
+/* table css start */
+
+/* table css end */
+
+/* responsivness */
+/* @media screen and (max-width:953px) {
+  .last-of-box:nth-child(4){
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width:736px) {
+  .last-of-box{
+    margin-top: 1rem;
+  }
+} */
+
+@media screen and (max-width: 845px) {
+  .navText {
+    font-size: 0.8rem;
+  }
+
+  .adminText {
+    font-size: 1rem;
+  }
+  #navFirst {
+    display: none;
+  }
+
+  #burger {
+    display: block !important;
+  }
+
+  #secondCol {
+    margin-left: 0.7rem;
+  }
+}
