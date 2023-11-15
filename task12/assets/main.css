@@ -1,0 +1,130 @@
+#navbar {
+  z-index: 2;
+  background-color: rgb(69, 0, 133);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 25px 25px;
+}
+
+#circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(248, 247, 247);
+  border-radius: 50%;
+  position: relative;
+}
+#circle::before {
+  content: "";
+  position: absolute;
+  background-color: greenyellow;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: 38px;
+}
+#circle::after {
+  position: absolute;
+  content: "JC";
+  color: rgb(69, 0, 133);
+  font-size: 30px;
+  font-weight: 600;
+  left: 10px;
+}
+#name {
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+#post {
+  color: white;
+  font-size: 16px;
+}
+
+#icons {
+  color: white;
+  font-size: 26px;
+}
+
+.mess-blue {
+  background-color: rgb(69, 0, 133);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mess-white {
+  border: 1px solid rgb(69, 0, 133);
+  box-shadow: rgba(116, 116, 255, 0.35) 0px 5px 15px;
+}
+
+.visit {
+  /* border: 2px solid red; */
+  opacity: 0.8;
+  padding-bottom: 4px;
+  text-align: end;
+  margin-bottom: 0;
+}
+.author {
+  opacity: 0.8;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.author::before {
+  content: "JC";
+  position: absolute;
+  color: white;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(54, 0, 104);
+  border-radius: 50%;
+  left: -22px;
+  bottom: 2px;
+}
+
+input:focus {
+  outline: none;
+}
+#input-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#sticker {
+  font-size: 22px;
+  text-align: center;
+}
+#sticker span {
+  margin-left: 2px;
+  color: blueviolet;
+}
+
+#fix {
+  position: fixed;
+  cursor: pointer;
+  right: 6px;
+  bottom: 4px;
+}
+#close {
+  margin-bottom: 0;
+
+  font-size: 28px;
+  color: red;
+  font-weight: 600;
+}
+
+#message-cont {
+  position: absolute;
+  right: 120px;
+  top: 70px;
+  width: 200px;
+  height: 70vh;
+}
+
+#message-box {
+  height: 298px;
+  overflow-y: scroll;
+}

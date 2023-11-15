@@ -1,0 +1,59 @@
+#navbar {
+  background-color: rgb(64, 64, 64) !important;
+  color: white;
+}
+.nav-link {
+  font-size: 1.3rem;
+  color: white;
+}
+#inner {
+  color: black !important;
+  font-size: 1rem;
+}
+.nav-link:hover {
+  color: rgb(254, 61, 61);
+}
+#parn:hover > #topDrop {
+  display: block !important;
+}
+#child:hover > #innerDrop {
+  display: block !important;
+}
+
+.activeCol {
+  color: rgb(254, 61, 61) !important;
+  /* border: 2px solid red; */
+}
+
+.nav-link.show {
+  color: red !important;
+}
+.navbar-toggler-icon {
+  background-color: rgb(255, 255, 255);
+}
+
+#innerDrop {
+  position: absolute;
+  top: 4.3rem;
+  left: 12.6rem;
+}
+
+.shadow3d {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@media screen and (max-width: 768px) {
+  #topDrop {
+    position: relative !important;
+    /* background-color: red; */
+  }
+  #innerDrop {
+    position: relative !important;
+    width: 50%;
+    top: 0.2rem;
+    left: 6.4rem;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChatPage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/main.css" />
+  </head>
+  <body>
+    <div class="row" id="fix">
+      <div class="col">
+        <p id="close" style="display: none">X</p>
+        <img
+          src="assets/images/Group 16200.png"
+          alt="chat-img"
+          class="img-fluid"
+          style="width: 100px"
+        />
+      </div>
+    </div>
+    <div
+      class="container-fluid ps-0 pe-0"
+      id="message-cont"
+      style="
+        width: 26vw;
+        background-color: rgb(242, 242, 242, 0.8);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      "
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col p-3" id="navbar">
+            <div id="nav-cont" class="d-flex">
+              <div id="circle"></div>
+              <div class="ps-3">
+                <span id="name">Jessica Cowles</span> <br />
+                <span id="post">Support Angent</span>
+              </div>
+            </div>
+            <div id="icons">
+              <i class="bi bi-hand-thumbs-up"></i>
+              <i class="bi bi-hand-thumbs-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="message-box">
+        <div class="row d-flex justify-content-end m-3">
+          <div class="col-10">
+            <p class="visit">Visitor 12:04</p>
+            <div class="mess-blue p-3 rounded">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                corrupti eius autem illo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-start m-3">
+          <div class="col-10">
+            <p class="author ms-4 ps-2">Jessica 12:04</p>
+            <div class="mess-white p-3 rounded">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                corrupti eius autem illo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-end m-3">
+          <div class="col-10">
+            <p class="visit">Visitor 12:04</p>
+            <div class="mess-blue p-3 rounded">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                corrupti eius autem illo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-start m-3">
+          <div class="col-10">
+            <p class="author ms-4 ps-2">Jessica 12:04</p>
+            <div class="mess-white p-3 rounded">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                corrupti eius autem illo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-end m-3">
+          <div class="col-10">
+            <p class="visit">Visitor 12:04</p>
+            <div class="mess-blue p-3 rounded">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                corrupti eius autem illo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-start m-3">
+          <div class="col-10">
+            <p class="author ms-4 ps-2">Jessica 12:04</p>
+            <div class="mess-white p-3 rounded">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                corrupti eius autem illo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-end m-3">
+          <div class="col-10">
+            <p class="visit">Visitor 12:04</p>
+            <div class="mess-blue p-3 rounded">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                corrupti eius autem illo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-start m-3">
+          <div class="col-10">
+            <p class="author ms-4 ps-2">Jessica 12:04</p>
+            <div class="mess-white p-3 rounded">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                corrupti eius autem illo. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. corrupti eius autem illo. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. corrupti
+                eius autem illo. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. corrupti eius autem illo. Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. corrupti eius autem
+                illo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="fixed-input">
+        <div class="row">
+          <div
+            class="col p-2 pe-3"
+            id="input-text"
+            style="background-color: white"
+          >
+            <div>
+              <input
+                type="text"
+                class="p-2"
+                placeholder="Type a message...."
+                style="border: none; width: 11vw"
+              />
+            </div>
+            <div id="sticker">
+              <span><i class="bi bi-emoji-smile"></i></span>
+              <span><i class="bi bi-paperclip"></i></span>
+              <span
+                ><img
+                  src="assets/images/send.png"
+                  alt=""
+                  width="21px"
+                  class="img-fluid"
+                  onclick="down()"
+              /></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let ele = document.getElementById("fix");
+      let trg = document.getElementById("message-cont");
+      let cross = document.getElementById("close");
+
+      const show = () => {
+        if (trg.style.display == "none") {
+          trg.style.display = "block";
+          cross.style.display = "block";
+        } else {
+          trg.style.display = "none";
+          cross.style.display = "none";
+        }
+      };
+
+      ele.addEventListener("click", show);
+    </script>
+
+    <script>
+      const down = () => {
+        var messageBody = document.querySelector("#message-box");
+        let temp = 180;
+        messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight ;
+     
+        if (messageBody.scrollTop < messageBody.scrollHeight - messageBody.clientHeight) 
+        {
+          messageBody.scrollTop += 200; // move down
+          console.log(messageBody.scrollTop);
+        }
+        
+          
+        
+        console.log(
+          messageBody.scrollHeight -
+            messageBody.clientHeight +
+            " and " +
+            messageBody.scrollHeight +
+            " " +
+            messageBody.clientHeight
+        );
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blink</title>
+    <link rel="stylesheet" href="assets/main.css" />
+  </head>
+  <body>
+    <div id="box1">
+      <div class="dot" onclick="show('popup1','popup2','popup3','popup4','popup5')"></div>
+      <div class="popup" id="popup1">
+        <p>
+          I am popup 1 <br />
+          Hello
+        </p>
+        <button onclick="goNext('popup2','popup1')">Next</button>
+      </div>
+    </div>
+    <div id="box2">
+      <div class="dot" id="dot2" onclick="show('popup2','popup1','popup3','popup4','popup5')">
+      </div>
+      <div class="popup" id="popup2" style="display: none;">
+        <p>
+          I am popup 2 <br />
+          Hello
+        </p>
+        <div>
+            <button onclick="goPrev('popup1','popup2')">Prev</button>
+            <button onclick="goNext('popup3','popup2')">Next</button>
+        </div>
+      </div>
+    </div>
+    <div id="box3">
+      <div class="dot" id="dot3" onclick="show('popup3','popup2','popup1','popup4','popup5')"></div>
+      <div class="popup" id="popup3" style="display: none;">
+        <p>
+          I am popup 3 <br />
+          Hello
+        </p>
+        <div>
+            <button onclick="goPrev('popup2','popup3')">Prev</button>
+            <button onclick="goNext('popup4','popup3')">Next</button>
+          </div>
+      </div>
+    </div>
+    <div id="box4">
+      <div class="dot" id="dot4" onclick="show('popup4','popup2','popup3','popup1','popup5')"></div>
+      <div class="popup" id="popup4" style="display: none;">
+        <p>
+          I am popup 4 <br />
+          Hello
+        </p>
+        <div>
+            <button onclick="goPrev('popup3','popup4')">Prev</button>
+            <button onclick="goNext('popup5','popup4')">Next</button>
+          </div>
+      </div>
+    </div>
+    <div id="box5">
+      <div class="dot" id="dot5" onclick="show('popup5','popup2','popup3','popup4','popup1')"></div>
+      <div class="popup" id="popup5" style="display: none;">
+        <p>
+          I am popup 5 <br />
+          Hello
+        </p>
+        <div>
+            <button onclick="goPrev('popup4','popup5')">Prev</button>
+            <button onclick="goNext('popup1','popup5')">Next</button>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/main.js"></script>
+</html>

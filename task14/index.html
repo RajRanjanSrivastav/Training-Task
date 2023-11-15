@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jqury slider</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="assets/main.css" />
+
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <!-- <video autoplay loop id='video'>
+        <source src="assets/images/hp_banner-video-1.mp4" type="video/mp4">
+        
+        Your browser does not support the video tag.
+    </video> -->
+
+    <!-- slider -->
+    <div class="slider">
+      <div class="holder">
+        <div class="img" id="img1"></div>
+        <div class="img" id="img2"></div>
+        <div class="img" id="img3"></div>
+        <div class="img" id="img4"></div>
+        <div class="img" id="img5"></div>
+        <div class="img" id="img6"></div>
+        <div class="img" id="img7"></div>
+        <div class="img" id="img8"></div>
+        <div class="img" id="img9"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    $(window).on("load", showSlider());
+
+    var ele = $('.img');
+    var ele1 = $('#img1');
+    var ele2 = $('#img2');
+    var ele3 = $('#img3');
+    var ele4 = $('#img4');
+    var ele5 = $('#img5');
+    var ele6 = $('#img6');
+    var ele7 = $('#img7');
+    var ele8 = $('#img8');
+    var ele9 = $('#img9');
+
+    ele.hide();
+    var cnt = 0;
+    var backImage = [];
+    backImage[0] = "assets/images/Banner-1.jpg";
+    backImage[1] = 'assets/images/Banner-3-bg.jpg';
+  
+
+    function showSlider() {
+      $(".holder").fadeOut(2000, function () {
+        $(".holder").css({ "background-image": "url(" + backImage[cnt] + ")" });
+        $(".holder").fadeIn(1000);
+        if(cnt==1)
+        {
+            showEle();
+            setTimeout(showSlider, 11000);
+        }
+        else{
+            ele.hide()
+            setTimeout(showSlider, 3000);
+        }
+      });
+      
+      cnt++;
+      if(cnt>1)
+      {
+        cnt=0; 
+      }
+     
+      
+    }
+
+    function showEle(){
+        //ele 1
+        setTimeout(e1,1000);
+        function e1(){
+            ele1.show(1000)
+        }
+        //ele 2
+        setTimeout(e2,2000);
+        function e2(){
+            ele2.show(1000)
+        }
+        //ele 3
+        setTimeout(e3,3000);
+        function e3(){
+            ele3.show(1000)
+        }
+        //ele 4
+        setTimeout(e4,4000);
+        function e4(){
+            ele4.show(1000)
+        }
+        //ele 5
+        setTimeout(e5,5000);
+        function e5(){
+            ele5.show(1000)
+        }
+        //ele 6
+        setTimeout(e6,6000);
+        function e6(){
+            ele6.show(1000)
+        }
+        //ele 7
+        setTimeout(e7,7000);
+        function e7(){
+            ele7.show(1000)
+        }
+        //ele 8
+        setTimeout(e8,8000);
+        function e8(){
+            ele8.show(1000)
+        }
+        //ele 9
+        setTimeout(e9,9000);
+        function e9(){
+            ele9.show(1000)
+        }
+    }
+  </script>
+</html>

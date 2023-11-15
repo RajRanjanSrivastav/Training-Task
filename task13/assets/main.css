@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#card-head {
+  background-color: #260175;
+}
+p {
+  margin-bottom: 0.2rem !important;
+}
+
+#img-box {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+}
+#img-box img {
+  position: absolute;
+  width: 100px;
+  height: 95px;
+  top: 18px;
+  left: 16px;
+  object-fit: contain;
+}
+
+#star-img {
+  width: 40px;
+  height: 40px;
+}
+
+#inf-mail {
+  margin: auto;
+  background-color: rgba(4, 102, 124, 0.2);
+  width: 200px;
+  font-weight: 700;
+  font-style: italic;
+  color: rgb(8, 8, 113, 0.8);
+}

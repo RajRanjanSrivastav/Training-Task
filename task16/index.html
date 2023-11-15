@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="assets/main.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+          <div class="logo">
+            <span>.kreate </span> Technologies
+          </div>
+          <p class="f1">Automate <br> your code Now <br> for free</p>
+      </div>
+
+      <div class="right">
+        <h3 class="f1">Get Started Now</h3>
+        <p>Enter your details below.</p>
+        <form action="assets/main.html" method="get">
+          <div class="name box">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              placeholder=" enter your name....."
+              id="name"
+              name="name"
+              class="boxStyle"
+              oninput="nameVali(value)"
+            />
+          </div>
+          <div class="email box">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              name="email"
+              placeholder=" enter your email....."
+              id="email"
+              class="boxStyle"
+              oninput="emailVali(value)"
+            />
+          </div>
+          <div class="password box">
+            <label for="name">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="min 8 char"
+              id="password"
+              class="boxStyle"
+              oninput="passVali(value)"
+            />
+          </div>
+          <div class="gender">
+            <span id="first">Gender</span>
+            <label for="male"><span>Male</span></label>
+            <input
+              type="radio"
+              name="gender"
+              id="male"
+              class="boxStyle"
+              value="Male"
+              onchange="genderVali(value)"
+            />
+            <label for="female"><span>Female</span></label>
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              name="gender"
+              class="boxStyle"
+              value="Female"
+              onchange="genderVali(value)"
+            />
+          </div>
+          <div class="age box">
+            <label for="">Age </label>
+            <input
+              type="number"
+              name="age"
+              placeholder="enter your age...."
+              id="age"
+              class="boxStyle"
+              oninput="ageVali(value)"
+            />
+          </div>
+          <div class="phone box">
+            <label for="">Phone number  </label>
+            <input
+              type="number"
+              name="phone_no"
+              placeholder="enter your phone number...."
+              id="phone"
+              class="boxStyle"
+              oninput="noVali(value)"
+            />
+          </div>
+          <div class="port box">
+            <label for="">Portfolio link </label>
+            <input
+              type="text"
+              name="port"
+              placeholder="enter your portfolio link...."
+              id="port"
+              class="boxStyle"
+              oninput="portVali(value)"
+            />
+          </div>
+          <div class="btn">
+            <input type="submit" onclick="show(event)">
+            <!-- <button onclick="show(event)">Submit</button> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="assets/main.js"></script>
+</html>

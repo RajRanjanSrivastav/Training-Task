@@ -1,0 +1,108 @@
+body{
+  background-color: rgb(238, 212, 174,0.2);
+}
+#box1 {
+  position: absolute;
+  top: 12rem;
+  left: 34rem;
+  width: 300px;
+  height: 200px;
+  display: flex;
+}
+#box2 {
+  position: absolute;
+  top: 18rem;
+  left: 56rem;
+  width: 300px;
+  height: 200px;
+  display: flex;
+}
+#box2 {
+  position: absolute;
+  top: 20rem;
+  left: 56rem;
+  width: 300px;
+  height: 200px;
+  display: flex;
+}
+#box3 {
+  position: absolute;
+  top: 2rem;
+  left: 55rem;
+  width: 300px;
+  height: 200px;
+  display: flex;
+}
+#box4 {
+  position: absolute;
+  top: 2rem;
+  left: 5rem;
+  width: 300px;
+  height: 200px;
+  display: flex;
+}
+#dot4 {
+  position: relative;
+  /* top: 2rem; */
+  left: 14rem;
+}
+#box5 {
+  position: absolute;
+  top: 20rem;
+  left: 5rem;
+  width: 300px;
+  height: 200px;
+  display: flex;
+}
+#dot5 {
+  position: relative;
+  left: 14rem;
+}
+
+.dot {
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  border-radius: 50%;
+  animation: blink 2s linear infinite;
+}
+
+.dot:hover{
+  cursor: pointer;
+}
+
+
+@keyframes blink {
+
+  0%, 100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+    transform: scale(2);
+  }
+}
+
+.popup {
+  /* visibility: hidden; */
+  border: 2px solid black;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.5rem;
+  width: 200px;
+  height: 150px;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: rgb(247, 97, 10, 0.5);
+}
+.popup button {
+  width: 4rem;
+  height: 2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(171, 18, 135, 0.4);
+}

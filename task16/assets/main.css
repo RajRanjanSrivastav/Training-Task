@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  /* margin: 8px; */
+  background-color: rgb(8, 8, 8, 0.8);
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  background-color: rgb(70, 0, 128, 0.7);
+  border-radius: 20px;
+  margin-right: 10px;
+  width: 50%;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 5vw;
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: white;
+}
+.logo {
+  text-transform: uppercase;
+}
+.f1 {
+  font-size: 2.5rem;
+  color: white;
+}
+.logo span {
+  font-size: 2.5rem;
+}
+
+.right {
+  background-color: rgb(4, 4, 4, 0.6);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 20px;
+  padding: 2vw 10vw;
+  overflow-y: scroll;
+}
+
+.right p {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.boxStyle {
+  box-sizing: content-box;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(10, 10, 10, 0.6);
+  border-radius: 20px;
+}
+.boxStyle:focus {
+  border: none;
+  outline: 2px solid rgb(70, 0, 128, 0.7);
+}
+
+label {
+  color: white;
+  opacity: 0.9;
+}
+input::placeholder {
+  color: white;
+  opacity: 0.3;
+  font-size: 0.8rem;
+  padding: 4px;
+}
+input {
+  color: white;
+  font-size: 0.9rem;
+}
+
+#first {
+  color: white;
+}
+.gender {
+  margin-bottom: 8px;
+}
+.gender label span {
+  font-size: 0.8rem;
+}
+.gender label {
+  margin-left: 10px;
+}
+
+.btn {
+  margin: auto;
+}
+.btn input {
+  padding: 0.4rem;
+  border-radius: 20px;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn input:hover {
+  transition: all linear 0.4s;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+}
+
+/* second page */
+body{
+  background-color: rgb(0, 0, 0,0.7);
+}
+#secH{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top:4rem;
+  color: rgb(255, 255, 255,0.8);
+}
+.dataBox{
+  border: 2px solid white;
+  width: 50vw;
+  height: 60vh;
+  margin: 1rem auto;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgb(70, 0, 128, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+.dataBox p{
+  color: rgb(255, 255, 255,0.9);
+  font-size: 1.5rem;
+  padding: 4px;
+}
+.dataBox p span{
+  text-transform: capitalize;
+  margin-left: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}

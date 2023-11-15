@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+    .table {
+      width: 600px;
+      height: 250px;
+      position: absolute;
+      top: 10rem;
+      left: 20rem;
+      font-size: 1.4rem;
+    }
+    tr:hover {
+      cursor: pointer;
+      background-color: rgb(171, 55, 55, 0.8);
+    }
+  </style>
+  <body>
+    <table class="table">
+      <tbody>
+        <tr id="First" onclick="show('Second')">
+          <td scope="col">First</td>
+          <td scope="col">Last</td>
+          <td scope="col">Handle</td>
+        </tr>
+        <tr id="Second" style="display: none">
+          <td>Second</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr id="Third" onclick="show('Fourth')">
+          <td>Third</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr id="Fourth" style="display: none">
+          <td>Fourth</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="main.js"></script>
+  </body>
+</html>

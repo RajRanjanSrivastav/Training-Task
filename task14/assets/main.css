@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* #video{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+} */
+
+
+.slider{
+    width: 100%;
+    height: 60vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    /* padding: 2%; */
+    position: relative;
+}
+.holder{
+    width: inherit;
+    height: inherit;
+    background-image: url('images/Banner-3-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.img{
+    width: 70px;
+    height: 70px;
+    /* background-color: red; */
+    position: absolute;
+}
+.img:nth-child(1){
+    background-image: url(images/0.png) ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 2.8rem;
+    left: 3.3rem;
+}
+.img:nth-child(2){
+    background-image: url(images/1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 15.5rem;
+    left: 5.8rem;
+}
+.img:nth-child(3){
+    background-image: url(images/2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 10rem;
+    left: 12.8rem;
+}
+.img:nth-child(4){
+    background-image: url(images/3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 2.6rem;
+    left: 23.6rem;
+}
+.img:nth-child(6){
+    background-image: url(images/dgvcl.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* top: 16.6rem; */
+    bottom: 1rem;
+    left: 26.8rem;
+}
+.img:nth-child(7){
+    background-image: url(images/Deendayal.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 2.3rem;
+    right: 11.5rem;
+}
+.img:nth-child(8){
+    background-image: url(images/GIFT.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 4.2rem;
+    right: 2rem;
+}
+.img:nth-child(5){
+    background-image: url(images/mgvcl.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 2rem;
+    right: 20rem;
+}
+.img:nth-child(9){
+    background-image: url(images/Torrent-Power.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 1rem;
+    right: 6.2rem;
+}
+.arrow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    /* border: 2px solid green */
+}
+.arrow span{
+    font-size: 2.8rem;
+    font-weight: 800;
+    cursor: pointer;
+    opacity: 0.4;
+}
+.arrow span:hover{
+    opacity: 1;
+}
