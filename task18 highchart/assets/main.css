@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+.f1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0, 0.5);
+}
+.f2{
+    color: #737373;
+    font-weight: 600;
+}
+#navbar {
+  background-color: rgb(49, 18, 127);
+}
+.icon-container {
+  border-bottom: 1px solid white;
+}
+.icons {
+  cursor: pointer;
+}
+.burger {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: white;
+}
+.list-group-item {
+  background-color: rgb(49, 18, 127);
+  border: none;
+  margin-top: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+.list-group-item:hover {
+  color: rgb(225, 225, 225, 0.9);
+}
+
+/* for main container wher charts are placed */
+#horiNav {
+  /* border: 2px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputContainer {
+  /* border: 1px solid red; */
+  background-color: rgba(223, 222, 222, 0.4);
+  border-radius: 20px;
+}
+.halfNavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#horiNav input {
+  border-radius: 20px;
+  background-color: rgba(223, 222, 222, 0);
+  border: none;
+}
+#horiNav input::placeholder {
+  /* font-weight: 600; */
+  color: rgb(0, 0, 0, 0.7);
+}
+#horiNav input:focus {
+  outline: none;
+}
+.logoname {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.bell {
+  position: relative;
+  cursor: pointer;
+}
+.chat {
+  position: relative;
+  cursor: pointer;
+}
+.chat::after {
+  content: "1";
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  background-color: rgb(49, 18, 127, 0.8);
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  bottom: 15px;
+  right: -15px;
+}
+.bell::after {
+  content: "5";
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  background-color: rgb(255, 0, 0, 0.8);
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  bottom: 15px;
+  right: -12px;
+}
+
+.profile {
+  cursor: pointer;
+  width: 46px;
+  border-radius: 50%;
+  background-image: url("images/profile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* charts */
+.secChartBTn {
+  display: inline;
+  color: #737373;
+  padding: 6px;
+  padding-right: 0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.secChartBTn span{
+    background-color: blue; color: white;padding: 6px; border-radius:  0 8px 8px 0;
+}
+
+
+.chart4Btn button{
+margin: 4px;
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.card-open-positions{
+    width: 100px;
+    border-radius: 20px;
+    margin: 4px;
+}
+/* testing */
+
+#c1{
+background-color:#960365;
+}
+#c2{
+background-color:orange;
+}
+#c3{
+background-color:blue;
+}
+#c4{
+background-color:yellow;
+}
+#c5{
+background-color:red;
+}

@@ -437,47 +437,118 @@ const ctx6_2 = document.getElementById("myChart6_2").getContext("2d");
 new Chart(ctx6_2, config6_2);
 
 // chart 7
-const config7_1 = {
-  type: "doughnut",
-  data: {
-    labels: [
-      "Not Disclosed",
-      "Compensation & Benefits",
-      "Termination",
-      "Higher studies",
-      "Not interested anymore",
-      "illness",
-    ],
-    datasets: [
-      {
-        label: "My First Dataset",
-        data: [300, 40, 10, 10, 10, 10],
-        backgroundColor: [
-          "darkblue",
-          "rgba(242, 247, 178)",
-          "rgba(208, 247, 245)",
-          "rgba(207, 195, 37)",
-          "rgba(245, 179, 237)",
-          "rgba(37, 139, 207)",
-        ],
-        hoverOffset: 4,
-      },
-    ],
-  },
-  options: {
-    plugins: {
-      legend: {
-        display: true,
-        position: "bottom",
-        labels: {
-          boxWidth: 13,
-        },
-      },
+// const config7_1 = {
+//   type: "doughnut",
+//   data: {
+//     labels: [
+//       "Not Disclosed",
+//       "Compensation & Benefits",
+//       "Termination",
+//       "Higher studies",
+//       "Not interested anymore",
+//       "illness",
+//     ],
+//     datasets: [
+//       {
+//         label: "My First Dataset",
+//         data: [300, 40, 10, 10, 10, 10],
+//         backgroundColor: [
+//           "darkblue",
+//           "rgba(242, 247, 178)",
+//           "rgba(208, 247, 245)",
+//           "rgba(207, 195, 37)",
+//           "rgba(245, 179, 237)",
+//           "rgba(37, 139, 207)",
+//         ],
+//         hoverOffset: 4,
+//       },
+//     ],
+//   },
+//   options: {
+//     plugins: {
+//       legend: {
+//         display: true,
+//         position: "bottom",
+//         labels: {
+//           boxWidth: 13,
+//         },
+//       },
+//     },
+//   },
+// };
+// const ctx7_1 = document.getElementById("myChart7_1").getContext("2d");
+// new Chart(ctx7_1, config7_1);
+
+am4core.ready(function () {
+  // Themes begin
+  am4core.useTheme(am4themes_animated);
+  am4core.options.commercialLicense = true;
+  // Themes end
+
+  var chart = am4core.create("myChart7_1", am4charts.PieChart3D);
+  chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+  // chart.legend = new am4charts.Legend();
+  var legend = new am4charts.Legend();
+  chart.legend = legend;
+
+  // Reduce the size of the legend
+  legend.width = am4core.percent(80); // Set width to 80% of the chart
+  legend.fontSize = 10; // Set font size
+  legend.itemContainers.template.maxWidth = 150;
+  // legendSettings.labelText = "{country}";
+
+  chart.data = [
+    {
+      country: "Not Disclosed",
+      litres: 1501.9,
+      color: am4core.color("#120f69"),
     },
-  },
-};
-const ctx7_1 = document.getElementById("myChart7_1").getContext("2d");
-new Chart(ctx7_1, config7_1);
+    {
+      country: "Compensation & Benefits",
+      litres: 901.9,
+      color: am4core.color("#edf59a"),
+    },
+    {
+      country: "Termination",
+      litres:  80.3,
+      color: am4core.color("#9aecf5")
+    },
+    {
+      country: "Higher studies",
+      litres: 80.3,
+      color: am4core.color("#f2be85")
+     
+    },
+    {
+      country: "Not interested anymore",
+      litres:  80.3,
+      color: am4core.color("#d077ed")
+      
+    },
+    {
+      country: "illness",
+      litres: 80.3,
+      color: am4core.color("#6296f0")
+     
+    },
+  ];
+  chart.innerRadius = 10;
+  chart.legend.valueLabels.template.text = "";
+  chart.legend.useDefaultMarker = true;
+  chart.legend.position = "bottom";
+  chart.legend.align = "center"; 
+
+  var series = chart.series.push(new am4charts.PieSeries3D());
+
+  series.dataFields.value = "litres";
+  series.dataFields.category = "country";
+  series.labels.template.disabled = true;
+  series.innerRadius = am4core.percent(40);
+  series.slices.template.propertyFields.fill = "color";
+  // series.legendSettings.labelText = "{country}";
+  // series.labels.template.text = "{category}: {value.value}";
+});
 
 const config7_2 = {
   type: "doughnut",
@@ -645,92 +716,146 @@ Highcharts.chart("container", {
   ],
 });
 
+// chart 8 tree
+am5.ready(function () {
+  let root = am5.Root.new("chartdiv");
+  root._logo.dispose();
 
-// chart 8
-var root = am5.Root.new("chartdiv");
+  root.setThemes([am5themes_Animated.new(root)]);
 
+  let container = root.container.children.push(
+    am5.Container.new(root, {
+      width: am5.percent(100),
+      height: am5.percent(100),
+      layout: root.verticalLayout,
+    })
+  );
 
-// Set themes
-// https://www.amcharts.com/docs/v5/concepts/themes/
-root.setThemes([
-  am5themes_Animated.new(root)
-]);
+  let series = container.children.push(
+    am5hierarchy.ForceDirected.new(root, {
+      downDepth: 1,
+      initialDepth: 2,
+      topDepth: 1,
+      paddingLeft: 2,
+      valueField: "value",
+      // width:am5.percent(150),
+      categoryField: "name",
+      childDataField: "children",
+      minRadius: 20,
+      maxRadius: am5.percent(15),
+      manyBodyStrength: 0,
+      nodePadding: 31,
 
+      legendSettings: {
+        name: "Root",
+      },
+    })
+  );
+  series.nodes.template.setAll({
+    draggable: false // Disable node dragging
+  });
+  series.circles.template.setAll({
+    templateField: "nodeSettings",
+  });
 
-// Create wrapper container
-var container = root.container.children.push(am5.Container.new(root, {
-  width: am5.percent(100),
-  height: am5.percent(90),
-  layout: root.verticalLayout
-}));
+  series.data.setAll([
+    {
+      name: "Root",
+      value: 0,
+      children: [
+        {
+          name: "14",
+          value: 90,
+          nodeSettings: {
+            fill: am5.color(0xffa500),
+          },
+          children: [
+            {
+              name: "10",
+              value: 60,
+              nodeSettings: {
+                fill: am5.color(0x3ef53b),
+              },
+            },
+            {
+              name: "3",
 
+              value: 40,
+              nodeSettings: {
+                fill: am5.color(0x3545f2),
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ]);
+  series.set("selectedDataItem", series.dataItems[0]);
 
-// Create series
-// https://www.amcharts.com/docs/v5/charts/hierarchy/#Adding
-var series = container.children.push(am5hierarchy.Tree.new(root, {
-  singleBranchOnly: false,
-  downDepth: 1,
-  initialDepth: 10,
-  valueField: "value",
-  categoryField: "name",
-  childDataField: "children"
-}));
+  // Add legend
+  
+});
+// Create root and chart
+// var root = am5.Root.new("chartdiv");
 
+// root.setThemes([am5themes_Animated.new(root)]);
 
-// Generate and set data
-// https://www.amcharts.com/docs/v5/charts/hierarchy/#Setting_data
-var maxLevels = 0;
-var maxNodes = 1;
-var maxValue = 1;
+// var container = root.container.children.push(
+//   am5.Container.new(root, {
+//     width: am5.percent(100),
+//     height: am5.percent(100),
+//     layout: root.verticalLayout,
+//   })
+// );
 
-var data = {
-  name: "14",
-  children: []
-}
-generateLevel(data, "", 1);
+// var series = container.children.push(
+//   am5hierarchy.ForceDirected.new(root, {
+//     downDepth: 1,
+//     initialDepth: 2,
+//     topDepth: 1,
+//     valueField: "value",
+//     categoryField: "name",
+//     childDataField: "children",
+//     minRadius: 20,
+//     maxRadius: am5.percent(15),
+//     manyBodyStrength: 0,
+//     nodePadding: 32,
 
-series.data.setAll([data]);
-series.set("selectedDataItem", series.dataItems[0]);
+//   })
+// );
 
-function generateLevel(data, name, level) {
-  for (var i = 0; i < Math.ceil(maxNodes * Math.random()) + 1; i++) {
-    var nodeName = name + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[i];
-    var child;
-    if (level < maxLevels) {
-      child = {
-        name: nodeName + level
-      }
+// series.data.setAll([
+//   {
+//     // name: "root",
+//     value: 0,
+//     children: [
+//       {
+//         name: "14",
+//         value: 90,
+//         children: [
+//           {
+//             name: "10",
+//             value: 60,
 
-      if (level > 0 && Math.random() < 0.5) {
-        child.value = Math.round(Math.random() * maxValue);
-      }
-      else {
-        child.children = [];
-        generateLevel(child, nodeName + i, level + 1)
-      }
-    }
-    else {
-      child = {
-        name: "3",
-        value: Math.round(Math.random() * maxValue)
-      }
-    }
-    data.children.push(child);
-  }
+//           },
+//           {
+//             name: "3",
+//             value: 20,
+//             // color: am5.color(0x095256),
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ]);
 
-  level++;
-  return data;
-}
-
-
-// Make stuff animate on load
-series.appear(1000, 10);
+// series.set("selectedDataItem", series.dataItems[0]);
 
 // chart 9
 
 const config9_1 = {
-  type: 'bar',
-  data:  {
+  type: "bar",
+  data: {
     labels: [
       "Apr20",
       "May20",
@@ -747,13 +872,13 @@ const config9_1 = {
     datasets: [
       {
         label: "Joiner",
-        data: [5, 5, 1,3,3,1,3,5,7,10],
+        data: [5, 5, 1, 3, 3, 1, 3, 5, 7, 10],
         backgroundColor: "blue",
         borderWidth: 1,
       },
       {
         label: "Leaver",
-        data: [-2,-4,-5,-2,-6,-3,-6,-6,-4,-7],
+        data: [-2, -4, -5, -2, -6, -3, -6, -6, -4, -7],
         backgroundColor: "red",
         borderWidth: 1,
       },
@@ -763,16 +888,16 @@ const config9_1 = {
     responsive: true,
     plugins: {
       legend: {
-        position: 'bottom',
+        position: "bottom",
         labels: {
           usePointStyle: true,
         },
       },
       title: {
         display: true,
-        text: 'Chart.js Bar Chart'
-      }
-    }
+        text: "Chart.js Bar Chart",
+      },
+    },
   },
 };
 
@@ -781,21 +906,18 @@ new Chart(ctx9_1, config9_1);
 const config9_2 = {
   type: "doughnut",
   data: {
-    labels: ["18-24", "25-30", "31-35", "36-40","41-45","45-50"],
+    labels: ["18-24", "25-30", "31-35", "36-40", "41-45", "45-50"],
     datasets: [
       {
         label: "My First Dataset",
-        data: [120, 280, 10, 20,20,60],
+        data: [120, 280, 10, 20, 20, 60],
         backgroundColor: [
-          
           "rgba(237, 84, 28)",
           "blue",
           "rgb(196, 14, 105)",
           "rgba(128, 4, 53)",
           "rgba(175, 184, 6)",
           "rgba(5, 105, 32)",
-          
-          
         ],
         hoverOffset: 4,
       },
@@ -815,8 +937,6 @@ const config9_2 = {
 };
 const ctx9_2 = document.getElementById("myChart9_2").getContext("2d");
 new Chart(ctx9_2, config9_2);
-
-
 
 // chart 10
 const config10 = {
@@ -838,7 +958,7 @@ const config10 = {
     ],
     datasets: [
       {
-        data: [1.6, 1.3, 1.3, 0, 1.2, 1.3, 1.4, 1.2, 1.8, 1.8, 1.6, 1.7, 1.5,],
+        data: [1.6, 1.3, 1.3, 0, 1.2, 1.3, 1.4, 1.2, 1.8, 1.8, 1.6, 1.7, 1.5],
         backgroundColor: "rgba(173, 7, 93)",
         borderWidth: 1,
         order: 1,

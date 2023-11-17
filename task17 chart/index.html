@@ -35,6 +35,11 @@
     <script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
+    <!-- script for amchart 4 -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
@@ -253,18 +258,22 @@
                   <div class="col d-flex">
                     <div class="card-body">
                       <h5 class="card-title h5">Leavers by Reason</h5>
-                      <canvas
+                      <div
+                        id="myChart7_1"
+                        style="height: 550px; width: 320px"
+                      ></div>
+                      <!-- <canvas
                         id="myChart7_1"
                         class="mt-4"
                         style="height: 550px; width: 320px"
-                      ></canvas>
+                      ></canvas> -->
                     </div>
                     <div class="card-body">
                       <h5 class="card-title h5">Leavers by Tenure in Years</h5>
                       <canvas
                         id="myChart7_2"
                         class="mt-4"
-                        style="height: 550px; width: 270px"
+                        style="width: 21vw"
                       ></canvas>
                     </div>
                   </div>
@@ -299,7 +308,7 @@
               </div>
 
               <!-- chart 9 -->
-              <div class="card ms-3 mt-3 f1 flex-grow-1" style="width:35rem">
+              <div class="card ms-3 mt-3 f1 flex-grow-1" style="width: 35rem">
                 <div class="row">
                   <div class="col d-flex">
                     <div class="card-body">
@@ -307,27 +316,21 @@
                       <canvas
                         id="myChart9_1"
                         class="mt-4"
-                        style="width: 250px; height: 230px;"
+                        style="width: 250px; height: 230px"
                       ></canvas>
                     </div>
                     <div class="card-body">
                       <h5 class="card-title h5">Joiner Vs Leavers By Months</h5>
-                      <canvas
-                        id="myChart9_2"
-                        class="mt-4"
-                        
-                      ></canvas>
+                      <canvas id="myChart9_2" class="mt-4"></canvas>
                     </div>
                   </div>
                 </div>
               </div>
 
               <!-- chart 10 -->
-              <div class="card  f1 mt-4" style="width: 32rem">
+              <div class="card f1 mt-4" style="width: 32rem">
                 <div class="card-body">
-                  <h5 class="card-title h6">
-                    Monthly Turnover Rate
-                  </h5>
+                  <h5 class="card-title h6">Monthly Turnover Rate</h5>
                   <canvas
                     id="myChart10"
                     class="mt-4"
