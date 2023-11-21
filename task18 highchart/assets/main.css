@@ -12,9 +12,9 @@ html {
   font-weight: 600;
   color: rgb(0, 0, 0, 0.5);
 }
-.f2{
-    color: #737373;
-    font-weight: 600;
+.f2 {
+  color: #737373;
+  font-weight: 600;
 }
 #navbar {
   background-color: rgb(49, 18, 127);
@@ -40,6 +40,9 @@ html {
 }
 .list-group-item:hover {
   color: rgb(225, 225, 225, 0.9);
+}
+#dash:hover {
+  color: rgb(225, 225, 225, 0.9) !important;
 }
 
 /* for main container wher charts are placed */
@@ -131,46 +134,204 @@ html {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
-.secChartBTn span{
-    background-color: blue; color: white;padding: 6px; border-radius:  0 8px 8px 0;
+.secChartBTn span {
+  background-color: blue;
+  color: white;
+  padding: 6px;
+  border-radius: 0 8px 8px 0;
 }
 
-
-.chart4Btn button{
-margin: 4px;
+.chart4Btn button {
+  margin: 4px;
 }
-.circle{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: pink;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 600;
-    font-size: 1.4rem;
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
-.card-open-positions{
-    width: 100px;
-    border-radius: 20px;
-    margin: 4px;
+.card-open-positions {
+  width: 82px;
+  border-radius: 20px;
+  margin: 4px;
 }
 /* testing */
 
-#c1{
-background-color:#960365;
+#c1 {
+  background-color: #960365;
 }
-#c2{
-background-color:orange;
+#c2 {
+  background-color: orange;
 }
-#c3{
-background-color:blue;
+#c3 {
+  background-color: blue;
 }
-#c4{
-background-color:yellow;
+#c4 {
+  background-color: yellow;
 }
-#c5{
-background-color:red;
+#c5 {
+  background-color: red;
 }
+
+/* second page navbar */
+
+.navbarMangement-Container {
+  /* position: fixed; */
+  box-shadow: 0 9px 12px -2px rgba(0, 0, 0, 0.2);
+}
+.navbarMangement {
+  min-width: 68rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-Box {
+  display: flex;
+  justify-content: space-between;
+}
+.logo2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.inputText {
+  background-color: #e5e5e5;
+  border-radius: 20px;
+}
+.inputSecond {
+  min-width: 36rem;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: #e5e5e5;
+}
+.iconDivider {
+  position: relative;
+}
+.iconDivider::after {
+  content: "";
+  background-color: #545454;
+  width: 0.1rem;
+  height: 20px;
+  left: 30px;
+  top: 2px;
+  position: absolute;
+}
+#bell2nav i {
+  font-size: 1.8rem;
+}
+
+.items {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 30px;
+  color: #949494;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.items:nth-child(1):hover {
+  color: black;
+  cursor: pointer;
+  transition: linear 0.7s;
+  border-bottom: 3px solid rgb(231, 178, 3);
+}
+.items:nth-child(2):hover {
+  color: black;
+  cursor: pointer;
+  transition: linear 0.7s;
+  border-bottom: 3px solid rgb(231, 3, 3);
+}
+.items:nth-child(3):hover {
+  color: black;
+  cursor: pointer;
+  transition: linear 0.7s;
+  border-bottom: 3px solid rgb(17, 83, 1);
+}
+.items:nth-child(4):hover {
+  color: black;
+  cursor: pointer;
+  transition: linear 0.7s;
+  border-bottom: 3px solid rgb(30, 3, 231);
+}
+.items:nth-child(5):hover {
+  color: black;
+  cursor: pointer;
+  transition: linear 0.7s;
+  border-bottom: 3px solid rgb(231, 3, 170);
+}
+.items:nth-child(6):hover {
+  color: black;
+  cursor: pointer;
+  transition: linear 0.7s;
+  border-bottom: 3px solid rgb(231, 121, 3);
+}
+
+
+.img-col {
+  background-image: url(images/wizard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img-text {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+#img-head {
+  width: 150px;
+  margin: auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* scrollbar */
+.fixTableHead::-webkit-scrollbar {
+  width: 10px;
+}
+
+.fixTableHead::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.fixTableHead::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  outline: 1px solid slategrey;
+}
+
+
+
+/* for table */
+
+.fixTableHead { 
+  overflow-y: scroll; 
+  height: 202px; 
+} 
+.fixTableHead thead th { 
+  position: sticky; 
+  top: -0.7px; 
+} 
+table { 
+  border-collapse: collapse;         
+  width: 100%; 
+} 
+th, 
+td { 
+  padding: 8px 15px; 
+  
+
+} 
+/* tr{
+background-color: #949494;
+} */
+th { 
+  background: #fcfcfc; 
+} 
