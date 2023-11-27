@@ -1,0 +1,45 @@
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.head{
+    border-bottom: 2px solid black;
+   
+}
+
+.box-container {
+  background-color: black;
+  margin-left: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.box-container:hover{
+    background-color: rgb(10, 10, 10,0.9);
+}
+
+.img-container {
+  border: 3px solid rgb(218, 165, 32);
+  width: 100%;
+  height: 180px;
+  margin: 12px 0;
+  background-image: url(images/belt.jpg);
+  background-size: cover;
+}
+
+.text-content {
+  color: rgb(226, 168, 22);
+  font-size: 1.2rem;
+}
