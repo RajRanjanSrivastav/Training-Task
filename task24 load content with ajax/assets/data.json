@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "fruit": "Mango",
+        "veg": "Tomato"
+    },
+    {
+        "id": 2,
+        "fruit": "Apple",
+        "veg": "Cucumber"
+    },
+    {
+        "id": 3,
+        "fruit": "Avocados",
+        "veg": "Celery"
+    },
+    {
+        "id": 4,
+        "fruit": "Blueberry",
+        "veg": " Bitter gourd"
+    },
+    {
+        "id": 5,
+        "fruit": "Blackcurrant",
+        "veg": "Carrot"
+    },
+    {
+        "id": 6,
+        "fruit": "Ackee",
+        "veg": "Spring onion"
+    },
+    {
+        "id": 7,
+        "fruit": "Cherry",
+        "veg": "Potato"
+    },
+    {
+        "id": 9,
+        "fruit": "Grapefruitt",
+        "veg": "Turnip"
+    },
+    {
+        "id": 10,
+        "fruit": "Gooseberries",
+        "veg": "Brinjal"
+    },
+    {
+        "id": 11,
+        "fruit": "Chempedak",
+        "veg": "beans"
+    },
+    {
+        "id": 12,
+        "fruit": "Grapes",
+        "veg": "peas"
+    }
+]
