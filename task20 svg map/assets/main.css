@@ -1,0 +1,69 @@
+body {
+  /* background-color: black; */
+  /* overflow: hidden; */
+}
+path {
+  cursor: pointer;
+}
+path:hover {
+  fill: peru;
+}
+#Cname {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: italic;
+  display: inline;
+  border-bottom: 2px solid black;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 12px;
+  margin: 12px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+}
+nav ul li a:hover {
+  z-index: 22;
+  color: rgb(232, 232, 232, 0.8);
+  transition: all linear 0.8s;
+  border-bottom: 2px solid rgb(255, 0, 123);
+}
+
+.box img {
+  z-index: 1;
+  width: 100%;
+  border: 2px solid red;
+  height: 80vh;
+  object-fit: contain;
+}
+
+.box:before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: 6%;
+  z-index: -1;
+  background: url(images/earth.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotateZ(12deg);
+}
+
+.svg-cont {
+  width: 300px;
+  height: 80vh;
+  border: 2px solid red;
+  object-fit: contain;
+}
