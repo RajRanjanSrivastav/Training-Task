@@ -7,7 +7,7 @@ fetch("assets/data.json")
     return res.json();
   })
   .then((ans) => {
-    // console.log(ans);
+    console.log(ans);
     ans.map((e) => {
       str += `<div class="col-2">
         <div class="row flex-column box-container">
