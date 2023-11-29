@@ -45,12 +45,19 @@ body {
   object-fit: cover;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
 .nav {
   /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px;
+  background-color: white;
   box-shadow: 0px 15px 10px -15px #d6d6d6;
 }
 .logo {
@@ -143,14 +150,89 @@ body {
   font-size: 0.8rem;
 }
 
-
 /* start second slider */
-.head-text{
-    text-transform: uppercase;
-    color: #3e4152;
-    letter-spacing: .15em;
-    font-size: 1.8em;
-    margin: 50px 0 10px 30px;
-    max-height: 5em;
-    font-weight: 700;
+.head-text {
+  text-transform: uppercase;
+  color: #3e4152;
+  letter-spacing: 0.15em;
+  font-size: 1.8em;
+  margin: 50px 0 10px 30px;
+  max-height: 5em;
+  font-weight: 700;
+}
+
+/* category */
+.box-container:hover {
+  cursor: pointer;
+  background-color: rgba(63, 63, 63, 0.9);
+}
+
+.img-container {
+  border: 3px solid rgb(218, 165, 32);
+  width: 100%;
+  height: 180px;
+  margin: 12px 0;
+  background-image: url(images/belt.jpg);
+  background-size: cover;
+}
+
+.text-content {
+  color: rgb(226, 168, 22);
+  font-size: 1.2rem;
+}
+
+
+/* show all items */
+.box{
+  height: 250px;
+  background-image: url(images/ethnic/eth1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: 2px solid red; */
+}
+.box-cont{
+  position: relative;
+}
+.rating-cont{
+  background-color: rgb(255, 255, 255,0.7);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.rating{
+  font-size: 0.8rem;
+  color: rgb(1, 169, 85);
+}
+.price{
+  font-size: 0.9rem;
+}
+.mainbtn{
+  background-color: black;
+  color: white;
+  padding: 6px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 12px;
+}
+.mainbtn:hover{
+  background-color: rgb(41, 41, 41,0.9);
+}
+
+
+
+/* body  */
+/* #all-content{
+  display: none;
+} */
+#all-content{
+  border: 2px solid red;
+  padding: 0;
+  margin: 0;
 }
