@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "img": "assets/images/ethnic/eth1.webp",
+        "rating":"4.5",
+        "number":"3.2K",
+        "brand":"KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice":"4280",
+        "offer": "40"
+    },
+    {
+        "id": 2,
+        "img": "assets/images/ethnic/eth2.webp",
+        "rating":"3.5",
+        "number":"2K",
+        "brand":"KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice":"2080",
+        "offer": "30"
+    },
+    {
+        "id": 3,
+        "img": "assets/images/ethnic/eth3.webp",
+        "rating":"4.2",
+        "number":"4.2K",
+        "brand":"KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice":"1300",
+        "offer": "20"
+    },
+    {
+        "id": 4,
+        "img": "assets/images/ethnic/eth4.webp",
+        "rating":"3.8",
+        "number":"3.2K",
+        "brand":"KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice":"6880",
+        "offer": "70"
+    },
+    {
+        "id": 5,
+        "img": "assets/images/ethnic/eth5.webp",
+        "rating":"4",
+        "number":"32K",
+        "brand":"KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice":"3380",
+        "offer": "70"
+        
+    },
+    {
+        "id": 6,
+        "img": "assets/images/ethnic/eth6.webp",
+        "rating":"4",
+        "number":"32K",
+        "brand":"KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice":"3380",
+        "offer": "70"
+        
+    },
+    {
+        "id": 7,
+        "img": "assets/images/ethnic/eth7.webp",
+        "rating":"4",
+        "number":"32K",
+        "brand":"KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice":"3380",
+        "offer": "70"
+        
+    }
+    
+]

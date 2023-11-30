@@ -4,13 +4,11 @@
   font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica, Arial, sans-serif;
 }
-body {
-  overflow-x: hidden;
-}
 
 /* css for swiper slider */
 html,
 body {
+  overflow-x:hidden;
   position: relative;
   height: 100%;
 }
@@ -181,20 +179,18 @@ body {
   font-size: 1.2rem;
 }
 
-
 /* show all items */
-.box{
+.box {
   height: 250px;
-  background-image: url(images/ethnic/eth1.webp);
   background-repeat: no-repeat;
   background-size: cover;
   /* border: 2px solid red; */
 }
-.box-cont{
+.box-cont {
   position: relative;
 }
-.rating-cont{
-  background-color: rgb(255, 255, 255,0.7);
+.rating-cont {
+  background-color: rgb(255, 255, 255, 0.7);
   border-radius: 5px;
   position: absolute;
   bottom: 8px;
@@ -206,14 +202,14 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
 }
-.rating{
+.rating {
   font-size: 0.8rem;
   color: rgb(1, 169, 85);
 }
-.price{
+.price {
   font-size: 0.9rem;
 }
-.mainbtn{
+.mainbtn {
   background-color: black;
   color: white;
   padding: 6px;
@@ -221,18 +217,66 @@ body {
   border: none;
   border-radius: 12px;
 }
-.mainbtn:hover{
-  background-color: rgb(41, 41, 41,0.9);
+.mainbtn:hover {
+  background-color: rgb(41, 41, 41, 0.9);
+}
+
+#item-cont {
+  display: flex;
+  justify-content: center;
+}
+#all-content {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* footer */
+
+.footer-cont{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+.footer-list li {
+  cursor: pointer;
+  list-style: none;
+  color: #696b79;
+}
+
+/* play and app store images */
+.play{
+  cursor: pointer;
+  height: 70px;
+  width: 110%;
+  background-image: url(images/playstore.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.app{
+  background-image: url(images/appstore.png);
+  height: 60px;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
-
-/* body  */
-/* #all-content{
-  display: none;
-} */
-#all-content{
-  border: 2px solid red;
+.footer-icons{
+  display: flex;
+  justify-content: space-between;
   padding: 0;
-  margin: 0;
+  max-width: 140px;
+}
+.footer-icons li{
+  cursor: pointer;
+  list-style: none;
+
+}
+.footer-icons li i{
+  font-size: 1.4rem;
+  color: #282c3f;
 }
