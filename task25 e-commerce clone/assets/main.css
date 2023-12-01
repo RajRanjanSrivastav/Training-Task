@@ -147,6 +147,10 @@ body {
   font-weight: 700;
   font-size: 0.8rem;
 }
+.order a{
+  text-decoration: none;
+  color: black;
+}
 
 /* start second slider */
 .head-text {
@@ -160,25 +164,44 @@ body {
 }
 
 /* category */
+.box-container{
+  /* border: 2px solid black; */
+  position: relative;
+  /* margin:; */
+}
 .box-container:hover {
+  /* border: 2px solid black; */
   cursor: pointer;
   background-color: rgba(63, 63, 63, 0.9);
 }
 
 .img-container {
-  border: 3px solid rgb(218, 165, 32);
+  /* border: 3px solid rgb(218, 165, 32);  */
   width: 100%;
-  height: 180px;
-  margin: 12px 0;
-  background-image: url(images/belt.jpg);
+  height: 318px;
+  background-image: url(images/category/jewellary.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .text-content {
-  color: rgb(226, 168, 22);
+  /* color: rgb(226, 168, 22); */
   font-size: 1.2rem;
 }
-
+.text-on-image{
+  position: absolute;
+  text-align: center;
+  bottom: 6px;
+  left: 6px;
+  height: 100px;
+  width: 94%;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid red;
+  background-color: rgb(255, 72, 0,0.9);
+  
+}
 /* show all items */
 .box {
   height: 250px;
@@ -224,6 +247,7 @@ body {
 #item-cont {
   display: flex;
   justify-content: center;
+  /* border: 2px solid green; */
 }
 #all-content {
   /* border: 2px solid red; */
@@ -279,4 +303,20 @@ body {
 .footer-icons li i{
   font-size: 1.4rem;
   color: #282c3f;
+}
+
+
+
+/* add to cart navbar */
+.cart-navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status{
+  letter-spacing: 3px;
+  min-width: 400px;
+  font-size: 12px;
+  color: #696B79;
+  font-weight: 600px;
 }

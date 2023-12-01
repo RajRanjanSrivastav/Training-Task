@@ -31,53 +31,65 @@ fetch("assets/data.json")
   .then((ans) => {
     // console.log(ans);
     ans.map((e) => {
-      str += `<div class="col-2 item-click">
-        <div class="row flex-column box-container">
-          <div class="col">
-            <div class="img-container" style="background-image: url(${e.img});"></div>
-          </div>
-          <div class="col text-content text-center">
-            <p>
-              ${e.type} <br />
-              <span class="h3">${e.offer}</span> <br />
-              shop now
-            </p>
-          </div>
+      str += `<div class="col-2 item-click" key="${e.id}">
+      <div class="row box-container">
+        <div class="col p-0 img-container" style="background-image: url(${e.img});">
+          <p class="text-on-image mb-0">
+            ${e.type} <br />
+            <span class="h3">${e.offer}</span> <br />
+            shop now
+          </p>
         </div>
-      </div>`;
+      </div>
+    </div>`;
     });
     eleTrg.innerHTML = str;
   })
   .then(() => {
     let itemClick = document.querySelectorAll(".item-click");
 
-    console.log(itemClick.length);
+    // console.log(itemClick.length);
 
     // woking on ajax
 
     const xhr = new XMLHttpRequest();
     //open
-    xhr.open("GET", "assets/ethnic.json", true);
+    xhr.open("GET", "assets/allWear.json", true);
 
     // onloaad
-
     xhr.onload = function () {
       let data = JSON.parse(xhr.responseText);
-      console.log(data, "outer data");
-      console.log(itemClick, "outer data");
+      // console.log(data, "outer data");          //just checking for data is geting or not
+      // console.log(itemClick, "outer data");
       itemClick.forEach((element) => {
-        console.log(element);
+        // console.log(element);
         element.addEventListener("click", () => {
-          console.log(element, "ele");
+          let catgHeader = document.getElementById("category-header");
+          catgHeader.style.display = "block";
+          // console.log(element.getAttribute("key"), "ele"); //testing for the keys
+          let key = element.getAttribute("key"); //hold the key value
+          // console.log(key);
+          let ans = data[key - 1].items; //hold the internal array in a variable for use loop on it
+          // console.log(ans, "andar wala");
+          let category = data[key - 1].category;
+          console.log(category);
+          catgHeader.innerHTML = `<div class="col"><p class="mb-2 fw-bold text-uppercase">${category}</p></div>
+          <div class="col">
+            <p>
+              <span class="fw-bold text-uppercase">${category}</span>
+              <span style="color: #959595">- ${ans.length} items</span>
+            </p>
+          </div>`;
           let holder = "";
           let contChange = document.getElementById("all-content");
-          console.log(data, "data");
-          data.map((e) => {
-            console.log("andar");
-            let sellprice = (e.showPrice * e.offer) / 100;
+          // console.log(data, "data");
+          ans.map((e) => {
+            // console.log(e, "andar");
+            let per = Math.floor((e.showPrice * e.offer) / 100);
+            let sellprice = e.showPrice - per;
             holder += `
-            <div class="col-2 mt-5 m-2 ">
-              <div class="row mt-5 flex-column">
+            <div class="col-2 mt-4 m-2 ">
+              <div class="row mt-4 flex-column">
                 <div class="col box-cont">
                   <div class="box" style=" background-image: url(${e.img});"></div>
                   <p class="rating-cont">${e.rating} <i class="bi bi-star-fill rating"></i> | ${e.number}</p>
@@ -108,11 +120,9 @@ fetch("assets/data.json")
           contChange.innerHTML = holder;
         });
       });
-      console.log(itemClick);
-      console.log(data, "last");
+      // console.log(itemClick);
+      // console.log(data, "last");
     };
 
     xhr.send();
   });
-
-

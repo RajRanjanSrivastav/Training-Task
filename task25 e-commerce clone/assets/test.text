@@ -1,11 +1,4 @@
-[
-    {
-        "id": 1,
-        "img": "assets/images/category/activewear.jpg",
-        "type": "Active Wear",
-        "offer": "50-80% OFF"
-    },
-    {
+{
         "id": 2,
         "img": "assets/images/category/ethnic.jpg",
         "type": "Ethnic Wear",
@@ -83,4 +76,13 @@
         "type": "Headphones",
         "offer": "40-80% OFF"
     }
-]
+
+
+
+    <div class="col text-content text-center text-on-image">
+            <p>
+              ${e.type} <br />
+              <span class="h3">${e.offer}</span> <br />
+              shop now
+            </p>
+          </div>

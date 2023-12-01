@@ -6,15 +6,43 @@
     <title>test</title>
   </head>
   <body>
-    <div><p>testing</p></div>
+    <div><p onclick="collect(0)" style="cursor: pointer">testing</p></div>
+
+    
+    
     <script>
-      fetch("allWear.json").then((res) => {
-        console.log(res);
-        return res.json();
-      })
-      .then((ans)=>{
-        console.log(ans);
-      })
+      let data = [];
+      fetch("allWear.json")
+        .then((res) => {
+          console.log(res);
+          return res.json();
+        })
+        .then((ans) => {
+          // console.log(ans);
+          data = ans;
+          console.log(data);
+          return ans;
+        });
+      ;
+
+      // async function genRes(){
+      //   let res = await fetch('allWear.json');
+      //   data = await res.json();
+      //   console.log(data);
+      // }
+      
+      // genRes();
+      // console.log(data);
+      const collect = (id)=>{
+        console.log(id);
+        let hold = data[0].items;
+
+        hold.map((e)=>{
+          console.log(e.name);
+        })
+        console.log(hold);
+      }
+      console.log(data);
     </script>
   </body>
 </html>

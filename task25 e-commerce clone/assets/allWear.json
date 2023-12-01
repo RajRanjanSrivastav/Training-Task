@@ -1,0 +1,1066 @@
+[
+  {
+    "id": 0,
+    "category": "Active Wear",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/active/active1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Track Pant",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/active/active2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Jacket",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/active/active3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Tshirt",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/active/active4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Track Pant",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/active/active5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Track Pant",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/active/active6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Gym Dress",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/active/active7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Running Shoes",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "category": "Ethnic Wear",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/ethnic/eth1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/ethnic/eth2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "2080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/ethnic/eth3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "1300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/ethnic/eth4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "6880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/ethnic/eth5.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/ethnic/eth6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/ethnic/eth7.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Casual Wear",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/casual/cas1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Sweatshirt",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/casual/cas2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Shirts",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/casual/cas3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Sweatshirt",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/casual/cas4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Sweatshirt",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/casual/cas5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Shirt",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/casual/cas6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Shirt",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/casual/cas7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Shirt",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Office Wear",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/office/off1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Pant",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/office/off2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Pant",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/office/off3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Pant",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/office/off4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Pant",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/office/off5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Pant",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/office/off6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Shirt",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/office/off7.jpg",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Top",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Active Wear",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/active/active1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Track Pant",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/active/active2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Jacket",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/active/active3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Tshirt",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/active/active4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Track Pant",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/active/active5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Track Pant",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/active/active6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Gym Dress",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/active/active7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Running Shoes",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "flip flop",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/flipflop/flip1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "NEEMANS",
+        "type": "Rubber Thoung Flip-Flop",
+        "showPrice": "4280",
+        "offer": "30"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/flipflop/flip2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Rubber Thoung Flip-Flop",
+        "showPrice": "6080",
+        "offer": "50"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/flipflop/flip3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NEEMANS",
+        "type": "Rubber Thoung Flip-Flop",
+        "showPrice": "4300",
+        "offer": "70"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/flipflop/flip4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Rubber Thoung Flip-Flop",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/flipflop/flip5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "MAX",
+        "type": "Rubber Thoung Flip-Flop",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/flipflop/flip6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "PUMA",
+        "type": "Men Rubber Sliders",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/flipflop/flip7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "Red Tape",
+        "type": "Men Rubber Sliders",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "jewellery",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/jewellery/jwel1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "Zaveri Pearls",
+        "type": "Women Jewellery Set",
+        "showPrice": "4280",
+        "offer": "80"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/jewellery/jwel2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "KARATCART",
+        "type": "Gold-Plated Jewellary Set",
+        "showPrice": "2396",
+        "offer": "72"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/jewellery/jwel3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "Shinig Diva Fashion",
+        "type": "Women Jewellery Set",
+        "showPrice": "1870",
+        "offer": "83"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/jewellery/jwel4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "Shinig Diva Fashion",
+        "type": "Women Jewellery Set",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/jewellery/jwel5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "KARATCART",
+        "type": "Women Jewellery Set",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/jewellery/jwel6.jpg",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Women Jewellery Set",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/jewellery/jwel7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "Shinig Diva Fashion",
+        "type": "Women Jewellery Set",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "category": "shoes",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/shoes/sho1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/shoes/sho2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/shoes/sho3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/shoes/sho4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/shoes/sho5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/shoes/sho6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/shoes/sho7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "category": "watch",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/watch/watch1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/watch/watch2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/watch/watch3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/watch/watch4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/watch/watch5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/watch/watch6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/watch/watch7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "category": "sleep wear",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/active/active1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/active/active2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/active/active3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/active/active4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/active/active5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/active/active6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/active/active7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "category": "perfume",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/perfume/per1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/perfume/per2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/perfume/per3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/perfume/per4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/perfume/per5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/perfume/per6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/perfume/per7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "category": "HandBag",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/handbag/bag1.jpg",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/handbag/bag2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/handbag/bag3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/handbag/bag4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/handbag/bag5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/handbag/bag6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/handbag/bag7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "category": "sports",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/active/active1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/active/active2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/active/active3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/active/active4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/active/active5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/active/active6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/active/active7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "category": "Head Phones",
+    "items": [
+      {
+        "id": 1,
+        "img": "assets/images/headphone/head1.webp",
+        "rating": "4.5",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4280",
+        "offer": "40"
+      },
+      {
+        "id": 2,
+        "img": "assets/images/headphone/head2.webp",
+        "rating": "3.5",
+        "number": "2K",
+        "brand": "PUMA",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "6080",
+        "offer": "30"
+      },
+      {
+        "id": 3,
+        "img": "assets/images/headphone/head3.webp",
+        "rating": "4.2",
+        "number": "4.2K",
+        "brand": "NIKE",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4300",
+        "offer": "20"
+      },
+      {
+        "id": 4,
+        "img": "assets/images/headphone/head4.webp",
+        "rating": "3.8",
+        "number": "3.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "5880",
+        "offer": "70"
+      },
+      {
+        "id": 5,
+        "img": "assets/images/headphone/head5.webp",
+        "rating": "4",
+        "number": "1.2K",
+        "brand": "HRX",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "4380",
+        "offer": "70"
+      },
+      {
+        "id": 6,
+        "img": "assets/images/headphone/head6.webp",
+        "rating": "4",
+        "number": "32K",
+        "brand": "KALANI",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "70"
+      },
+      {
+        "id": 7,
+        "img": "assets/images/headphone/head7.webp",
+        "rating": "4",
+        "number": "1K",
+        "brand": "AVANT",
+        "type": "Kurta with trouser and dupatta",
+        "showPrice": "3380",
+        "offer": "80"
+      }
+    ]
+  }
+]

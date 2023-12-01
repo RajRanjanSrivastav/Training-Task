@@ -26,6 +26,13 @@
     <!-- main css file -->
     <link rel="stylesheet" href="assets/main.css" />
 
+    <!-- logo link -->
+    <link
+      rel="icon"
+      href="assets/images/myntra_logo.webp"
+      type="image/icon type"
+    />
+
     <title>Myntra.com</title>
   </head>
   <body id="body-cont">
@@ -80,8 +87,10 @@
                 <div class="text">Wishlist</div>
               </div>
               <div class="order same">
-                <div class="icon"><i class="bi bi-bag"></i></div>
+                <a href="assets/addCart.html">
+                <div class="icon ms-1"><i class="bi bi-bag"></i></div>
                 <div class="text">Order</div>
+                </a>
               </div>
             </div>
           </div>
@@ -90,6 +99,11 @@
       <!-- navbar end -->
 
       <!-- header slider start  -->
+      <div
+        class="row flex-column ms-4"
+        style="margin-top: 8rem; display: none"
+        id="category-header"
+      ></div>
       <div class="row p-0" id="all-content">
         <!-- <section id="all-content"> -->
         <!-- <div class="row" id="all-content"> -->
@@ -225,12 +239,26 @@
             <p class="head-text">Shop by category</p>
           </div>
         </div>
-        <div class="row ms-2 me-2 item-contClass" id="item-cont"></div>
+        <div class="row gx-5 gy-5 mt-2 item-contClass" id="item-cont">
+          <!-- <div class="col-2 item-click" key="${e.id}">
+            <div class="row box-container">
+              <div class="col p-0">
+                <div class="img-container m-0">
+                  <p class="text-on-image mb-0">
+                    active <br />
+                    <span class="h3">50-70 OFF</span> <br />
+                    shop now
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
         <!-- </div> -->
       </div>
 
       <!-- footer -->
-      <div class="row  footer-cont">
+      <div class="row footer-cont">
         <div class="col-2">
           <ul class="footer-list">
             <li class="mb-3 fw-bold text-black">ONLINE SHOPPING</li>
@@ -292,7 +320,13 @@
           <div class="row flex-column">
             <div class="col">
               <div class="row">
-                <div class="col-2 p-0" style="width: 66px;"><img src="assets/images/original.png" alt="" class="img-fluid"></div>
+                <div class="col-2 p-0" style="width: 66px">
+                  <img
+                    src="assets/images/original.png"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
                 <div class="col ps-2">
                   <p>
                     <span class="fw-bold">100% ORIGINAL</span> guarantee for all
@@ -303,10 +337,16 @@
             </div>
             <div class="col">
               <div class="row">
-                <div class="col-2 p-0" style="width: 66px;"><img src="assets/images/retrun14.png" alt="" class="img-fluid"></div>
+                <div class="col-2 p-0" style="width: 66px">
+                  <img
+                    src="assets/images/retrun14.png"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
                 <div class="col ps-2">
                   <p>
-                    <span class="fw-bold ">Return within 14days</span> of
+                    <span class="fw-bold">Return within 14days</span> of
                     receiving your order
                   </p>
                 </div>
