@@ -8,9 +8,10 @@
 /* css for swiper slider */
 html,
 body {
-  overflow-x:hidden;
+  overflow-x: hidden;
   position: relative;
   height: 100%;
+  font-family: Assistant, Helvetica, Arial, sans-serif !important;
 }
 
 /* body {
@@ -65,6 +66,7 @@ body {
   width: 5vw;
   height: 5vw;
   margin-left: 40px;
+  cursor: pointer;
 }
 
 /* list catg */
@@ -85,7 +87,8 @@ body {
 .catg ul li a {
   text-decoration: none;
   color: rgb(15, 15, 15, 0.9);
-  font-size: 0.9rem;
+  font-size: 14px;
+  letter-spacing: 0.3px;
   font-weight: 700;
   text-transform: uppercase;
   border-bottom: 2px solid rgb(255, 255, 255);
@@ -147,7 +150,40 @@ body {
   font-weight: 700;
   font-size: 0.8rem;
 }
-.order a{
+.profile {
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+
+/* counter add to cart */
+.order{
+  position: relative;
+}
+#counter{
+  text-align: center;
+  line-height: 18px;
+  padding: 0 6px;
+  height: 18px;
+  background: #ff3f6c;
+  position: absolute;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #fff;
+  left: 16px;
+  top: -2px;
+  font-weight: 700;;
+}
+.profile:hover::after {
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 2px;
+  bottom: -20px;
+  left: 0;
+  background-color: red;
+}
+.order a {
   text-decoration: none;
   color: black;
 }
@@ -164,7 +200,7 @@ body {
 }
 
 /* category */
-.box-container{
+.box-container {
   /* border: 2px solid black; */
   position: relative;
   /* margin:; */
@@ -189,7 +225,7 @@ body {
   /* color: rgb(226, 168, 22); */
   font-size: 1.2rem;
 }
-.text-on-image{
+.text-on-image {
   position: absolute;
   text-align: center;
   bottom: 6px;
@@ -199,8 +235,7 @@ body {
   border-radius: 5px;
   color: white;
   border: 2px solid red;
-  background-color: rgb(255, 72, 0,0.9);
-  
+  background-color: rgb(255, 72, 0, 0.9);
 }
 /* show all items */
 .box {
@@ -259,7 +294,7 @@ body {
 
 /* footer */
 
-.footer-cont{
+.footer-cont {
   display: flex;
   justify-content: space-around;
   margin-top: 5rem;
@@ -272,7 +307,7 @@ body {
 }
 
 /* play and app store images */
-.play{
+.play {
   cursor: pointer;
   height: 70px;
   width: 110%;
@@ -280,7 +315,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.app{
+.app {
   background-image: url(images/appstore.png);
   height: 60px;
   cursor: pointer;
@@ -288,35 +323,106 @@ body {
   background-repeat: no-repeat;
 }
 
-
-.footer-icons{
+.footer-icons {
   display: flex;
   justify-content: space-between;
   padding: 0;
   max-width: 140px;
 }
-.footer-icons li{
+.footer-icons li {
   cursor: pointer;
   list-style: none;
-
 }
-.footer-icons li i{
+.footer-icons li i {
   font-size: 1.4rem;
   color: #282c3f;
 }
 
-
-
 /* add to cart navbar */
-.cart-navbar{
+.cart-navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.status{
+.status {
   letter-spacing: 3px;
   min-width: 400px;
   font-size: 12px;
-  color: #696B79;
+  color: #696b79;
   font-weight: 600px;
+}
+
+/* buttons of shopping bag */
+.twoBtn button {
+  border: none;
+  color: #696b79;
+  text-transform: uppercase;
+  background-color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px;
+}
+#remove:hover{
+  transition: all linear 0.4s;
+  color: rgb(47, 47, 47);
+}
+#remove {
+  border-right: 1px solid #696b79;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+}
+.card img {
+  height: 100%;
+  width: 150px;
+}
+.card-body p {
+  padding: 0;
+  margin: 0;
+  margin: 6px 0;
+}
+
+.size {
+  padding: 2px 8px;
+  background: #ececec;
+  color: #282c3f;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2px;
+  line-height: 16px;
+}
+.qyt {
+  padding: 2px 16px;
+  background: #ececec;
+  color: #282c3f;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2px;
+  line-height: 16px;
+}
+
+#total-amount{
+  box-sizing: content-box;
+  /* border: 2px solid red; */
+  width: 90%;
+  margin: auto;
+  font-weight: 700;
+}
+.order-place{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-radius: 2px;
+  background-color: rgb(255, 63, 108);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.order-place:hover{
+  background-color: rgb(244, 35, 84);
+}
+.know{
+  color: rgb(255, 63, 108);
+  font-weight: 700;
 }

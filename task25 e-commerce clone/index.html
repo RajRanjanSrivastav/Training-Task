@@ -35,7 +35,7 @@
 
     <title>Myntra.com</title>
   </head>
-  <body id="body-cont">
+  <body id="body-cont" onload="fetchAllPrev()">
     <div class="container-fluid p-0">
       <!-- navbar start -->
       <div class="row navbar p-0" style="width: 101%">
@@ -88,9 +88,10 @@
               </div>
               <div class="order same">
                 <a href="assets/addCart.html">
-                <div class="icon ms-1"><i class="bi bi-bag"></i></div>
-                <div class="text">Order</div>
+                  <div class="icon ms-1"><i class="bi bi-bag"></i></div>
+                  <div class="text">Order</div>
                 </a>
+                <div id="counter" style="display: none">0</div>
               </div>
             </div>
           </div>
@@ -100,10 +101,10 @@
 
       <!-- header slider start  -->
       <div
-        class="row flex-column ms-4"
+        class="row flex-column ms-4" 
         style="margin-top: 8rem; display: none"
         id="category-header"
-      ></div>
+      ></div>   
       <div class="row p-0" id="all-content">
         <!-- <section id="all-content"> -->
         <!-- <div class="row" id="all-content"> -->
@@ -294,10 +295,19 @@
             <div class="col">
               <div class="row">
                 <div class="col mt-3 mb-2">
-                  <div class="play"></div>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.myntra.android&hl=en_IN&gl=US&pli=1"
+                    target="_blank"
+                  >
+                    <div class="play"></div>
+                  </a>
                 </div>
                 <div class="col mt-3 mb-2">
-                  <div class="app"></div>
+                  <a
+                    href="https://apps.apple.com/in/app/myntra-fashion-shopping-app/id907394059"
+                    target="_blank"
+                    ><div class="app"></div
+                  ></a>
                 </div>
               </div>
             </div>

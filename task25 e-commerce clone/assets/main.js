@@ -19,6 +19,36 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
+// fucntion run when body reload
+let cnt = 0;
+let data; //for storing array of objects
+
+let arrHolder = []; //for storing object of selected items
+const fetchAllPrev = () => {
+  let counterEle = document.getElementById("counter");
+
+  cnt = localStorage.getItem("counter");
+  // console.log(cnt);
+  if (cnt != null) {
+    counterEle.style.display = "block";
+    counterEle.innerText = cnt;
+  } else {
+    counterEle.style.display = "none";
+  }
+
+  // console.log("agya mai");
+
+  // fetch all the preivoud add item data
+  if (JSON.parse(localStorage.getItem("itemArr") != null)) {
+    let parseData = JSON.parse(localStorage.getItem("itemArr"));
+    parseData.map((e) => {
+      arrHolder.push(e);
+    });
+    // arrHolder.push(JSON.parse(localStorage.getItem("itemArr")));
+    // console.log(JSON.parse(localStorage.getItem("itemArr")));
+  }
+};
+
 // fetch data by json
 let eleTrg = document.getElementById("item-cont");
 let str = "";
@@ -58,7 +88,7 @@ fetch("assets/data.json")
 
     // onloaad
     xhr.onload = function () {
-      let data = JSON.parse(xhr.responseText);
+      data = JSON.parse(xhr.responseText);
       // console.log(data, "outer data");          //just checking for data is geting or not
       // console.log(itemClick, "outer data");
       itemClick.forEach((element) => {
@@ -72,7 +102,7 @@ fetch("assets/data.json")
           let ans = data[key - 1].items; //hold the internal array in a variable for use loop on it
           // console.log(ans, "andar wala");
           let category = data[key - 1].category;
-          console.log(category);
+          // console.log(category);
           catgHeader.innerHTML = `<div class="col"><p class="mb-2 fw-bold text-uppercase">${category}</p></div>
           <div class="col">
             <p>
@@ -104,7 +134,7 @@ fetch("assets/data.json")
                     <span style="font-size: 12px; color: red;">(${e.offer}% OFF)</span>
                   </p>
                 </div>
-                <div class="col">
+                <div class="col" onclick="addToCart(${e.id},${key})">
                   <button class="mainbtn" style="width: 100%">Add To Cart</button>
                 </div>
                 <div class="col">
@@ -126,3 +156,26 @@ fetch("assets/data.json")
 
     xhr.send();
   });
+
+const addToCart = (id, key) => {
+  let arr = []; //for storing object which is used to reder the items in add to cart page
+  let counterEle = document.getElementById("counter");
+  counterEle.style.display = "block";
+  cnt++;
+  // console.log(id, id2, key, "cart");
+  // console.log(data[key-1].items[id-1]);
+  arr.push(data[key - 1].items[id - 1]);
+
+  arr.map((e) => {
+    arrHolder.push(e);
+  });
+  // console.log(arrHolder, "third");
+  localStorage.setItem("counter", cnt);
+  localStorage.setItem("itemArr", JSON.stringify(arrHolder));
+
+  // console.log(cartEle, "ele cart wala");
+  counterEle.innerText = cnt;
+};
+// console.log(JSON.parse(localStorage.getItem("itemArr")));
+
+// for addCart page
