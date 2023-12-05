@@ -23,6 +23,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <!-- loco css -->
+    <link rel="stylesheet" href="assets/loco.css" />
     <!-- main css file -->
     <link rel="stylesheet" href="assets/main.css" />
 
@@ -36,36 +38,1146 @@
     <title>Myntra.com</title>
   </head>
   <body id="body-cont" onload="fetchAllPrev()">
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" id="main">
       <!-- navbar start -->
-      <div class="row navbar p-0" style="width: 101%">
-        <div class="col p-0">
-          <div class="nav">
-            <!-- logo -->
-            <div class="logo">
-              <a href=""
-                ><img
-                  src="assets/images/myntra_logo.webp"
-                  alt="logo"
-                  class="img-fluid"
-              /></a>
-            </div>
+      <div class="navbar-top">
+        <div class="row justify-content-around align-items-center">
+          <div class="col-1 text-center">
+            <a href=""
+              ><img
+                src="assets/images/myntra_logo.webp"
+                alt="logo"
+                class="img-fluid logo"
+            /></a>
+          </div>
+          <div class="col-5 catg">
+            <ul>
+              <li class="menu-name">
+                <a href="" class="dropdownEle">Men</a>
+                <div class="menu-box">
+                  <div class="row justify-content-around">
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
 
-            <!-- list catag -->
-            <div class="catg">
-              <ul>
-                <li><a href="">Men</a></li>
-                <li><a href="">woMen</a></li>
-                <li><a href="">kids</a></li>
-                <li><a href="">home & living</a></li>
-                <li><a href="">beauty</a></li>
-                <li>
-                  <a href="">studio <sup>new</sup></a>
-                </li>
-              </ul>
-            </div>
+                    <!-- <div class="col-2">
+                      <h5>Bottom Wears</h5>
+                      <a href="">Jeans</a>
+                      <a href=""> Casual Trousers</a>
+                      <a href="">Formal Torusers</a>
+                      <a href="">Shorts</a>
+                      <a href="">Track pants and Joggers</a>
 
-            <!-- search bar -->
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Innerwears & Sleepwear</h5>
+                      <a href="">Briefs & Trunks</a>
+                      <a href="">Boxers</a>
+                      <a href="">Vests</a>
+                      <a href="">Sleepwear & Loungwear</a>
+                      <a href="">Thermals</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Plus Size</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Footwear</h5>
+                      <a href="">Csaual Shoes</a>
+                      <a href=""> Sports Shoes</a>
+                      <a href="">Formal Shoes</a>
+                      <a href="">Sneakers</a>
+                      <a href="">Sandals & Floaters</a>
+                      <a href="">Flip Flops</a>
+                      <a href="">Socks</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Personal Care & Grooming</h5>
+                      <h5>Sunglasses & Frames</h5>
+                      <h5>Watches</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Sports & Active Wears</h5>
+                      <a href="">Sports Shoes</a>
+                      <a href=""> Sports Sandals</a>
+                      <a href="">Active T-Shirts</a>
+                      <a href="">Track Pants & Shorts</a>
+                      <a href="">Track Suits</a>
+                      <a href="">Jackets & Sweatshirts</a>
+                      <a href="">Sports Accessories</a>
+                      <a href="">Swimwear</a>
+
+                      <div class="hr" style="width: 12rem"></div>
+                      <h5>Gadgets</h5>
+                      <a href="">Smart Wearbles</a>
+                      <a href="">Fitness Gadgets</a>
+                      <a href="">Headphones</a>
+                      <a href="">Speakers</a>
+                    </div>
+                    <div class="col-2">
+                      <h5>Fashion Accessories</h5>
+                      <a href="">Wallets</a>
+                      <a href=""> Belts</a>
+                      <a href="">Perfumes & Body Mists</a>
+                      <a href="">Trimmers</a>
+                      <a href="">Deodorants</a>
+                      <a href="">Ties, Cufflinks & Pocket Squares</a>
+                      <a href="">Accessory Gift Sets</a>
+                      <a href="">Caps & Hats</a>
+                      <a href="">Mufflers, Scarves & Gloves</a>
+                      <a href="">Phone Cases</a>
+                      <a href="">Rings & Wristwear</a>
+                      <a href="">Helmets</a>
+
+                      <div class="hr" style="width: 16rem"></div>
+                      <h5 class="mb-3">Bags & Backpacks</h5>
+                      <h5>Luggages & Trolleys</h5>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="menu-name">
+                <a href="">woMen</a>
+                <div class="menu-box">
+                  <div class="row justify-content-around">
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- <div class="col-2">
+                      <h5>Bottom Wears</h5>
+                      <a href="">Jeans</a>
+                      <a href=""> Casual Trousers</a>
+                      <a href="">Formal Torusers</a>
+                      <a href="">Shorts</a>
+                      <a href="">Track pants and Joggers</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Innerwears & Sleepwear</h5>
+                      <a href="">Briefs & Trunks</a>
+                      <a href="">Boxers</a>
+                      <a href="">Vests</a>
+                      <a href="">Sleepwear & Loungwear</a>
+                      <a href="">Thermals</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Plus Size</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Footwear</h5>
+                      <a href="">Csaual Shoes</a>
+                      <a href=""> Sports Shoes</a>
+                      <a href="">Formal Shoes</a>
+                      <a href="">Sneakers</a>
+                      <a href="">Sandals & Floaters</a>
+                      <a href="">Flip Flops</a>
+                      <a href="">Socks</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Personal Care & Grooming</h5>
+                      <h5>Sunglasses & Frames</h5>
+                      <h5>Watches</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Sports & Active Wears</h5>
+                      <a href="">Sports Shoes</a>
+                      <a href=""> Sports Sandals</a>
+                      <a href="">Active T-Shirts</a>
+                      <a href="">Track Pants & Shorts</a>
+                      <a href="">Track Suits</a>
+                      <a href="">Jackets & Sweatshirts</a>
+                      <a href="">Sports Accessories</a>
+                      <a href="">Swimwear</a>
+
+                      <div class="hr" style="width: 12rem"></div>
+                      <h5>Gadgets</h5>
+                      <a href="">Smart Wearbles</a>
+                      <a href="">Fitness Gadgets</a>
+                      <a href="">Headphones</a>
+                      <a href="">Speakers</a>
+                    </div>
+                    <div class="col-2">
+                      <h5>Fashion Accessories</h5>
+                      <a href="">Wallets</a>
+                      <a href=""> Belts</a>
+                      <a href="">Perfumes & Body Mists</a>
+                      <a href="">Trimmers</a>
+                      <a href="">Deodorants</a>
+                      <a href="">Ties, Cufflinks & Pocket Squares</a>
+                      <a href="">Accessory Gift Sets</a>
+                      <a href="">Caps & Hats</a>
+                      <a href="">Mufflers, Scarves & Gloves</a>
+                      <a href="">Phone Cases</a>
+                      <a href="">Rings & Wristwear</a>
+                      <a href="">Helmets</a>
+
+                      <div class="hr" style="width: 16rem"></div>
+                      <h5 class="mb-3">Bags & Backpacks</h5>
+                      <h5>Luggages & Trolleys</h5>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="menu-name">
+                <a href="">kids</a>
+                <div class="menu-box">
+                  <div class="row justify-content-around">
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- <div class="col-2">
+                      <h5>Bottom Wears</h5>
+                      <a href="">Jeans</a>
+                      <a href=""> Casual Trousers</a>
+                      <a href="">Formal Torusers</a>
+                      <a href="">Shorts</a>
+                      <a href="">Track pants and Joggers</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Innerwears & Sleepwear</h5>
+                      <a href="">Briefs & Trunks</a>
+                      <a href="">Boxers</a>
+                      <a href="">Vests</a>
+                      <a href="">Sleepwear & Loungwear</a>
+                      <a href="">Thermals</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Plus Size</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Footwear</h5>
+                      <a href="">Csaual Shoes</a>
+                      <a href=""> Sports Shoes</a>
+                      <a href="">Formal Shoes</a>
+                      <a href="">Sneakers</a>
+                      <a href="">Sandals & Floaters</a>
+                      <a href="">Flip Flops</a>
+                      <a href="">Socks</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Personal Care & Grooming</h5>
+                      <h5>Sunglasses & Frames</h5>
+                      <h5>Watches</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Sports & Active Wears</h5>
+                      <a href="">Sports Shoes</a>
+                      <a href=""> Sports Sandals</a>
+                      <a href="">Active T-Shirts</a>
+                      <a href="">Track Pants & Shorts</a>
+                      <a href="">Track Suits</a>
+                      <a href="">Jackets & Sweatshirts</a>
+                      <a href="">Sports Accessories</a>
+                      <a href="">Swimwear</a>
+
+                      <div class="hr" style="width: 12rem"></div>
+                      <h5>Gadgets</h5>
+                      <a href="">Smart Wearbles</a>
+                      <a href="">Fitness Gadgets</a>
+                      <a href="">Headphones</a>
+                      <a href="">Speakers</a>
+                    </div>
+                    <div class="col-2">
+                      <h5>Fashion Accessories</h5>
+                      <a href="">Wallets</a>
+                      <a href=""> Belts</a>
+                      <a href="">Perfumes & Body Mists</a>
+                      <a href="">Trimmers</a>
+                      <a href="">Deodorants</a>
+                      <a href="">Ties, Cufflinks & Pocket Squares</a>
+                      <a href="">Accessory Gift Sets</a>
+                      <a href="">Caps & Hats</a>
+                      <a href="">Mufflers, Scarves & Gloves</a>
+                      <a href="">Phone Cases</a>
+                      <a href="">Rings & Wristwear</a>
+                      <a href="">Helmets</a>
+
+                      <div class="hr" style="width: 16rem"></div>
+                      <h5 class="mb-3">Bags & Backpacks</h5>
+                      <h5>Luggages & Trolleys</h5>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="menu-name">
+                <a href="">home & living</a>
+                <div class="menu-box">
+                  <div class="row justify-content-around">
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- <div class="col-2">
+                      <h5>Bottom Wears</h5>
+                      <a href="">Jeans</a>
+                      <a href=""> Casual Trousers</a>
+                      <a href="">Formal Torusers</a>
+                      <a href="">Shorts</a>
+                      <a href="">Track pants and Joggers</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Innerwears & Sleepwear</h5>
+                      <a href="">Briefs & Trunks</a>
+                      <a href="">Boxers</a>
+                      <a href="">Vests</a>
+                      <a href="">Sleepwear & Loungwear</a>
+                      <a href="">Thermals</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Plus Size</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Footwear</h5>
+                      <a href="">Csaual Shoes</a>
+                      <a href=""> Sports Shoes</a>
+                      <a href="">Formal Shoes</a>
+                      <a href="">Sneakers</a>
+                      <a href="">Sandals & Floaters</a>
+                      <a href="">Flip Flops</a>
+                      <a href="">Socks</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Personal Care & Grooming</h5>
+                      <h5>Sunglasses & Frames</h5>
+                      <h5>Watches</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Sports & Active Wears</h5>
+                      <a href="">Sports Shoes</a>
+                      <a href=""> Sports Sandals</a>
+                      <a href="">Active T-Shirts</a>
+                      <a href="">Track Pants & Shorts</a>
+                      <a href="">Track Suits</a>
+                      <a href="">Jackets & Sweatshirts</a>
+                      <a href="">Sports Accessories</a>
+                      <a href="">Swimwear</a>
+
+                      <div class="hr" style="width: 12rem"></div>
+                      <h5>Gadgets</h5>
+                      <a href="">Smart Wearbles</a>
+                      <a href="">Fitness Gadgets</a>
+                      <a href="">Headphones</a>
+                      <a href="">Speakers</a>
+                    </div>
+                    <div class="col-2">
+                      <h5>Fashion Accessories</h5>
+                      <a href="">Wallets</a>
+                      <a href=""> Belts</a>
+                      <a href="">Perfumes & Body Mists</a>
+                      <a href="">Trimmers</a>
+                      <a href="">Deodorants</a>
+                      <a href="">Ties, Cufflinks & Pocket Squares</a>
+                      <a href="">Accessory Gift Sets</a>
+                      <a href="">Caps & Hats</a>
+                      <a href="">Mufflers, Scarves & Gloves</a>
+                      <a href="">Phone Cases</a>
+                      <a href="">Rings & Wristwear</a>
+                      <a href="">Helmets</a>
+
+                      <div class="hr" style="width: 16rem"></div>
+                      <h5 class="mb-3">Bags & Backpacks</h5>
+                      <h5>Luggages & Trolleys</h5>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="menu-name">
+                <a href="">beauty</a>
+                <div class="menu-box">
+                  <div class="row justify-content-around">
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a style="color: #ee5f73" class="menu-a">Top Wears</a>
+                        </li>
+                        <li><a href="" class="menu-a">T-shirts</a></li>
+                        <li><a href="" class="menu-a"> Casual shirts</a></li>
+                        <li><a href="" class="menu-a">Formal shirts</a></li>
+                        <li><a href="" class="menu-a">Sweatshirts</a></li>
+                        <li><a href="" class="menu-a">Sweaters</a></li>
+                        <li><a href="" class="menu-a">Jackets</a></li>
+                        <li><a href="" class="menu-a">Blazers & Coats</a></li>
+                        <li><a href="" class="menu-a">Suits </a></li>
+                        <li><a href="" class="menu-a">Rain Jackets</a></li>
+                      </ul>
+                      <ul class="menu-list-ul">
+                        <li>
+                          <a class="menu-a">Indian & Festive Wear</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-a">Kurtas & Kurta Sets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Sherwains </a></li>
+                        <li>
+                          <a href="" class="menu-a">Nehru Jackets</a>
+                        </li>
+                        <li><a href="" class="menu-a">Dhotis</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- <div class="col-2">
+                      <h5>Bottom Wears</h5>
+                      <a href="">Jeans</a>
+                      <a href=""> Casual Trousers</a>
+                      <a href="">Formal Torusers</a>
+                      <a href="">Shorts</a>
+                      <a href="">Track pants and Joggers</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Innerwears & Sleepwear</h5>
+                      <a href="">Briefs & Trunks</a>
+                      <a href="">Boxers</a>
+                      <a href="">Vests</a>
+                      <a href="">Sleepwear & Loungwear</a>
+                      <a href="">Thermals</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Plus Size</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Footwear</h5>
+                      <a href="">Csaual Shoes</a>
+                      <a href=""> Sports Shoes</a>
+                      <a href="">Formal Shoes</a>
+                      <a href="">Sneakers</a>
+                      <a href="">Sandals & Floaters</a>
+                      <a href="">Flip Flops</a>
+                      <a href="">Socks</a>
+
+                      <div class="hr" style="width: 15rem"></div>
+                      <h5>Personal Care & Grooming</h5>
+                      <h5>Sunglasses & Frames</h5>
+                      <h5>Watches</h5>
+                    </div>
+                    <div class="col-2">
+                      <h5>Sports & Active Wears</h5>
+                      <a href="">Sports Shoes</a>
+                      <a href=""> Sports Sandals</a>
+                      <a href="">Active T-Shirts</a>
+                      <a href="">Track Pants & Shorts</a>
+                      <a href="">Track Suits</a>
+                      <a href="">Jackets & Sweatshirts</a>
+                      <a href="">Sports Accessories</a>
+                      <a href="">Swimwear</a>
+
+                      <div class="hr" style="width: 12rem"></div>
+                      <h5>Gadgets</h5>
+                      <a href="">Smart Wearbles</a>
+                      <a href="">Fitness Gadgets</a>
+                      <a href="">Headphones</a>
+                      <a href="">Speakers</a>
+                    </div>
+                    <div class="col-2">
+                      <h5>Fashion Accessories</h5>
+                      <a href="">Wallets</a>
+                      <a href=""> Belts</a>
+                      <a href="">Perfumes & Body Mists</a>
+                      <a href="">Trimmers</a>
+                      <a href="">Deodorants</a>
+                      <a href="">Ties, Cufflinks & Pocket Squares</a>
+                      <a href="">Accessory Gift Sets</a>
+                      <a href="">Caps & Hats</a>
+                      <a href="">Mufflers, Scarves & Gloves</a>
+                      <a href="">Phone Cases</a>
+                      <a href="">Rings & Wristwear</a>
+                      <a href="">Helmets</a>
+
+                      <div class="hr" style="width: 16rem"></div>
+                      <h5 class="mb-3">Bags & Backpacks</h5>
+                      <h5>Luggages & Trolleys</h5>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="menu-name">
+                <a href="">studio <sup>new</sup></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
             <div class="search">
               <span><i class="bi bi-search"></i></span>
               <input
@@ -73,22 +1185,24 @@
                 placeholder="Search for products, brands and more"
               />
             </div>
-
-            <!-- icons profile wishlist bags -->
+          </div>
+          <div class="col-2">
             <div class="icons-list">
               <div class="profile same">
-                <div class="pro-icon icon">
-                  <i class="bi bi-person"></i>
-                </div>
-                <div class="text">Profile</div>
+                <a href="">
+                  <div class="icon"><i class="bi bi-person"></i></div>
+                  <div class="text">Profile</div>
+                </a>
               </div>
               <div class="wishlist same">
-                <div class="icon"><i class="bi bi-heart"></i></div>
-                <div class="text">Wishlist</div>
+                <a href="assets/addCart.html">
+                  <div class="icon ms-1"><i class="bi bi-heart"></i></div>
+                  <div class="text">Wishlist</div>
+                </a>
               </div>
               <div class="order same">
                 <a href="assets/addCart.html">
-                  <div class="icon ms-1"><i class="bi bi-bag"></i></div>
+                  <div class="icon"><i class="bi bi-bag"></i></div>
                   <div class="text">Order</div>
                 </a>
                 <div id="counter" style="display: none">0</div>
@@ -101,14 +1215,14 @@
 
       <!-- header slider start  -->
       <div
-        class="row flex-column ms-4" 
-        style="margin-top: 8rem; display: none"
+        class="row flex-column ms-4"
+        style="margin-top: 3rem; display: none"
         id="category-header"
-      ></div>   
-      <div class="row p-0" id="all-content">
+      ></div>
+      <div class="row" id="all-content">
         <!-- <section id="all-content"> -->
         <!-- <div class="row" id="all-content"> -->
-        <div class="row p-0" style="margin-top: 6rem">
+        <div class="row p-0" style="margin-top: 5rem">
           <div class="col mt-5 mb-5 p-0 border">
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
@@ -293,21 +1407,29 @@
               <p class="fw-bold">EXPERIENCE MYNTRA APP ON MOBILE</p>
             </div>
             <div class="col">
-              <div class="row">
-                <div class="col mt-3 mb-2">
+              <div class="row mt-3 mb-3">
+                <div class="col">
                   <a
                     href="https://play.google.com/store/apps/details?id=com.myntra.android&hl=en_IN&gl=US&pli=1"
                     target="_blank"
                   >
-                    <div class="play"></div>
+                    <img
+                      src="assets/images/playstore.png"
+                      alt=""
+                      class="img-fluid"
+                      style="height: 100%"
+                    />
                   </a>
                 </div>
-                <div class="col mt-3 mb-2">
+                <div class="col">
                   <a
                     href="https://apps.apple.com/in/app/myntra-fashion-shopping-app/id907394059"
                     target="_blank"
-                    ><div class="app"></div
-                  ></a>
+                    ><img
+                      src="assets/images/appstore.png"
+                      alt=""
+                      class="img-fluid"
+                  /></a>
                 </div>
               </div>
             </div>
@@ -374,6 +1496,12 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- locomotive js -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+    <!-- smooth scrooling js -->
+    <!-- <script src="assets/loco.js"></script> -->
     <!-- main js file -->
     <script src="assets/main.js"></script>
   </body>

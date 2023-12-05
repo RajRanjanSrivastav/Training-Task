@@ -1,3 +1,5 @@
+
+
 var swiper1 = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -18,6 +20,8 @@ var swiper2 = new Swiper(".mySwiper2", {
     delay: 2000,
   },
 });
+
+
 
 // fucntion run when body reload
 let cnt = 0;
@@ -178,4 +182,18 @@ const addToCart = (id, key) => {
 };
 // console.log(JSON.parse(localStorage.getItem("itemArr")));
 
-// for addCart page
+// for menu 
+let menuItems = document.getElementsByClassName('menu-name')
+
+console.log(menuItems);
+// for (let item of menuItems) {
+//   console.log(item.firstElementChild);
+//   item.firstElementChild.addEventListener('mouseover',()=>{
+//     // item.firstElementChild.style.color='red';
+//     item.lastElementChild.style.display='block'
+//   })
+//   item.firstElementChild.addEventListener('mouseleave',()=>{
+//     // item.firstElementChild.style.color='black';
+//     item.lastElementChild.style.display='none'
+//   })
+// }

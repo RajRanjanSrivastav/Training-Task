@@ -1,48 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
   </head>
+  <style>
+    .navbar {
+      position: fixed;
+      top: -8px;
+      width: 100%;
+      z-index: 2;
+    }
+    .nav {
+      /* border: 2px solid red; */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      box-shadow: 0px 15px 10px -15px #d6d6d6;
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5vw;
+      height: 5vw;
+      margin-left: 30px;
+      cursor: pointer;
+    }
+
+    /*  list catg */
+
+    .catg ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+    }
+    .catg ul li {
+      padding: 4px;
+      margin: 5px;
+    }
+    .catg ul li a {
+      text-decoration: none;
+      color: rgb(15, 15, 15, 0.9);
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgb(255, 255, 255);
+      padding: 0 5px;
+      padding-bottom: 19px;
+    }
+    .catg ul li a:hover {
+      border-bottom: 2px solid rgb(255, 15, 15);
+    }
+    .catg ul li a sup {
+      color: red;
+    }
+
+    /* search */
+    .search {
+      background-color: rgb(214, 213, 213, 0.4);
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .search i {
+      padding-left: 8px;
+      color: rgb(101, 101, 101);
+    }
+    .search input {
+      padding-left: 8px;
+      background-color: rgb(214, 213, 213, 0.1);
+      border: none;
+      min-width: 240px;
+    }
+    .search input:focus {
+      outline: none;
+    }
+
+    /* icons */
+    .icons-list {
+      /* border: 2px solid mediumvioletred; */
+      padding: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* min-width: 160px; */
+      /* margin-right: 20px; */
+    }
+    .same {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .icon {
+      font-size: 1.3rem;
+    }
+    .pro-icon {
+      font-size: 1.5rem;
+    }
+    .text {
+      line-height: 1;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+    .profile {
+      /* border: 1px solid red; */
+      position: relative;
+    }
+
+    /* counter add to cart */
+    .order {
+      position: relative;
+    }
+  </style>
   <body>
-    <div><p onclick="collect(0)" style="cursor: pointer">testing</p></div>
-
-    
-    
-    <script>
-      let data = [];
-      fetch("allWear.json")
-        .then((res) => {
-          console.log(res);
-          return res.json();
-        })
-        .then((ans) => {
-          // console.log(ans);
-          data = ans;
-          console.log(data);
-          return ans;
-        });
-      ;
-
-      // async function genRes(){
-      //   let res = await fetch('allWear.json');
-      //   data = await res.json();
-      //   console.log(data);
-      // }
-      
-      // genRes();
-      // console.log(data);
-      const collect = (id)=>{
-        console.log(id);
-        let hold = data[0].items;
-
-        hold.map((e)=>{
-          console.log(e.name);
-        })
-        console.log(hold);
-      }
-      console.log(data);
-    </script>
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center" style="border: 1px solid red;">
+        <div class="col-1">
+          <img src="images/myntra_logo.webp" alt="logo" class="img-fluid" />
+        </div>
+        <div class="col-6 catg border">
+          <ul>
+            <li><a href="">Men</a></li>
+            <li><a href="">woMen</a></li>
+            <li><a href="">kids</a></li>
+            <li><a href="">home & living</a></li>
+            <li><a href="">beauty</a></li>
+            <li>
+              <a href="">studio <sup>new</sup></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <div class="search">
+            <span><i class="bi bi-search"></i></span>
+          <input
+            type="text"
+            placeholder="Search for products, brands and more"
+          />
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="icons-list">
+            <div class="profile same">
+              <div class="pro-icon icon">
+                <i class="bi bi-person"></i>
+              </div>
+              <div class="text">Profile</div>
+            </div>
+            <div class="wishlist same">
+              <div class="icon"><i class="bi bi-heart"></i></div>
+              <div class="text">Wishlist</div>
+            </div>
+            <div class="order same">
+              <a href="assets/addCart.html">
+                <div class="icon ms-1"><i class="bi bi-bag"></i></div>
+                <div class="text">Order</div>
+              </a>
+              <div id="counter" style="display: none">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
+
+
+
+<div class="row navbar">
+    <div class="col p-0">
+      <div class="nav">
+        <!-- logo -->
+        <div class="logo">
+          <a href=""
+            ><img
+              src="assets/images/myntra_logo.webp"
+              alt="logo"
+              class="img-fluid"
+          /></a>
+        </div>
+
+        <!-- list catag -->
+        <div class="catg">
+          <ul>
+            <li><a href="">Men</a></li>
+            <li><a href="">woMen</a></li>
+            <li><a href="">kids</a></li>
+            <li><a href="">home & living</a></li>
+            <li><a href="">beauty</a></li>
+            <li>
+              <a href="">studio <sup>new</sup></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- search bar -->
+        <div class="search">
+          <span><i class="bi bi-search"></i></span>
+          <input
+            type="text"
+            placeholder="Search for products, brands and more"
+          />
+        </div>
+
+        <!-- icons profile wishlist bags -->
+        <div class="icons-list">
+          <div class="profile same">
+            <div class="pro-icon icon">
+              <i class="bi bi-person"></i>
+            </div>
+            <div class="text">Profile</div>
+          </div>
+          <div class="wishlist same">
+            <div class="icon"><i class="bi bi-heart"></i></div>
+            <div class="text">Wishlist</div>
+          </div>
+          <div class="order same">
+            <a href="assets/addCart.html">
+              <div class="icon ms-1"><i class="bi bi-bag"></i></div>
+              <div class="text">Order</div>
+            </a>
+            <div id="counter" style="display: none">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -30,8 +30,7 @@ const loadItems = (id) => {
       cartHolder += `<div class="card mt-2">
             <img
               src="../${e.img}"
-              class="card-img-top"
-              alt="..."
+              alt="itemes-images"
             />
             <div class="card-body pt-0" style="height: 200px">
               <p style="font-weight: 700">${e.brand}</p>
