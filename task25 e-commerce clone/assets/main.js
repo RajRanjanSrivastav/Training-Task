@@ -1,4 +1,5 @@
 var swiper1 = new Swiper(".mySwiper", {
+  autoHeight: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -8,6 +9,7 @@ var swiper1 = new Swiper(".mySwiper", {
   },
 });
 var swiper2 = new Swiper(".mySwiper2", {
+  autoHeight: true,
   slidesPerView: 5,
   spaceBetween: 0,
   pagination: {
@@ -25,6 +27,16 @@ let data; //for storing array of objects
 
 let arrHolder = []; //for storing object of selected items
 const fetchAllPrev = () => {
+
+  // for checking list  icons
+  slideNavbarCont.classList.add("hide");
+  // let eleIcon = togelIcon.classList.contains("bi-x");
+  // if(eleIcon){
+  //   togelIcon.classList.add("bi-list");
+  // }
+  // else{
+  //   togelIcon.classList.add("bi-list");
+  // }
   let counterEle = document.getElementById("counter");
 
   cnt = localStorage.getItem("counter");
@@ -118,7 +130,7 @@ fetch("assets/data.json")
             let per = Math.floor((e.showPrice * e.offer) / 100);
             let sellprice = e.showPrice - per;
             holder += `
-            <div class="col-2 mt-4 m-2 ">
+            <div class="col-2 mt-4 m-2 itemforSale">
               <div class="row mt-4 flex-column">
                 <div class="col box-cont">
                   <div class="box" style=" background-image: url(${e.img});"></div>
@@ -183,7 +195,7 @@ let menuItems = document.getElementsByClassName("menu-name");
 
 console.log(menuItems);
 for (let item = 0; item < menuItems.length - 1; item++) {
-  console.log(menuItems[item]);
+  // console.log(menuItems[item]);
   menuItems[item].firstElementChild.addEventListener("mouseover", () => {
     // item.firstElementChild.style.color='red';
     menuItems[item].lastElementChild.style.display = "block";
@@ -203,3 +215,20 @@ for (let item = 0; item < menuItems.length - 1; item++) {
     // item.lastElementChild.style.display='none'
   });
 }
+
+// for slide navbar
+const showNav = (id, menu) => {
+  let isPesent = menu.classList.contains("bi-list");
+
+  if (isPesent) {
+    menu.classList.remove("bi-list");
+    menu.classList.add("bi-x");
+    id.classList.remove("hide");
+    id.classList.add("show");
+  } else {
+    menu.classList.remove("bi-x");
+    menu.classList.add("bi-list");
+    id.classList.remove("show");
+    id.classList.add("hide");
+  }
+};

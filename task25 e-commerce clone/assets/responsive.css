@@ -1,0 +1,53 @@
+/* start doing responsive */
+.item-click {
+  width: 220px;
+}
+.itemforSale {
+  width: 220px;
+}
+
+@media screen and (min-width:1094px) {
+    .slideNavbar{
+        display: none;
+    }
+}
+/* for 1095px */
+@media screen and (max-width:1095px) {   
+    .catg{
+        display: none;
+    }
+    .search-cont{
+        display: none;
+    }
+    .navbar-item-cont{
+        justify-content: space-between !important;
+    }
+    .menuIcon{
+        display: block !important;
+    }
+    /* for icons container */
+    .icons-cont{
+        min-width: 290px;
+    }
+}
+@media screen and (max-width:780px) {
+    .logo{
+        height: 5vw !important;
+    }
+}
+@media screen and (max-width:768px) {
+    .slideNavbar{
+        width: 110% !important;
+    }
+    .slideNavEle{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 2rem;
+    }
+}
+@media screen and (max-width:680px) {
+    .logo{
+        height: 2.8rem !important;
+    }
+   
+}

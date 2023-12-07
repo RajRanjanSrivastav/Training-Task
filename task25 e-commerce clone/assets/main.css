@@ -22,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 
 .swiper-slide img {
@@ -47,8 +48,10 @@ body {
   background-color: white;
   box-shadow: 0px 15px 10px -15px #d6d6d6;
 }
+.navbar-item-cont {
+  justify-content: space-around;
+}
 .logo {
-  width: 5vw;
   height: 4vw;
   cursor: pointer;
 }
@@ -96,7 +99,7 @@ body {
   padding-left: 8px;
   background-color: rgb(214, 213, 213, 0.1);
   border: none;
-  min-width: 334px;
+  min-width: 296px;
 }
 .search input:focus {
   outline: none;
@@ -118,6 +121,11 @@ body {
 }
 .icon {
   font-size: 1.3rem;
+}
+.menuIcon {
+  display: none;
+  padding-right: 1rem;
+  font-size: 2.5rem;
 }
 .pro-icon {
   font-size: 1.5rem;
@@ -304,6 +312,7 @@ body {
 #item-cont {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   /* border: 2px solid green; */
 }
 #all-content {
@@ -449,4 +458,43 @@ body {
 .know {
   color: rgb(255, 63, 108);
   font-weight: 700;
+}
+
+/* slide navbar */
+.slideNavbar {
+  position: absolute;
+  top: 70px;
+  background-color: rgb(0, 0, 0, 0.8);
+  height: 100%;
+  width: 30%;
+  z-index: 24;
+}
+#slideNavbarCont {
+  /* border: 2px solid red; */
+  height: 90vh;
+}
+.hide {
+  transition: linear 0.6s;
+  right: -850px;
+}
+.show {
+  right: 0;
+  transition: linear 0.6s;
+}
+.slideNavEle {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: white;
+}
+.slideNavEle:hover {
+  color: white;
+  /* font-size: 18px; */
+  color: #ee5f73;
+}
+.list-cont-slideNav {
+  /* border: 2px solid red; */
+  height: 60%;
+  padding: 2rem;
+  margin-top: 1rem;
 }
