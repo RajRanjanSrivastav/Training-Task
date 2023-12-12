@@ -1,6 +1,720 @@
-
-
-
-.main{
-    background-image: url(images/back-img.png);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* slider css start */
+html,
+body {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.dark{
+  background-color: black !important;
+  color: white !important;
+}
+
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* scroll bar start */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* scroll bar end */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* work on positioning of arrow button start */
+
+.swiper-button-next {
+  background-color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.swiper-button-prev {
+  background-color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  left: 66.6rem;
+  top: 8.8rem;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "prev";
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* work on positioning of arrow button end */
+/* css for btn of second slider start*/
+
+.swiper2-button-next {
+  background-color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.swiper2-button-prev {
+  background-color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  left: 66rem;
+  top: 8.6rem;
+}
+
+.swiper2-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.swiper2-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "prev";
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+/* css for btn of second slider end */
+
+/* slider css end */
+
+:root {
+  --primary: #127170;
+  --secondry: #08486e;
+  --color1: rgb(255, 136, 0);
+  --color2: rgb(125, 125, 125);
+}
+.lineAtt {
+  line-height: 1.2;
+}
+.main {
+  height: 100vh;
+  background-image: url(images/back-img.png);
+  background-color: rgb(228, 228, 228);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box-social-chat {
+  position: fixed;
+  bottom: 2px;
+  right: -21px;
+  z-index: 11;
+  display: block;
+  height: 28vh;
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.box-social-chat div {
+  background-color: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  /* margin-top: 20px; */
+}
+.face {
+  background-image: url(icon/facebook.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.twi {
+  background-image: url(icon/twitter.5d82b7eb-9734-4b51-b65d-a0383348ab1b);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-nav-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.header-nav-ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+.header-nav-ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photoLi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photoLi p {
+  font-size: 13px;
+}
+.photo-cont {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(images/modi.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icons {
+  font-size: 20px;
+}
+.black {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+.white {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+}
+.divider-line {
+  position: relative;
+}
+.divider-line::after {
+  content: "";
+  right: -18px;
+  width: 2px;
+  height: 22px;
+  background-color: #bebebe;
+  position: absolute;
+}
+
+/* second navbar */
+.secNav {
+  background-color: var(--primary);
+}
+
+.f1 {
+  font-size: 0.9rem;
+}
+/* end */
+
+/* in slider section start */
+.slider-cont {
+  position: relative;
+}
+.swiper-container {
+  border: 2px soldi black;
+  position: relative;
+}
+
+/* second slider start */
+.mySwiper2 {
+  position: absolute;
+  top: -100px;
+  height: 150px;
+  width: 94%;
+  left: 34px;
+  border-radius: 12px;
+  background-color: white;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: var(--secondry);
+}
+.box i {
+  color: white;
+  font-size: 1.8rem;
+}
+.slider-para {
+  font-size: 14px;
+  margin: 0;
+  margin-top: 14px;
+}
+.mySwiper2 .swiper-slide {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#secSliNext {
+  right: 8px;
+  top: -20px;
+}
+#secSliPrev {
+  left: 10px;
+  top: -20px;
+}
+
+/* second slider ed  */
+
+/* in slider section end */
+
+/* section about start */
+
+.top-para {
+  background-color: var(--color1);
+  padding: 6px;
+  padding-right: 15px;
+  border-end-end-radius: 18px;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+}
+.icon-holder {
+  background-color: white;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+}
+.icon-holder i {
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  color: var(--color1);
+  font-size: 18px;
+}
+.Topfirst a {
+  color: var(--color1);
+  font-weight: 700;
+}
+.text-grey {
+  color: var(--color2);
+}
+.content {
+  border-bottom: 1px solid black;
+}
+.content-box {
+  background-color: white;
+  padding-bottom: 1.2rem;
+  box-shadow: 2px 2px 5px rgb(10, 10, 10, 0.5);
+}
+
+.circle-cont {
+  position: relative;
+}
+.circle {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 124%;
+  height: 100%;
+  top: 0;
+  left: -270px;
+  position: absolute;
+}
+.data-circle {
+  position: relative;
+  padding: 20px;
+  top: 60px;
+}
+
+.btn {
+  background-color: var(--secondry);
+  color: white;
+}
+.btn:hover {
+  background-color: var(--secondry);
+  color: white;
+}
+/* section about end */
+
+/* section gallery start */
+.gallery {
+  background-color: var(--secondry);
+}
+
+#btn-next-photo {
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 162px;
+}
+#btn-next-photo::after {
+  color: black;
+}
+#btn-prev-photo::after {
+  color: black;
+}
+#btn-prev-photo {
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 162px;
+}
+
+/* section gallery end */
+
+/* last swiper start */
+
+.last-slider {
+  background-color: white;
+}
+.last-swiper {
+  height: 10vh;
+}
+
+.mySwiper4 .swiper-wrapper .swiper-slide img {
+  width: 190px;
+}
+#last-next {
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  top: 68px;
+  right: 0;
+  background-color: #bebebe;
+}
+#last-next::after {
+  color: black;
+}
+#last-prev::after {
+  color: black;
+}
+#last-prev {
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 68px;
+  background-color: #bebebe;
+}
+
+.slider-footer {
+  background-color: #bebebe;
+  padding: 0.6rem;
+}
+
+.last-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.last-nav li a {
+  position: relative;
+}
+.last-nav li a::after {
+  content: "";
+  right: -60px;
+  width: 2px;
+  height: 22px;
+  background-color: #000000;
+  position: absolute;
+}
+.help:after {
+  display: none;
+}
+/* last swiper end */
+
+/* footer start */
+footer {
+  background-color: var(--secondry);
+}
+
+.footer-content p {
+  margin: 0;
+  padding: 2px;
+}
+
+.icons-container-footer {
+  display: flex;
+  gap: 8px;
+}
+.icon-box {
+  cursor: pointer;
+  border: 1px solid white;
+}
+.icon-box i {
+  font-size: 2rem;
+  padding: 12px;
+}
+.footerCol p {
+  cursor: pointer;
+}
+/* footer end */
+
+/* side nav bar onclick start */
+.show {
+  left: 0 !important;
+}
+#sideNavCont {
+  display: none;
+}
+
+/* side nav bar onclick end */
+/* responsiveness start */
+@media screen and (max-width: 1199px) {
+  .circle-cont {
+    text-align: center;
+  }
+  .circle {
+    width: 430px;
+    left: 15px;
+  }
+  .last-nav li a::after {
+    right: -44px;
+  }
+  .divider-line::after {
+    right: -10px;
+  }
+
+  /* slider btn */
+  .swiper-button-prev {
+    left: 55.3rem;
+    top: 7rem;
+  }
+}
+
+@media screen and (max-width: 1035px) {
+  #top-nav-content {
+    margin: 0;
+    justify-content: end;
+  }
+  ul {
+    margin: 0;
+  }
+  .hide {
+    display: none !important;
+  }
+  #upperNavbar {
+    display: none;
+  }
+  .side-nav-holder {
+    position: relative;
+  }
+  #sideNavCont {
+    height: 100vh;
+    display: block;
+  }
+
+  .side-nav {
+    background-color: var(--primary);
+    top: 55px;
+    left: -250px;
+    z-index: 11;
+    transition: all linear 0.4s;
+    position: absolute;
+  }
+  #sideNav {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu {
+    display: block !important;
+  }
+  .menu i {
+    font-size: 2rem;
+    color: white;
+  }
+
+  /* gallery circle */
+  .circle {
+    left: -35px;
+  }
+
+  #btn-next-photo{
+    top: 134px;
+  }
+  #btn-prev-photo{
+    top: 134px;
+  }
+}
+
+@media screen and (max-width: 956px) {
+  .circle {
+    left: -55px;
+  }
+  .last-nav li a::after {
+    right: -34px;
+  }
+}
+@media screen and (max-width: 992px) {
+
+  #btn-next-photo{
+    top: 324px;
+  }
+  #btn-prev-photo{
+    top: 324px;
+  }
+  .mySwiper2 {
+    top: -80px;
+    left: 22px;
+  }
+  #secSliPrev {
+    left: 2px;
+    top: -6px;
+  }
+  #secSliNext {
+    right: 0px;
+    top: -6px;
+  }
+
+  /* box */
+  .box {
+    width: 62%;
+  }
+  .box i {
+    font-size: 1.4rem;
+  }
+
+  /* slider btn */
+  .swiper-button-prev {
+    left: 40.3rem;
+    top: 4.6rem;
+  }
+
+  /* fixed box */
+  .box-social-chat {
+    top: 334px;
+    right: 1px;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  #btn-next-photo{
+    top: 242px;
+  }
+  #btn-prev-photo{
+    top: 242px;
+  }
+  .circle-cont {
+    text-align: end;
+    margin-left: 0 !important;
+  }
+  .circle {
+    width: 418px;
+    left: 45px;
+  }
+  .last-nav li a::after {
+    right: -28px;
+  }
+}
+@media screen and (max-width: 766px) {
+  .circle {
+    display: none;
+  }
+  .inner-circle {
+    background-color: rgb(255, 255, 255,0.6);
+    border-radius: 50%;
+    width: 94%;
+    height: 69%;
+    top: 74px;
+    left: 17px;
+    position: absolute;
+  }
+  .slider-footer {
+    display: none;
+  }
+  .swiper-button-prev {
+    left: 42.1rem;
+  }
+  .circle {
+    left: 89px;
+    top: 20px;
+    height: 400px;
+  }
+  .past-img {
+    display: none;
+  }
+  .img-cont {
+    display: block !important;
+    position: relative;
+  }
+  .icon-cont img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:589px) {
+  .inner-circle{
+    left: 12px;
+  }
+
+  #btn-next-photo{
+    top: 178px;
+  }
+  #btn-prev-photo{
+    top: 178px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .inner-circle-text{
+    font-size:11px !important;
+  }
+  .inner-circle-btn{
+    margin-top: 5px !important;
+  }
+
+  #btn-next-photo{
+    top: 118px;
+  }
+  #btn-prev-photo{
+    top: 118px;
+  }
+}
+/* responsiveness end*/

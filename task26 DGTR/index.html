@@ -11,6 +11,22 @@
       crossorigin="anonymous"
     />
 
+    <!-- swiper js css -->
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- internal css -->
     <link rel="stylesheet" href="assets/main.css" />
   </head>
@@ -20,36 +36,725 @@
 
       <div class="main">
         <!-- first navbar start -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"
-              ><img src="assets/images/logo.png" alt="logo" class="img-fluid"
-            /></a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
+        <div class="container-fluid">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-4">
+              <a href="">
+                <img
+                  src="assets/images/logo.png"
+                  class="img-fluid"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <div class="col col-lg-8">
+              <ul class="header-nav-ul ms-auto m-lg-0 p-2" id="top-nav-content">
+                <li class="photoLi ms-5">
+                  <a href="" class="photo-cont me-2"></a>
+                  <p class="text-white m-0 lineAtt">
+                    Shri Narendra Modi <br />
+                    Prime Minister Of India
+                  </p>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                <li class="divider-line hide"><a href="">English</a></li>
+                <li class="divider-line hide"><a href="">हिंदी</a></li>
+                <li class="divider-line hide">
+                  <a href="">Skip the main content</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                <li class="divider-line hide">
+                  <a href=""> <i class="bi bi-megaphone-fill"></i></a>
+                </li>
+                <li class="divider-line hide">
+                  <a href=""> <i class="bi bi-megaphone-fill"></i></a>
+                </li>
+                <li class="hide">
+                  <span
+                    class="me-2 white"
+                    id="theme"
+                    style="cursor: pointer"
+                    onclick="switchTheme(theme)"
+                  ></span>
                 </li>
               </ul>
             </div>
           </div>
-        </nav>
+        </div>
         <!-- first navbar end -->
+
+        <!-- second navbar start -->
+        <div class="secNav">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid side-nav-holder">
+              <div
+                class="navbar-collapse d-flex justify-content-between"
+                id="navbarNav"
+              >
+                <div
+                  class="menu"
+                  style="display: none"
+                  onclick="show(sideNavCont)"
+                >
+                  <i class="bi bi-list"></i>
+                </div>
+                <ul class="navbar-nav" id="upperNavbar">
+                  <li class="nav-item pe-2">
+                    <a
+                      class="nav-link active text-uppercase text-white f1"
+                      aria-current="page"
+                      href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item pe-2">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >About DGTR</a
+                    >
+                  </li>
+                  <li class="nav-item pe-2">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Publications</a
+                    >
+                  </li>
+                  <li class="nav-item pe-2">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Trade notice/oms</a
+                    >
+                  </li>
+                  <li class="nav-item pe-2">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >RTI</a
+                    >
+                  </li>
+                  <li class="nav-item pe-2">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Trade defence</a
+                    >
+                  </li>
+                  <li class="nav-item pe-2">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Contact details</a
+                    >
+                  </li>
+                  <li class="nav-item pe-2">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Events</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Artis</a
+                    >
+                  </li>
+                  <!-- <li class="nav-item border">
+                    <a class="nav-link text-uppercase text-white" href="#">icon</a>
+                  </li> -->
+                </ul>
+                <div class="icon text-white me-2">
+                  <i class="bi bi-search" style="font-size: 20px"></i>
+                </div>
+              </div>
+
+              <!-- side navbar start -->
+              <div class="side-nav" id="sideNavCont">
+                <ul class="navbar-nav ps-4 pe-2" id="sideNav">
+                  <li class="nav-item pe-2">
+                    <a
+                      class="nav-link active text-uppercase text-white f1"
+                      aria-current="page"
+                      href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >About DGTR</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Publications</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Trade notice/oms</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >RTI</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Trade defence</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Contact details</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Events</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white f1" href="#"
+                      >Artis</a
+                    >
+                  </li>
+                  <!-- <li class="nav-item border">
+                    <a class="nav-link text-uppercase text-white" href="#">icon</a>
+                  </li> -->
+                </ul>
+              </div>
+              <!-- side navbar end -->
+            </div>
+          </nav>
+        </div>
+        <!-- second navbar end -->
+
+        <!-- first slider start -->
+        <div class="container-fluid container-md mt-2 slider-cont">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/images/slider-img.jpg" alt="back-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/slider-img.jpg" alt="back-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/slider-img.jpg" alt="back-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/slider-img.jpg" alt="back-img" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
+          <!-- first slider end -->
+
+          <!-- second slider start-->
+          <div class="swiper-container">
+            <div class="swiper mySwiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="box">
+                    <i class="bi bi-card-text"></i>
+                  </div>
+                  <p class="slider-para lineAtt">
+                    Antidumping <br />
+                    Investigations in India
+                  </p>
+                </div>
+                <div class="swiper-slide lineAtt">
+                  <div class="box">
+                    <i class="bi bi-card-text"></i>
+                  </div>
+                  <p class="slider-para">
+                    Antidumping <br />
+                    Investigations in India
+                  </p>
+                </div>
+                <div class="swiper-slide lineAtt">
+                  <div class="box">
+                    <i class="bi bi-card-text"></i>
+                  </div>
+                  <p class="slider-para">
+                    Antidumping <br />
+                    Investigations in India
+                  </p>
+                </div>
+                <div class="swiper-slide lineAtt">
+                  <div class="box">
+                    <i class="bi bi-card-text"></i>
+                  </div>
+                  <p class="slider-para">
+                    Antidumping <br />
+                    Investigations in India
+                  </p>
+                </div>
+                <div class="swiper-slide lineAtt">
+                  <div class="box">
+                    <i class="bi bi-card-text"></i>
+                  </div>
+                  <p class="slider-para">
+                    Antidumping <br />
+                    Investigations in India
+                  </p>
+                </div>
+                <div class="swiper-slide lineAtt">
+                  <div class="box">
+                    <i class="bi bi-card-text"></i>
+                  </div>
+                  <p class="slider-para">
+                    Antidumping <br />
+                    Investigations in India
+                  </p>
+                </div>
+                <div class="swiper-slide lineAtt">
+                  <div class="box">
+                    <i class="bi bi-card-text"></i>
+                  </div>
+                  <p class="slider-para">
+                    Antidumping <br />
+                    Investigations in India
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-next" id="secSliNext"></div>
+            <div class="swiper-button-prev" id="secSliPrev"></div>
+          </div>
+          <!-- second slider end-->
+        </div>
+      </div>
+
+      <!-- header section end -->
+
+      <!-- section 2 about dgtr -->
+      <section class="about ms-3 mb-3 mt-3">
+        <div class="container-fluid">
+          <div class="row g-4 justify-content-center">
+            <div class="col-10 col-xl-3">
+              <div class="content-box rounded">
+                <div
+                  class="Topfirst d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="top-para d-flex justify-content-between align-items-center"
+                  >
+                    <div class="icon-holder">
+                      <i class="bi bi-megaphone-fill"></i>
+                    </div>
+                    <div class="text ms-2 pe-2 f1">What's New</div>
+                  </div>
+                  <a href="#" class="me-3">View All</a>
+                </div>
+                <div class="content ms-2 mt-2">
+                  <p class="p-1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
+                    consequuntur commodi.
+                  </p>
+                  <p class="text-grey">05 Aug 2023</p>
+                </div>
+                <div class="content ms-2 mt-2">
+                  <p class="p-1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
+                    consequuntur commodi.
+                  </p>
+                  <p class="text-grey">05 Aug 2023</p>
+                </div>
+                <div class="content ms-2 mt-2">
+                  <p class="p-1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
+                    consequuntur commodi.
+                  </p>
+                  <p class="text-grey">05 Aug 2023</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-10 col-xl-3">
+              <div class="content-box rounded">
+                <div
+                  class="Topfirst d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="top-para d-flex justify-content-between align-items-center"
+                  >
+                    <div class="icon-holder">
+                      <i class="bi bi-megaphone-fill"></i>
+                    </div>
+                    <div class="text ms-2 pe-2 f1">Oral Hearings</div>
+                  </div>
+                  <a href="#" class="me-3">View All</a>
+                </div>
+                <div class="content ms-2 mt-2">
+                  <p class="p-1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
+                    consequuntur commodi.
+                  </p>
+                  <p class="text-grey">05 Aug 2023</p>
+                </div>
+                <div class="content ms-2 mt-2">
+                  <p class="p-1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
+                    consequuntur commodi.
+                  </p>
+                  <p class="text-grey">05 Aug 2023</p>
+                </div>
+                <div class="content ms-2 mt-2">
+                  <p class="p-1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
+                    consequuntur commodi.
+                  </p>
+                  <p class="text-grey">05 Aug 2023</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-3">2</div> -->
+            <div class="col-10 col-xl-3 ms-auto circle-cont">
+              <div class="img-cont" style="display: none">
+                <img
+                  src="assets/images/truck.jpg"
+                  class="img-fluid"
+                  alt=""
+                  width="100%"
+                />
+
+                <div class="inner-circle d-flex">
+                  <div
+                    class="p-4 data-inner-circle d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <p class="text-uppercase text-center m-0">
+                      <span class="fs-3" style="color: var(--secondry)"
+                        >ABOUT</span
+                      >
+                      <span class="fs-3" style="color: var(--color1)"
+                        >DGTR</span
+                      >
+                    </p>
+                    <p
+                      class="text-center m-0 inner-circle-text"
+                      style="font-size: 0.8rem"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corrupti vitae aperiam voluptates est quia? Laborum
+                      aspernatur nesciunt, mollitia voluptate, accusantium enim
+                      voluptatem optio at nemo ab, harum asperiores numquam quod
+                      quo unde fuga possimus error!
+                    </p>
+                    <button class="btn mt-3 inner-circle-btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="assets/images/truck.jpg"
+                class="img-fluid past-img"
+                alt=""
+                style="height: 100%"
+              />
+
+              <div class="circle">
+                <div
+                  class="data-circle d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="text-uppercase text-center">
+                    <span class="fs-3" style="color: var(--secondry)"
+                      >ABOUT</span
+                    >
+                    <span class="fs-3" style="color: var(--color1)">DGTR</span>
+                  </p>
+                  <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Corrupti vitae aperiam voluptates est quia? Laborum
+                    aspernatur nesciunt, mollitia voluptate, accusantium enim
+                    voluptatem optio at nemo ab, harum asperiores numquam quod
+                    quo unde fuga possimus error!
+                  </p>
+                  <button class="btn mt-3">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 3 photo gallery -->
+      <section class="gallery p-4">
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-4">
+            <div class="gallery-box-cont">
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <p
+                  class="text-uppercase m-0 text-white fw-bolder"
+                  style="font-size: 16px"
+                >
+                  photo gallery
+                </p>
+                <a
+                  href="#"
+                  class="text-white text-uppercase"
+                  style="font-size: 12px"
+                  >View All</a
+                >
+              </div>
+
+              <!-- slider start -->
+              <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/modi.jpg" alt="back-img" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/modi.jpg" alt="back-img" />
+                  </div>
+                </div>
+                <div class="swiper-button-next" id="btn-next-photo"></div>
+                <div class="swiper-button-prev" id="btn-prev-photo"></div>
+              </div>
+              <!-- slider end -->
+
+              <div class="last-line mt-2">
+                <p class="m-0 fw-bolder text-white">Chandigarh</p>
+                <p class="m-0 text-white">Outreach Programme</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 mt-4 mt-lg-0">
+            <p
+              class="text-uppercase text-white fw-bolder mb-1"
+              style="font-size: 16px"
+            >
+              Facebook
+            </p>
+            <div class="site-dark" style="display: none;">
+              <a class="twitter-timeline darkTwitter" data-height="380" data-theme="dark"  href="https://twitter.com/XDevelopers?ref_src=twsrc%5Etfw">Tweets by XDevelopers</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="site-light">
+              <a class="twitter-timeline darkTwitter" data-height="380" href="https://twitter.com/XDevelopers?ref_src=twsrc%5Etfw">Tweets by XDevelopers</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 mt-4 mt-lg-0">
+            <p
+              class="text-uppercase text-white fw-bolder mb-1"
+              style="font-size: 16px"
+            >
+              twitter
+            </p>
+            <div class="site-dark" style="display: none;">
+              <a class="twitter-timeline darkTwitter" data-height="380" data-theme="dark" href="https://twitter.com/XDevelopers?ref_src=twsrc%5Etfw">Tweets by XDevelopers</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="site-light">
+              <a class="twitter-timeline darkTwitter" data-height="380" href="https://twitter.com/XDevelopers?ref_src=twsrc%5Etfw">Tweets by XDevelopers</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section last slider start -->
+      <section class="last-slider">
+        <div class="swiper mySwiper4" style="height: 20vh">
+          <div class="swiper-wrapper p-1">
+            <div class="swiper-slide">
+              <img src="assets/icon/digital-india.png" alt="back-img" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/icon/mygov_0_0.png" alt="back-img" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/icon/makeinindia.png" alt="back-img" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/icon/mygov.png" alt="back-img" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/icon/mygov_0_0.png" alt="back-img" />
+            </div>
+          </div>
+          <div class="swiper-button-next" id="last-next"></div>
+          <div class="swiper-button-prev" id="last-prev"></div>
+        </div>
+
+        <div class="slider-footer mt-2">
+          <div class="container-fluid container-lg">
+            <ul class="navbar-nav last-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-uppercase text-black f1"
+                  aria-current="page"
+                  href="#"
+                  >Website Policies</a
+                >
+              </li>
+              <li class="nav-item pe-2">
+                <a class="nav-link text-uppercase text-black f1" href="#"
+                  >T&C</a
+                >
+              </li>
+              <li class="nav-item pe-2">
+                <a class="nav-link text-uppercase text-black f1" href="#"
+                  >Disclaimer</a
+                >
+              </li>
+              <li class="nav-item pe-2">
+                <a class="nav-link text-uppercase text-black f1" href="#"
+                  >Web Information Manager Committees</a
+                >
+              </li>
+              <li class="nav-item pe-2">
+                <a class="nav-link text-uppercase text-black f1 help" href="#"
+                  >Help</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- section last slider end -->
+
+      <!-- footer start -->
+      <footer>
+        <div class="container-fluid">
+          <div
+            class="row justify-content-between footer-content p-4"
+            style="color: white"
+          >
+            <div class="col-5 col-md-3">
+              <p class="fw-bolder fs-5 lineAtt">
+                Directorate General Of <br />
+                Trade Remedies(DGTR) <br />
+                Department of Commerce
+              </p>
+              <div class="d-flex mt-2">
+                <span class="me-2"><i class="bi bi-geo-alt"></i></span>
+                <p class="p-0">
+                  4th Floor, Jeevan Tara Building,<br />
+                  5, Parilament Strrt, Patel Chowk,<br />New Delhi-110001
+                </p>
+              </div>
+              <div class="d-flex mt-2">
+                <span class="me-2"><i class="bi bi-telephone"></i></span>
+                <p class="p-0">call: +91-011-23349435</p>
+              </div>
+              <div class="d-flex mt-2">
+                <span class="me-2"><i class="bi bi-camera-reels"></i></span>
+                <p class="p-0">Fax: 011-23349436</p>
+              </div>
+            </div>
+            <div class="col-5 col-md-2 footerCol">
+              <p class="fw-bolder fs-5">Related Links</p>
+              <p>DOC</p>
+              <p>DGFT</p>
+              <p>DGCI&C</p>
+              <p>CBIC</p>
+              <p>CESTAT</p>
+              <p>WTO</p>
+            </div>
+            <div class="col-5 col-md-2 footerCol mt-4 mt-md-0">
+              <p class="fw-bolder fs-5">Other Links</p>
+              <p class="text-uppercase">Career</p>
+              <p class="text-uppercase">Feedback</p>
+              <p class="text-uppercase">Tenders</p>
+              <p class="text-uppercase">Contact Us</p>
+            </div>
+            <div class="col-5 col-md-3 mt-4 mt-md-0">
+              <p class="fw-bolder fs-5">Follows US</p>
+              <div class="icons-container-footer mb-2 mt-2">
+                <div class="icon-box">
+                  <i class="bi bi-facebook"></i>
+                </div>
+                <div class="icon-box">
+                  <i class="bi bi-twitter"></i>
+                </div>
+                <div class="icon-box">
+                  <i class="bi bi-youtube"></i>
+                </div>
+              </div>
+              <p class="p-0">
+                Visitors Count: <span class="fw-bolder fs-6">158789</span>
+              </p>
+              <p class="p-0">
+                Last Updated: <span class="fw-bolder fs-6">09 Jun 2023</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="background-color: var(--color1)">
+            <div class="col-12 col-xl-5 mx-auto">
+              <p class="m-0 p-1 text-center text-white">
+                © Directorate General of Trade Remedies 2023, All Rights
+                Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+
+      <!-- fixed box for social media and chat  -->
+      <div class="box-social-chat">
+        <div class="chat">
+          <a href=""
+            ><img src="assets/icon/chat-per.png" class="img-fluid" alt=""
+          /></a>
+        </div>
+        <div class="mt-1">
+          <!-- <img src="assets/icon/facebook.png" class="img-fluid" alt=""/> -->
+          <a href="">
+            <div class="face"></div>
+          </a>
+        </div>
+        <div class="mt-1">
+          <a href=""><div class="twi"></div></a>
+        </div>
       </div>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <!-- slider js start -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 6,
+        navigation: {
+          nextEl: "#secSliNext",
+          prevEl: "#secSliPrev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        },
+      });
+      var swiper3 = new Swiper(".mySwiper3", {
+        navigation: {
+          nextEl: "#btn-next-photo",
+          prevEl: "#btn-prev-photo",
+        },
+      });
+      var swiper4 = new Swiper(".mySwiper4", {
+        slidesPerView: 4,
+        navigation: {
+          nextEl: "#last-next",
+          prevEl: "#last-prev",
+        },
+      });
+    </script>
+    <!-- slider js end -->
+    <script src="assets/main.js"></script>
   </body>
 </html>
