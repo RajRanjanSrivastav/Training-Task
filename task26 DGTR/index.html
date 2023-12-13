@@ -44,12 +44,13 @@
                   src="assets/images/logo.png"
                   class="img-fluid"
                   alt="logo"
+                  style="background-color: #eee;"
                 />
               </a>
             </div>
             <div class="col col-lg-8">
               <ul class="header-nav-ul ms-auto m-lg-0 p-2" id="top-nav-content">
-                <li class="photoLi ms-5">
+                <li class="photoLi m-0 ms-sm-5">
                   <a href="" class="photo-cont me-2"></a>
                   <p class="text-white m-0 lineAtt">
                     Shri Narendra Modi <br />
@@ -67,13 +68,8 @@
                 <li class="divider-line hide">
                   <a href=""> <i class="bi bi-megaphone-fill"></i></a>
                 </li>
-                <li class="hide">
-                  <span
-                    class="me-2 white"
-                    id="theme"
-                    style="cursor: pointer"
-                    onclick="switchTheme(theme)"
-                  ></span>
+                <li class="ms-3 ms-xl-0">
+                  <i class="bi bi-moon-fill fs-5 text-white" id="theme" style="cursor: pointer;"  onclick="switchTheme(theme)"></i>
                 </li>
               </ul>
             </div>
@@ -92,9 +88,9 @@
                 <div
                   class="menu"
                   style="display: none"
-                  onclick="show(sideNavCont)"
+                  onclick="show(sideNavCont,listBtn)"
                 >
-                  <i class="bi bi-list"></i>
+                  <i class="bi bi-list" id="listBtn"></i>
                 </div>
                 <ul class="navbar-nav" id="upperNavbar">
                   <li class="nav-item pe-2">
@@ -217,7 +213,7 @@
         <!-- second navbar end -->
 
         <!-- first slider start -->
-        <div class="container-fluid container-md mt-2 slider-cont">
+        <div class="container-fluid container-md mt-5 mt-lg-2 slider-cont">
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -726,9 +722,17 @@
           prevEl: "#secSliPrev",
         },
         breakpoints: {
+          200: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          500: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
           640: {
             slidesPerView: 4,
-            spaceBetween: 20,
+            spaceBetween: 30,
           },
           768: {
             slidesPerView: 4,
@@ -736,7 +740,7 @@
           },
           1024: {
             slidesPerView: 5,
-            spaceBetween: 50,
+            spaceBetween: 40,
           },
         },
       });
@@ -751,6 +755,28 @@
         navigation: {
           nextEl: "#last-next",
           prevEl: "#last-prev",
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          500: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+          },
         },
       });
     </script>

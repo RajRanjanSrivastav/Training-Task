@@ -12,11 +12,10 @@ body {
   overflow-x: hidden;
 }
 
-.dark{
+.dark {
   background-color: black !important;
   color: white !important;
 }
-
 
 body {
   background: #eee;
@@ -223,7 +222,7 @@ body {
 .icons {
   font-size: 20px;
 }
-.black {
+/* .black {
   width: 20px;
   height: 20px;
   background-color: black;
@@ -232,13 +231,13 @@ body {
   width: 20px;
   height: 20px;
   background-color: rgb(255, 255, 255);
-}
+} */
 .divider-line {
   position: relative;
 }
 .divider-line::after {
   content: "";
-  right: -18px;
+  right: -30px;
   width: 2px;
   height: 22px;
   background-color: #bebebe;
@@ -278,8 +277,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45%;
-  height: 50%;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--secondry);
 }
@@ -481,6 +480,7 @@ footer {
 
 .icons-container-footer {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .icon-box {
@@ -575,10 +575,10 @@ footer {
     left: -35px;
   }
 
-  #btn-next-photo{
+  #btn-next-photo {
     top: 134px;
   }
-  #btn-prev-photo{
+  #btn-prev-photo {
     top: 134px;
   }
 }
@@ -592,11 +592,13 @@ footer {
   }
 }
 @media screen and (max-width: 992px) {
-
-  #btn-next-photo{
+  .main {
+    height: 92vh;
+  }
+  #btn-next-photo {
     top: 324px;
   }
-  #btn-prev-photo{
+  #btn-prev-photo {
     top: 324px;
   }
   .mySwiper2 {
@@ -613,9 +615,7 @@ footer {
   }
 
   /* box */
-  .box {
-    width: 62%;
-  }
+
   .box i {
     font-size: 1.4rem;
   }
@@ -628,16 +628,15 @@ footer {
 
   /* fixed box */
   .box-social-chat {
-    top: 334px;
-    right: 1px;
+    right: 4px;
   }
 }
 
 @media screen and (max-width: 868px) {
-  #btn-next-photo{
+  #btn-next-photo {
     top: 242px;
   }
-  #btn-prev-photo{
+  #btn-prev-photo {
     top: 242px;
   }
   .circle-cont {
@@ -652,12 +651,39 @@ footer {
     right: -28px;
   }
 }
-@media screen and (max-width: 766px) {
+
+/* for width height */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait){
+  .main {
+    height: 52vh !important;
+  }
+}
+
+/* ipan pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation : portrait){
+  .main {
+    height: 42vh !important;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-width: 1336px) and (orientation : portrait){
+  .main {
+    height: 39vh !important;
+  }
+}
+/* @media screen and (max-width: 768px),(max-height: 500px){
+  .main {
+    height: 52vh !important;
+  }
+} */
+@media screen and (max-width: 768px) {
+  .main {
+    height: 82vh;
+  }
   .circle {
     display: none;
   }
   .inner-circle {
-    background-color: rgb(255, 255, 255,0.6);
+    background-color: rgb(255, 255, 255, 0.8);
     border-radius: 50%;
     width: 94%;
     height: 69%;
@@ -669,7 +695,7 @@ footer {
     display: none;
   }
   .swiper-button-prev {
-    left: 42.1rem;
+    left: 40.1rem;
   }
   .circle {
     left: 89px;
@@ -689,32 +715,86 @@ footer {
   }
 }
 
-@media screen and (max-width:589px) {
-  .inner-circle{
+@media screen and (max-width: 589px) {
+  .main {
+    height: 80vh;
+  }
+  .inner-circle {
     left: 12px;
   }
 
-  #btn-next-photo{
+  #btn-next-photo {
     top: 178px;
   }
-  #btn-prev-photo{
+  #btn-prev-photo {
     top: 178px;
+  }
+  .box{
+    width: 48px;
+  }
+  .box i{
+    font-size: 1.2rem;
+  }
+
+  .box-social-chat{
+    right: 20px;
+  }
+
+  /* second slider  */
+  .mySwiper2 {
+    top: -52px;
+    left: 52px;
+    height: 136px;
+    width: 82%;
+  }
+  #secSliNext {
+    top: 26px;
+    right: 22px;
+  }
+  #secSliPrev {
+    top: 26px;
+    left: 26px;
+  }
+
+  .swiper-button-prev {
+    left: 86vw;
+    top: 8vw;
   }
 }
 
-@media screen and (max-width:480px) {
-  .inner-circle-text{
-    font-size:11px !important;
+@media screen and (max-width: 480px) {
+  .inner-circle-text {
+    font-size: 11px !important;
   }
-  .inner-circle-btn{
+  .inner-circle-btn {
     margin-top: 5px !important;
   }
 
-  #btn-next-photo{
+  .main {
+    height: 72vh;
+  }
+  #btn-next-photo {
     top: 118px;
   }
-  #btn-prev-photo{
+  #btn-prev-photo {
     top: 118px;
+  }
+
+  .swiper-button-prev {
+    left: 78vw;
+    top: 7vw;
+  }
+  .swiper-button-next{
+    top:69px;
+  }
+
+  .mySwiper2 {
+    top: -30px;
+    left: 38px;
+  }
+
+  #secSliNext {
+    right: 7px;
   }
 }
 /* responsiveness end*/
