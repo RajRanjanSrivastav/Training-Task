@@ -1,3 +1,38 @@
+#topmenuBar {
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+  margin-left: 71vw;
+  cursor: pointer;
+}
+
+#topmenuBar div {
+  width: 64px;
+  height: 60px;
+  position: relative;
+}
+
+#topmenuBar span {
+  background: #ffffff;
+  width: 60%;
+  height: 2px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all linear 0.4s;
+}
+
+#topmenuBar .line1 {
+  transform: translate(-50%, -11px);
+}
+
+#topmenuBar .line3 {
+  transform: translate(-50%, 9px);
+}
+
 #menuBar {
   width: 90px;
   height: 50px;
@@ -47,5 +82,26 @@
 @media screen and (max-width: 1190px) {
   .wrapper .navbar {
     position: relative;
+  }
+  .wrapper .navbar .list {
+    display: none;
+  }
+  .wrapper .list-nav-icon {
+    display: block !important;
+  }
+  .wrapper .blog .item-holder {
+    flex-direction: column;
+  }
+  .wrapper .blog .item-holder .blog-box {
+    margin-top: 2vw !important;
+  }
+}
+@media screen and (max-width: 890px) {
+  .about .item-holder .about-content-holder {
+    flex-direction: column;
+  }
+  footer .item-holder {
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=res.css.map */

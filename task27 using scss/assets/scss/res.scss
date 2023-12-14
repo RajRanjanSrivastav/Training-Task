@@ -1,8 +1,42 @@
 $f1break: 1190px;
+$f2break: 890px;
 
 // colors
 $black: black;
 $white: white;
+
+// start top menu bar
+#topmenuBar {
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+  margin-left: 71vw;
+  cursor: pointer;
+}
+#topmenuBar div {
+  width: 64px;
+  height: 60px;
+  position: relative;
+}
+#topmenuBar span {
+  background: #ffffff;
+  width: 60%;
+  height: 2px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all linear 0.4s;
+}
+#topmenuBar .line1 {
+  transform: translate(-50%, -11px);
+}
+#topmenuBar .line3 {
+  transform: translate(-50%, 9px);
+}
+// top nav menu bar end
 
 #menuBar {
   width: 90px;
@@ -50,55 +84,35 @@ $white: white;
 
     .navbar {
       position: relative;
-    //   .list {
-    //     display: none;
-    //   }
-    //   .list-nav-icon {
-    //     display: block !important;
-    //   }
-    //   .topslide {
-    //     z-index: 11;
-    //     border: 2px solid black;
-    //     background-color: rgb(11, 11, 11, 0.8);
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     height: 100vh;
-    //     width: 100%;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     ul {
-    //       li {
-    //         list-style: none;
-    //         padding: 14px 0;
-    //         text-align: center;
-    //         a {
-    //           text-decoration: none;
-    //           font-size: 2.4vw;
-    //           color: $white;
-    //           text-transform: uppercase;
-    //         }
-    //       }
-
-    //       .btn-top-nav {
-    //         display: flex;
-    //         flex-direction: column;
-    //         margin-top: 16px;
-    //         button {
-    //           cursor: pointer;
-    //           padding: 12px;
-    //           font-size: 2vw;
-    //           margin: 8px 0;
-    //           background-color: $black;
-    //           color: $white;
-    //           border: none;
-    //           border-top-left-radius: 15px;
-    //           border-bottom-right-radius: 15px;
-    //         }
-    //       }
-    //     }
-    //   }
+      .list {
+        display: none;
+      }
     }
+    .list-nav-icon {
+      display: block !important;
+    }
+
+
+    // blog
+    .blog{
+      .item-holder{
+        flex-direction: column;
+        .blog-box{
+          margin-top: 2vw !important;
+        }
+      }
+    }
+  }
+}
+
+
+// 890
+@media screen and (max-width: $f2break) {
+  .about .item-holder .about-content-holder {
+    flex-direction: column;
+  } 
+  footer .item-holder {
+    flex-direction: column;
+    align-items: center;
   }
 }

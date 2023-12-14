@@ -22,6 +22,14 @@
 
       <!-- navbar list from top -->
       <div class="topslide" id="topslideNav">
+        <!-- menu bar -->
+        <div id="topmenuBar" class="list-nav-icon">
+          <div onclick="show(menuBar,topslideNav,topmenuBar)">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+          </div>
+        </div>
         <ul>
           <li><a href="">Home</a></li>
           <li><a href="">about us</a></li>
@@ -56,7 +64,7 @@
           </div>
           <!-- menu bar -->
           <div id="menuBar" class="list-nav-icon" style="display: none">
-            <div onclick="show(menuBar,topslideNav)">
+            <div onclick="show(menuBar,topslideNav,topmenuBar)">
               <span class="line1"></span>
               <span class="line2"></span>
               <span class="line3"></span>
@@ -345,9 +353,11 @@
     <!-- script end -->
 
     <script>
-      const show = (id,id2) => {
+      const show = (id,id2,topList) => {
         id.classList.toggle("menuClose");
+        topList.classList.toggle("menuClose");
         id2.classList.toggle("show-Top-Nav");
+
       };
 
       //

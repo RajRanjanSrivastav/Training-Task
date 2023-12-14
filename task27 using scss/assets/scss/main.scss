@@ -15,7 +15,7 @@ $white: white;
 }
 .wrapper {
   .list-nav-icon {
-    display: block !important;
+    // display: block !important;
   }
   .topslide {
     z-index: 11;
@@ -26,6 +26,7 @@ $white: white;
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all linear 1s;
@@ -64,9 +65,12 @@ $white: white;
       }
     }
   }
+
+  // item holder
   .item-holder {
     width: 65%;
   }
+  // item holder end navbar start
   .navbar {
     display: flex;
     justify-content: center;
@@ -113,22 +117,20 @@ $white: white;
         }
       }
 
-      .list {
-        display: none;
-      }
+      
       
     }
   }
 
   .banner {
     background-image: url(../images/hp-banner.jpg);
-    height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     .content-container {
+      margin: 11vw 0;
       position: relative;
       .head-content-holder {
         p {
@@ -264,20 +266,20 @@ $white: white;
           .firstimg {
             width: 24vw;
             position: absolute;
-            top: 20px;
+            bottom: 0;
             left: -125px;
           }
 
           .secimg {
             width: 110px;
-            position: relative;
-            bottom: -117px;
-            right: -521px;
+            position: absolute;
+            bottom: -50px;
+            right: -18px;
           }
           .img-text {
-            position: relative;
-            bottom: -117px;
-            right: -427px;
+            position: absolute;
+            bottom: -5px;
+            right: 0;
             font-weight: 700;
           }
 
@@ -353,7 +355,7 @@ $white: white;
   .testimonial {
     background-image: url(../images/testimonial-bg.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin-top: 4rem;
     display: flex;
     justify-content: center;

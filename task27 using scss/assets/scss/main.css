@@ -7,9 +7,6 @@
   top: 0px !important;
 }
 
-.wrapper .list-nav-icon {
-  display: block !important;
-}
 .wrapper .topslide {
   z-index: 11;
   background-color: black;
@@ -19,6 +16,7 @@
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all linear 1s;
@@ -96,12 +94,8 @@
 .wrapper .navbar .item-holder .list ul li .signup {
   border-bottom-right-radius: 15px;
 }
-.wrapper .navbar .item-holder .list {
-  display: none;
-}
 .wrapper .banner {
   background-image: url(../images/hp-banner.jpg);
-  height: 70vh;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -109,6 +103,7 @@
   align-items: center;
 }
 .wrapper .banner .content-container {
+  margin: 11vw 0;
   position: relative;
 }
 .wrapper .banner .content-container .head-content-holder p {
@@ -222,19 +217,19 @@
 .wrapper .internsus-Status .item-holder .stats-img-holder .rect-box-back .firstimg {
   width: 24vw;
   position: absolute;
-  top: 20px;
+  bottom: 0;
   left: -125px;
 }
 .wrapper .internsus-Status .item-holder .stats-img-holder .rect-box-back .secimg {
   width: 110px;
-  position: relative;
-  bottom: -117px;
-  right: -521px;
+  position: absolute;
+  bottom: -50px;
+  right: -18px;
 }
 .wrapper .internsus-Status .item-holder .stats-img-holder .rect-box-back .img-text {
-  position: relative;
-  bottom: -117px;
-  right: -427px;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
   font-weight: 700;
 }
 .wrapper .internsus-Status .item-holder .stats-img-holder .rect-box-back .react-box-text p {
@@ -290,7 +285,7 @@
 .wrapper .testimonial {
   background-image: url(../images/testimonial-bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   margin-top: 4rem;
   display: flex;
   justify-content: center;
