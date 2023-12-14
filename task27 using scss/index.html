@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>site with Scss</title>
+
+    <link rel="stylesheet" href="assets/scss/main.css" />
+    <link rel="stylesheet" href="assets/scss/res.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onload="start()">
+    <div class="wrapper">
+
+      <!-- navbar list from top -->
+      <div class="topslide" id="topslideNav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">about us</a></li>
+          <li><a href="">what we do</a></li>
+          <li><a href="">companies</a></li>
+          <li><a href="">contact us</a></li>
+          <div class="btn-top-nav">
+            <button>LOGIN</button>
+            <button>SIGNUP</button>
+          </div>
+        </ul>
+      </div>
+      
+      <!-- navbar start -->
+      <div class="navbar">
+        <div class="item-holder">
+          <div class="logo-text">
+            <p>intern<span style="color: red">us</span></p>
+          </div>
+          <div class="list">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">What we do</a></li>
+              <li><a href="">Companies</a></li>
+              <li><a href="">Contact us</a></li>
+              <li>
+                <button class="login">login</button>
+                <button class="signup">Signup</button>
+              </li>
+            </ul>
+          </div>
+          <!-- menu bar -->
+          <div id="menuBar" class="list-nav-icon" style="display: none">
+            <div onclick="show(menuBar,topslideNav)">
+              <span class="line1"></span>
+              <span class="line2"></span>
+              <span class="line3"></span>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+      <!-- navbar end -->
+
+      <!-- banner section start -->
+      <div class="banner">
+        <div class="item-holder">
+          <div class="content-container">
+            <div class="head-content-holder">
+              <p>Hire talent Or get intership</p>
+              <p>as <span>high school students</span></p>
+              <div class="head-btn">
+                <a href="" class="jobs">Great jobs</a>
+                <a href="">Great talent</a>
+              </div>
+            </div>
+            <div class="box-circle">
+              <img src="assets/images/circle-img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- banner section end -->
+
+      <!-- about section start -->
+      <section class="about">
+        <div class="item-holder">
+          <!-- content -->
+          <div class="about-content-holder">
+            <div class="img-holder-about">
+              <img src="assets/images/about-us-img.png" alt="" />
+            </div>
+            <div class="text-holder-about">
+              <p class="head-about">
+                How internus helps people<br />
+                fulfill their goals
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
+                ut incidunt! Voluptatem dolor obcaecati sed similique vel
+                debitis neque. Omnis modi praesentium ipsum, dolore odit est
+                quisquam. Laborum, placeat blanditiis?
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
+                ut incidunt! Voluptatem dolor obcaecati sed similique vel
+                debitis neque. Omnis modi praesentium ipsum, dolore odit est
+                quisquam. Laborum, placeat blanditiis?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about section end -->
+
+      <!-- section internus stats start -->
+      <section class="internsus-Status">
+        <dvi class="item-holder">
+          <!-- internus stats -->
+          <div class="stats-holder">
+            <div class="stats-text">
+              <p>intern<span style="color: red">us</span> stats</p>
+            </div>
+            <div class="stats-icons">
+              <div class="icon-box">
+                <i class="fa-solid fa-calculator"></i>
+                <p class="num-data">300+</p>
+                <p>Accountancy, banking<br />& finance Jobs</p>
+              </div>
+              <div class="icon-box">
+                <i class="fa-solid fa-pen-ruler"></i>
+                <p class="num-data">100+</p>
+                <p>Arts & Designs Job</p>
+              </div>
+              <div class="icon-box">
+                <i class="fa-solid fa-user"></i>
+                <p class="num-data">50+</p>
+                <p>Consultant on board</p>
+              </div>
+              <div class="icon-box">
+                <i class="fa-solid fa-folder"></i>
+                <p class="num-data">20+</p>
+                <p>Projects in Pipeline</p>
+              </div>
+            </div>
+          </div>
+
+          <!--stats images background start  -->
+          <div class="stats-img-holder">
+            <div class="rect-box-back">
+              <img
+                class="firstimg"
+                src="assets/images/explore-layout-img.png"
+                alt=""
+              />
+              <img class="secimg" src="assets/images/explore.png" alt="" />
+              <p class="img-text">EXPLORE</p>
+              <div class="react-box-text">
+                <p>100+ Top consultancies</p>
+                <p>looking for internship</p>
+                <p>students</p>
+              </div>
+            </div>
+          </div>
+          <!--stats images background end  -->
+
+          <!-- internus end -->
+        </dvi>
+
+        <div class="semi-circle"></div>
+      </section>
+      <!-- section internus stats end -->
+
+      <!-- service section start -->
+      <section class="service">
+        <div class="item-holder">
+          <div class="service-content">
+            <div class="service-text">
+              <p>Amazing opportunities are now</p>
+              <p>within your reach</p>
+            </div>
+            <div class="service-icon-content">
+              <div class="service-icon">
+                <i class="fa-regular fa-handshake"></i>
+                <p class="icon-text">Best Service</p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sequi quod non minima?
+                </p>
+              </div>
+              <div class="service-icon">
+                <i class="fa-solid fa-people-group"></i>
+                <p class="icon-text">Talent Pool</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Porro sequi quisquam consectetur?
+                </p>
+              </div>
+              <div class="service-icon">
+                <i class="fa-regular fa-handshake"></i>
+                <p class="icon-text">Dedicated Support</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  magni nisi odio!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- service section end -->
+
+      <!-- testimonial start -->
+      <section class="testimonial">
+        <div class="item-holder">
+          <div class="testimonial-text">
+            <p>What do our esteemed clients</p>
+            <p>say about us</p>
+          </div>
+
+          <div class="testimonial-box-content">
+            <img src="assets/images/testimonial-img-1.png" alt="" />
+            <p class="testimonial-text-img">
+              Pakages and web editor now using <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              asperiores officia odio.
+            </p>
+            <p>Bhumi Kapoor</p>
+            <p>Abcd pvt.ltd.</p>
+          </div>
+        </div>
+      </section>
+      <!-- testimonial end -->
+
+      <!-- blog section start -->
+      <section class="blog">
+        <div class="item-holder">
+          <div class="blog-box">
+            <p class="latest">Latest Blog</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+              culpa doloremque sunt eum.
+            </p>
+            <button>View All</button>
+          </div>
+          <div class="blog-box" style="margin-top: -34px">
+            <img src="assets/images/about-us-section.png" alt="" />
+            <p>14 Dev 2023</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+              culpa doloremque sunt eum.
+            </p>
+          </div>
+          <div class="blog-box">
+            <img src="assets/images/for-interns-img.jpg" alt="" />
+            <p>14 Dev 2023</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+              culpa doloremque sunt eum. Magni aut officiis odio ducimus
+              veritatis tempora.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- blog section end -->
+
+      <!-- footer start -->
+      <footer>
+        <div class="item-holder">
+          <div class="footer-box">
+            <p>About Internus</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              earum natus cupiditate commodi odio suscipit voluptate impedit
+              dignissimos.
+            </p>
+            <div class="footer-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+          </div>
+          <div class="footer-box">
+            <p>Usefull Links</p>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">How it works</a></li>
+              <li><a href="">Privacy and policy</a></li>
+              <li><a href="">Terms and Conditions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-box">
+            <p>Subscribe Now</p>
+            <div class="inputbox">
+              <input type="text" />
+              <span class="send-icon"
+                ><i class="fa-solid fa-paper-plane"></i
+              ></span>
+            </div>
+            <p>
+              <span style="margin-right: 12px"
+                ><i class="fa-solid fa-phone"></i></span
+              >+91-7009879846
+            </p>
+            <p>
+              <span style="margin-right: 12px"
+                ><i class="fa-solid fa-envelope"></i></span
+              >info@gmail.com
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+    </div>
+
+    <!-- script start -->
+    <!-- <script>
+      const start = () => {
+        let num = document.getElementsByClassName("num-data");
+        console.log(num.length);
+        for (let i = 0; i < num.length; i++) {
+          let data = parseInt(num[i].innerText);
+
+          for (let j = 1; j <= data; j++) {
+            setInterval(() => {
+              num[i].innerText = `${j}+`;
+              // console.log(j);
+            }, 2000);
+          }
+          console.log(typeof data);
+        }
+      };
+    </script> -->
+    <!-- script end -->
+
+    <script>
+      const show = (id,id2) => {
+        id.classList.toggle("menuClose");
+        id2.classList.toggle("show-Top-Nav");
+      };
+
+      //
+    </script>
+  </body>
+</html>
