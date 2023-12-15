@@ -16,10 +16,53 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  </head>
-  <body onload="start()">
-    <div class="wrapper">
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
       <!-- navbar list from top -->
       <div class="topslide" id="topslideNav">
         <!-- menu bar -->
@@ -42,12 +85,12 @@
           </div>
         </ul>
       </div>
-      
+
       <!-- navbar start -->
       <div class="navbar">
         <div class="item-holder">
           <div class="logo-text">
-            <p>intern<span style="color: red">us</span></p>
+            <p><a href="">intern</a><span style="color: red">us</span></p>
           </div>
           <div class="list">
             <ul>
@@ -70,8 +113,6 @@
               <span class="line3"></span>
             </div>
           </div>
-
-          
         </div>
       </div>
 
@@ -227,22 +268,50 @@
 
       <!-- testimonial start -->
       <section class="testimonial">
-        <div class="item-holder">
-          <div class="testimonial-text">
-            <p>What do our esteemed clients</p>
-            <p>say about us</p>
-          </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="item-holder">
+                <div class="testimonial-text">
+                  <p>What do our esteemed clients</p>
+                  <p>say about us</p>
+                </div>
 
-          <div class="testimonial-box-content">
-            <img src="assets/images/testimonial-img-1.png" alt="" />
-            <p class="testimonial-text-img">
-              Pakages and web editor now using <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              asperiores officia odio.
-            </p>
-            <p>Bhumi Kapoor</p>
-            <p>Abcd pvt.ltd.</p>
+                <div class="testimonial-box-content">
+                  <img src="assets/images/testimonial-img-1.png" alt="" />
+                  <p class="testimonial-text-img">
+                    Pakages and web editor now using <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse asperiores officia odio.
+                  </p>
+                  <p>Bhumi Kapoor</p>
+                  <p>Abcd pvt.ltd.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item-holder">
+                <div class="testimonial-text">
+                  <p>What do our esteemed clients</p>
+                  <p>say about us</p>
+                </div>
+
+                <div class="testimonial-box-content">
+                  <img src="assets/images/testimonial-img-1.png" alt="" />
+                  <p class="testimonial-text-img">
+                    Pakages and web editor now using <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse asperiores officia odio.
+                  </p>
+                  <p>Bhumi Kapoor</p>
+                  <p>Abcd pvt.ltd.</p>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </section>
       <!-- testimonial end -->
@@ -290,9 +359,9 @@
               dignissimos.
             </p>
             <div class="footer-icon">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-linkedin"></i>
+              <a href=""> <i class="fa-brands fa-facebook"></i> </a>
+              <a href=""><i class="fa-brands fa-twitter"></i> </a>
+              <a href=""><i class="fa-brands fa-linkedin"></i> </a>
             </div>
           </div>
           <div class="footer-box">
@@ -316,51 +385,44 @@
                 ><i class="fa-solid fa-paper-plane"></i
               ></span>
             </div>
-            <p>
-              <span style="margin-right: 12px"
-                ><i class="fa-solid fa-phone"></i></span
-              >+91-7009879846
-            </p>
-            <p>
-              <span style="margin-right: 12px"
-                ><i class="fa-solid fa-envelope"></i></span
-              >info@gmail.com
-            </p>
+            <div class="num-box">
+              <p>
+                <span style="margin-right: 12px"
+                  ><i class="fa-solid fa-phone"></i></span
+                >+91-7009879846
+              </p>
+              <p>
+                <span style="margin-right: 12px"
+                  ><i class="fa-solid fa-envelope"></i></span
+                >info@gmail.com
+              </p>
+            </div>
           </div>
         </div>
       </footer>
       <!-- footer end -->
     </div>
 
-    <!-- script start -->
-    <!-- <script>
-      const start = () => {
-        let num = document.getElementsByClassName("num-data");
-        console.log(num.length);
-        for (let i = 0; i < num.length; i++) {
-          let data = parseInt(num[i].innerText);
-
-          for (let j = 1; j <= data; j++) {
-            setInterval(() => {
-              num[i].innerText = `${j}+`;
-              // console.log(j);
-            }, 2000);
-          }
-          console.log(typeof data);
-        }
-      };
-    </script> -->
-    <!-- script end -->
-
+    <!-- for show the top menu -->
     <script>
-      const show = (id,id2,topList) => {
+      const show = (id, id2, topList) => {
         id.classList.toggle("menuClose");
         topList.classList.toggle("menuClose");
         id2.classList.toggle("show-Top-Nav");
-
       };
+    </script>
 
-      //
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     </script>
   </body>
 </html>

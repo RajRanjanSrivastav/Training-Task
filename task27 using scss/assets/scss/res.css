@@ -100,8 +100,35 @@
   .about .item-holder .about-content-holder {
     flex-direction: column;
   }
+  .about .item-holder .about-content-holder .text-holder-about {
+    margin-top: 3vw;
+    text-align: left;
+  }
   footer .item-holder {
     flex-direction: column;
     align-items: center;
+  }
+  footer .item-holder .footer-box {
+    margin-top: 2vw;
+  }
+}
+@media screen and (max-width: 724px) {
+  .internsus-Status .item-holder .stats-icons {
+    flex-direction: column;
+  }
+  .internsus-Status .item-holder .stats-icons .icon-box {
+    margin: 3vw 0;
+  }
+  .internsus-Status .item-holder .stats-icons .icon-box i {
+    font-size: 5.4vw !important;
+  }
+  .service .item-holder .service-content .service-icon-content {
+    flex-direction: column;
+  }
+  .service .item-holder .service-content .service-icon-content .service-icon {
+    margin: 2vw 0;
+  }
+  .service .item-holder .service-content .service-icon-content .service-icon i {
+    font-size: 6vw !important;
   }
 }/*# sourceMappingURL=res.css.map */

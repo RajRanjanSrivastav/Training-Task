@@ -1,6 +1,8 @@
 $f1break: 1190px;
 $f2break: 890px;
 
+$f1: 3.4vw;
+$f2: 5.4vw;
 // colors
 $black: black;
 $white: white;
@@ -92,12 +94,11 @@ $white: white;
       display: block !important;
     }
 
-
     // blog
-    .blog{
-      .item-holder{
+    .blog {
+      .item-holder {
         flex-direction: column;
-        .blog-box{
+        .blog-box {
           margin-top: 2vw !important;
         }
       }
@@ -105,14 +106,54 @@ $white: white;
   }
 }
 
-
 // 890
 @media screen and (max-width: $f2break) {
   .about .item-holder .about-content-holder {
     flex-direction: column;
-  } 
+
+    .text-holder-about {
+      margin-top: 3vw;
+      text-align: left;
+    }
+  }
   footer .item-holder {
     flex-direction: column;
     align-items: center;
+    .footer-box {
+      margin-top: 2vw;
+    }
   }
 }
+
+// 724
+@media screen and (max-width: 724px) {
+  .internsus-Status {
+    .item-holder {
+      .stats-icons {
+        flex-direction: column;
+
+        .icon-box {
+          margin: 3vw 0;
+          i{
+            font-size: $f2 !important ;
+          }
+        }
+      }
+    }
+  }
+
+
+  //service
+  .service .item-holder .service-content .service-icon-content{
+    flex-direction: column;
+    .service-icon{
+      margin: 2vw 0;
+      i{
+        font-size: 6vw !important;
+      }
+    }
+  }
+}
+
+
+

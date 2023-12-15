@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .show-Top-Nav {
   top: 0px !important;
 }
@@ -13,7 +17,7 @@
   position: fixed;
   left: 0;
   top: -800px;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -52,7 +56,7 @@
   background-color: rgba(252, 31, 31, 0.7) !important;
 }
 .wrapper .item-holder {
-  width: 65%;
+  width: 70%;
 }
 .wrapper .navbar {
   display: flex;
@@ -66,8 +70,12 @@
   justify-content: space-between;
 }
 .wrapper .navbar .item-holder .logo-text {
-  font-size: 2.4vw;
+  font-size: 26px;
   padding-bottom: 6px;
+}
+.wrapper .navbar .item-holder .logo-text a {
+  text-decoration: none;
+  color: black;
 }
 .wrapper .navbar .item-holder .list ul {
   display: flex;
@@ -81,12 +89,18 @@
   text-transform: uppercase;
   color: black;
 }
+.wrapper .navbar .item-holder .list ul li a:hover {
+  font-weight: 600;
+}
 .wrapper .navbar .item-holder .list ul li button {
   background-color: red;
   padding: 10px;
   color: white;
   text-transform: uppercase;
   border: none;
+}
+.wrapper .navbar .item-holder .list ul li button:hover {
+  background-color: rgb(187, 7, 7);
 }
 .wrapper .navbar .item-holder .list ul li .login {
   border-top-left-radius: 15px;
@@ -114,7 +128,7 @@
   color: red;
 }
 .wrapper .banner .content-container .head-content-holder .head-btn {
-  margin-top: 26px;
+  margin-top: 2vw;
 }
 .wrapper .banner .content-container .head-content-holder .head-btn a {
   text-decoration: none;
@@ -137,14 +151,14 @@
 .wrapper .banner .content-container .box-circle {
   border: 2px solid rgb(255, 0, 0);
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 5vw;
+  height: 5vw;
   position: absolute;
-  left: -70px;
+  left: -5vw;
 }
 .wrapper .banner .content-container .box-circle img {
-  width: 56px;
-  margin: 7.4px;
+  width: 3.5vw;
+  margin: 0.7vw;
 }
 .wrapper .about {
   display: flex;
@@ -157,7 +171,7 @@
   align-items: center;
 }
 .wrapper .about .about-content-holder .img-holder-about img {
-  width: 350px;
+  width: 32vw;
 }
 .wrapper .about .about-content-holder .text-holder-about p {
   padding: 8px;
@@ -194,6 +208,9 @@
   font-size: 3vw;
   color: red;
 }
+.wrapper .internsus-Status .item-holder .stats-holder .stats-icons .icon-box p {
+  text-align: center;
+}
 .wrapper .internsus-Status .item-holder .stats-holder .stats-icons .icon-box .num-data {
   margin: 14px 0 4px 0;
   font-size: 2.4vw;
@@ -225,8 +242,10 @@
   position: absolute;
   bottom: -50px;
   right: -18px;
+  cursor: pointer;
 }
 .wrapper .internsus-Status .item-holder .stats-img-holder .rect-box-back .img-text {
+  cursor: pointer;
   position: absolute;
   bottom: -5px;
   right: 0;
@@ -283,23 +302,26 @@
   padding: 0 8px;
 }
 .wrapper .testimonial {
-  background-image: url(../images/testimonial-bg.png);
-  background-repeat: no-repeat;
-  background-size: contain;
   margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.wrapper .testimonial .item-holder {
-  margin-top: 4rem;
+.wrapper .testimonial .swiper .swiper-wrapper .swiper-slide {
+  background-image: url(../images/testimonial-bg.png);
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position: 0 50px !important;
 }
-.wrapper .testimonial .item-holder .testimonial-text {
+.wrapper .testimonial .swiper .swiper-wrapper .swiper-slide .item-holder {
+  margin: 2rem 0;
+}
+.wrapper .testimonial .swiper .swiper-wrapper .swiper-slide .item-holder .testimonial-text {
   font-size: 3vw;
   font-weight: 700;
   text-align: center;
 }
-.wrapper .testimonial .item-holder .testimonial-box-content {
+.wrapper .testimonial .swiper .swiper-wrapper .swiper-slide .item-holder .testimonial-box-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -307,13 +329,20 @@
   font-size: 1.4vw;
   font-weight: 600;
 }
-.wrapper .testimonial .item-holder .testimonial-box-content img {
+.wrapper .testimonial .swiper .swiper-wrapper .swiper-slide .item-holder .testimonial-box-content img {
   margin-top: 2rem;
+  width: 22vw;
 }
-.wrapper .testimonial .item-holder .testimonial-box-content .testimonial-text-img {
+.wrapper .testimonial .swiper .swiper-wrapper .swiper-slide .item-holder .testimonial-box-content .testimonial-text-img {
   text-align: center;
   margin: 1rem 0;
   width: 500px;
+}
+.wrapper .testimonial .swiper .swiper-button-next {
+  color: black;
+}
+.wrapper .testimonial .swiper .swiper-button-prev {
+  color: black;
 }
 .wrapper .blog {
   margin-top: 4rem;
@@ -337,9 +366,12 @@
   border: none;
   margin: 1rem 0;
 }
+.wrapper .blog .item-holder .blog-box button:hover {
+  background-color: rgb(187, 7, 7);
+}
 .wrapper .blog .item-holder .blog-box .latest {
-  font-size: 3vw;
-  font-weight: 800;
+  font-size: 35px;
+  font-weight: 700;
   letter-spacing: 5px;
 }
 .wrapper .blog .item-holder .blog-box img {
@@ -373,7 +405,11 @@
   margin-top: 8px;
   font-size: 2.6rem;
 }
-.wrapper footer .item-holder .footer-box .footer-icon i {
+.wrapper footer .item-holder .footer-box .footer-icon a {
+  text-decoration: none;
+  color: white;
+}
+.wrapper footer .item-holder .footer-box .footer-icon a i {
   padding-right: 12px;
 }
 .wrapper footer .item-holder .footer-box ul li {
@@ -383,6 +419,10 @@
 .wrapper footer .item-holder .footer-box ul li a {
   text-decoration: none;
   color: white;
+}
+.wrapper footer .item-holder .footer-box p:nth-child(1) {
+  font-weight: 800 !important;
+  font-size: 1.4vw;
 }
 .wrapper footer .item-holder .footer-box p {
   padding: 10px 0;
@@ -397,7 +437,14 @@
   margin-bottom: 16px;
 }
 .wrapper footer .item-holder .footer-box .inputbox .send-icon {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-left: 4px;
   color: white;
+}
+.wrapper footer .item-holder .footer-box .num-box {
+  margin-top: 14px;
+}
+.wrapper footer .item-holder .footer-box .num-box p {
+  font-size: 1.2vw !important;
+  padding: 2px 0;
 }/*# sourceMappingURL=main.css.map */
