@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.btn {
+  background-color: #db991e;
+  padding: 4px 16px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  &:hover{
+    background-color: #f0af36;
+  }
+}
+// color
+$main: #2c0a3c;
+$secondry: #29093a;
+$text-white: white;
+$pad-se: 8px;
+
+.wrapper {
+  .main {
+    background-image: url(images/iih-img.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    // navbar start
+    .navbar-IIH {
+      // first nav start
+      .first-nav {
+        padding: 6px;
+        font-size: 0.9rem;
+        background-color: $main;
+        .first-part-top-nav {
+          // border: 2px solid red;
+          color: $text-white;
+          display: flex;
+          p {
+            margin: 0;
+          }
+          .bharat {
+            line-height: 1;
+            position: relative;
+            p {
+              text-align: end;
+            }
+            &::after {
+              display: block;
+              position: absolute;
+              content: "";
+              width: 1.6px;
+              height: 28px;
+              background-color: rgb(255, 255, 255);
+              top: 1px;
+              right: -10px;
+            }
+          }
+
+          .culture {
+            line-height: 1;
+            :nth-child(2) {
+              font-size: 0.9rem;
+            }
+          }
+        }
+
+        /* ul- first navbar start */
+        .nav-ul {
+          display: flex;
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: white;
+            margin: 0 20px;
+          }
+          .anchor-tag {
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 1px;
+              height: 22px;
+              right: -19px;
+              top: 0;
+              background-color: white;
+            }
+          }
+        }
+
+        /* ul- first navbar end */
+      }
+      // first nav end
+
+      // second navbar start
+      .sec-nav {
+        background-color: rgb(50, 26, 66, 0.9);
+        color: $text-white;
+        .sec-nav-row {
+          padding: 10px $pad-se;
+          .logo-content-holder {
+            display: flex;
+            align-items: center;
+            .logo {
+              img {
+                width: 84px;
+              }
+            }
+            .logo-content {
+              p {
+                margin: 0;
+                margin-left: 8px;
+                font-size: 12px;
+                &:nth-child(1) {
+                  font-weight: 700;
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+
+          .input-box {
+            background-color: white;
+            border-radius: 21px;
+            padding: 8px 22px;
+            input {
+              border: none;
+            }
+            i {
+              color: #a57e84;
+              font-weight: 800;
+            }
+          }
+        }
+      }
+      // second navbar end
+
+      // third navbar start
+      .third-nav {
+        background-color: $secondry;
+        .row {
+          padding: 0 $pad-se;
+        }
+        ul {
+          color: $text-white;
+          margin: 0;
+          padding: 10px 4px;
+          display: flex;
+          font-weight: 600;
+          justify-content: space-between;
+
+          li {
+            list-style: none;
+            text-transform: uppercase;
+            cursor: pointer;
+          }
+        }
+      }
+      // third navbar end
+    }
+    // navbar end
+
+    .main-content {
+      background-color: rgb(50, 26, 66, 0.7);
+
+      .slider {
+        padding: 0 $pad-se + 14px;
+        .swiper {
+          .swiper-button-next {
+            &::after {
+              display: none;
+            }
+          }
+          .swiper-button-prev {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .header-cards {
+        .row {
+          padding: 0 12px;
+          .award {
+            background: linear-gradient(
+                94deg,
+                rgba(2, 0, 36, 0.9) 8%,
+                rgba(43, 3, 79, 0.7) 40%
+              ),
+              url(images/iih-img.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            // border: 2px solid red;
+            color: $text-white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 46px;
+            border-radius: 10px;
+
+            .award-logo {
+              position: relative;
+              img {
+                width: 1020px;
+              }
+              .btn {
+                top: 5vw;
+                left: 3.4vw;
+                position: absolute;
+              }
+            }
+            .award-content {
+              .about {
+                p {
+                  text-transform: uppercase;
+                  margin: 0;
+
+                  &:nth-child(1) {
+                    margin-left: 4px;
+                    color: #db991e;
+                  }
+                  &:nth-child(2) {
+                    font-weight: 700;
+                  }
+                }
+              }
+              .about-content {
+                border-left: 2px solid #db991e;
+                padding: 11px;
+                margin: 12px 0;
+                p {
+                  line-height: 1.2;
+                }
+              }
+            }
+          }
+
+          // vc card
+          .vc-card {
+            background-image: url(images/vc-back.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            .vc-img-hold {
+              background-color: rgb(255, 255, 255, 0.6);
+              border-radius: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              p {
+                margin: 0;
+              }
+            }
+            .vc-content {
+              p {
+                margin: 0;
+                a {
+                  color: black;
+                  font-weight: 700;
+                }
+              }
+              .vc-para {
+                display: flex;
+                span {
+                  width: 60px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // section gallery start
+  .gallery {
+     
+    .allType {
+      .gallery-top {
+        border-radius: 10px;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          94deg,
+          rgba(2, 0, 36, 1) 6%,
+          rgba(76, 0, 80, 1) 50%
+        );
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        color: $text-white;
+        .gal-type {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+        }
+        a {
+          color: $text-white;
+        }
+      }
+    }
+
+    .event-box{
+      background-color: rgb(41, 9, 58);
+      color: $text-white;
+      border-radius: 10px;
+      .event-para{
+        display: flex;
+        span{
+          width: 50px;
+        }
+      }
+      a{
+        color: $text-white;
+      }
+    }
+  }
+  // section gallery end
+
+
+  // last slider start
+  .last-slider{
+    .mySwiper2{
+      .swiper-wrapper{
+        .swiper-slide{
+          img{
+            padding: 2rem !important;
+          }
+        }
+      }
+    }
+  }
+  // last slider end
+
+
+  footer{
+    background-color: $main;
+
+    .alumni{
+      position: relative;
+      img{
+        max-width: 118%;
+      }
+      p{
+        position: absolute;
+        margin: 0;
+        top: 12px;
+        left: 12px;
+        font-weight: 700;
+        color: $secondry;
+      }
+    }
+    .footer-content{
+      color: $text-white;
+      display: flex;
+      justify-content: end;
+      ul{
+        margin: 0;
+        li{
+          font-size: 0.8rem;
+          list-style: none;
+        }
+      }
+    }
+
+    .copyright{
+      background-color: #3F0738;
+    }
+
+  }
+}
