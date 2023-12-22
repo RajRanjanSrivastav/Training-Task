@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  
 }
 
 .btn {
@@ -11,7 +10,7 @@
     text-decoration: none;
     color: black;
   }
-  &:hover{
+  &:hover {
     background-color: #f0af36;
   }
 }
@@ -21,47 +20,57 @@ $secondry: #29093a;
 $text-white: white;
 $pad-se: 8px;
 
+// index html
 .wrapper {
-  .main {
-    background-image: url(images/iih-img.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    // navbar start
-    .navbar-IIH {
-      // first nav start
-      .first-nav {
-        padding: 6px;
-        font-size: 0.9rem;
-        background-color: $main;
-        .first-part-top-nav {
-          // border: 2px solid red;
-          color: $text-white;
-          display: flex;
-          p {
-            margin: 0;
-          }
-          .bharat {
-            line-height: 1;
-            position: relative;
+  .main-wrapper {
+    // height: 158vh;
+    .main {
+      background: linear-gradient(
+          180deg,
+          rgba(2, 0, 36, 0.8) 21%,
+          rgba(78, 0, 96, 0.7) 56%
+        ),
+        url(images/iih-img.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 56vw;
+      // navbar start
+      .navbar-IIH {
+        // first nav start
+        .first-nav {
+          padding: 6px;
+          font-size: 0.9rem;
+          background-color: $main;
+          .first-part-top-nav {
+            // border: 2px solid red;
+            color: $text-white;
+            display: flex;
             p {
-              text-align: end;
+              margin: 0;
             }
-            &::after {
-              display: block;
-              position: absolute;
-              content: "";
-              width: 1.6px;
-              height: 28px;
-              background-color: rgb(255, 255, 255);
-              top: 1px;
-              right: -10px;
+            .bharat {
+              line-height: 1;
+              position: relative;
+              p {
+                text-align: end;
+              }
+              &::after {
+                display: block;
+                position: absolute;
+                content: "";
+                width: 1.6px;
+                height: 28px;
+                background-color: rgb(255, 255, 255);
+                top: 1px;
+                right: -10px;
+              }
             }
-          }
 
-          .culture {
-            line-height: 1;
-            :nth-child(2) {
-              font-size: 0.9rem;
+            .culture {
+              line-height: 1;
+              :nth-child(2) {
+                font-size: 0.9rem;
+              }
             }
           }
         }
@@ -95,7 +104,7 @@ $pad-se: 8px;
 
       // second navbar start
       .sec-nav {
-        background-color: rgb(50, 26, 66, 0.9);
+        // background-color: rgb(50, 26, 66, 0.9);
         color: $text-white;
         .sec-nav-row {
           padding: 10px $pad-se;
@@ -126,6 +135,9 @@ $pad-se: 8px;
             padding: 8px 22px;
             input {
               border: none;
+              &:focus {
+                outline: none;
+              }
             }
             i {
               color: #a57e84;
@@ -143,7 +155,6 @@ $pad-se: 8px;
           padding: 0 $pad-se;
         }
         ul {
-          color: $text-white;
           margin: 0;
           padding: 10px 4px;
           display: flex;
@@ -153,7 +164,10 @@ $pad-se: 8px;
           li {
             list-style: none;
             text-transform: uppercase;
-            cursor: pointer;
+            a {
+              text-decoration: none;
+              color: $text-white;
+            }
           }
         }
       }
@@ -162,9 +176,10 @@ $pad-se: 8px;
     // navbar end
 
     .main-content {
-      background-color: rgb(50, 26, 66, 0.7);
+      // background-color: rgb(50, 26, 66, 0.7);
 
       .slider {
+        position: relative;
         padding: 0 $pad-se + 14px;
         .swiper {
           .swiper-button-next {
@@ -177,6 +192,15 @@ $pad-se: 8px;
               display: none;
             }
           }
+        }
+
+        .slider-text {
+          position: absolute;
+          bottom: 60px;
+          left: 86px;
+          z-index: 11;
+          color: $text-white;
+          letter-spacing: 1px;
         }
       }
 
@@ -277,7 +301,7 @@ $pad-se: 8px;
 
   // section gallery start
   .gallery {
-     
+    margin-top: 16vw;
     .allType {
       .gallery-top {
         border-radius: 10px;
@@ -308,30 +332,33 @@ $pad-se: 8px;
       }
     }
 
-    .event-box{
+    .event-box {
       background-color: rgb(41, 9, 58);
       color: $text-white;
       border-radius: 10px;
-      .event-para{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .event-para {
         display: flex;
-        span{
+        span {
           width: 50px;
         }
       }
-      a{
+      a {
         color: $text-white;
       }
     }
   }
   // section gallery end
 
-
   // last slider start
-  .last-slider{
-    .mySwiper2{
-      .swiper-wrapper{
-        .swiper-slide{
-          img{
+  .last-slider {
+    .mySwiper2 {
+      .swiper-wrapper {
+        .swiper-slide {
+          img {
             padding: 2rem !important;
           }
         }
@@ -340,16 +367,14 @@ $pad-se: 8px;
   }
   // last slider end
 
-
-  footer{
+  footer {
     background-color: $main;
-
-    .alumni{
+    .alumni {
       position: relative;
-      img{
+      img {
         max-width: 118%;
       }
-      p{
+      p {
         position: absolute;
         margin: 0;
         top: 12px;
@@ -358,22 +383,28 @@ $pad-se: 8px;
         color: $secondry;
       }
     }
-    .footer-content{
+    .footer-content {
       color: $text-white;
+      // border: 2px solid white;
       display: flex;
-      justify-content: end;
-      ul{
+      justify-content: space-evenly;
+      // justify-content: end;
+      ul {
         margin: 0;
-        li{
+        li {
           font-size: 0.8rem;
           list-style: none;
+          line-height: 2;
         }
+      }
+
+      .second-box-footer {
+        // border: 2px solid red;
       }
     }
 
-    .copyright{
-      background-color: #3F0738;
+    .copyright {
+      background-color: #3f0738;
     }
-
   }
 }
