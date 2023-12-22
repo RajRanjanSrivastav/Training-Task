@@ -274,8 +274,11 @@
 .wrapper .gallery .event-box a {
   color: white;
 }
-.wrapper .last-slider .mySwiper2 .swiper-wrapper .swiper-slide img {
-  padding: 2rem !important;
+.wrapper .last-slider {
+  background-color: white;
+}
+.wrapper .last-slider .mySwiper4 .swiper-wrapper .swiper-slide img {
+  width: 190px;
 }
 .wrapper footer {
   background-color: #2c0a3c;

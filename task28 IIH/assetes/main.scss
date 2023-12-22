@@ -355,14 +355,10 @@ $pad-se: 8px;
 
   // last slider start
   .last-slider {
-    .mySwiper2 {
-      .swiper-wrapper {
-        .swiper-slide {
-          img {
-            padding: 2rem !important;
-          }
-        }
-      }
+    background-color: white;
+
+    .mySwiper4 .swiper-wrapper .swiper-slide img {
+      width: 190px;
     }
   }
   // last slider end
