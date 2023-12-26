@@ -10,6 +10,14 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!--including font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&family=Poppins&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- including swiper -->
     <link
       rel="stylesheet"
@@ -145,8 +153,8 @@
                 <div class="col">
                   <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="assetes/about.html">About nmi</a></li>
-                    <li><a href="assetes/research.html">departments</a></li>
+                    <li><a href="about.html">About nmi</a></li>
+                    <li><a href="research.html">departments</a></li>
                     <li><a href="#">academics</a></li>
                     <li><a href="#">students</a></li>
                     <li><a href="#">administration</a></li>
@@ -202,7 +210,7 @@
 
             <div class="container-fluid header-cards">
               <div class="row">
-                <div class="col-7">
+                <div class="col-7 content-card">
                   <div class="award">
                     <div class="award-logo">
                       <img
@@ -210,7 +218,6 @@
                         class="img-fluid"
                         alt=""
                       />
-                      <button class="btn"><a href="">Awards</a></button>
                     </div>
                     <div class="award-content ms-5">
                       <div class="about">
@@ -233,7 +240,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-5">
+                <div class="col-5 content-card">
                   <div class="row p-2 vc-card">
                     <div class="col-5 p-3 vc-img-hold">
                       <p class="fw-bold fs-6">VC'S NOTE</p>
@@ -429,8 +436,8 @@
               <img src="assetes/icon/mygov_0_0.png" alt="back-img" />
             </div>
           </div>
-          <div class="swiper-button-next" id="last-next"></div>
-          <div class="swiper-button-prev" id="last-prev"></div>
+          <div class="swiper-button-next slider-btn" id="last-next"></div>
+          <div class="swiper-button-prev slider-btn" id="last-prev"></div>
         </div>
       </section>
       <!-- section last slider end -->
@@ -478,33 +485,33 @@
             <div class="col-6 footer-content ms-auto">
               <div class="first-box-footer">
                 <ul>
-                  <li>Home</li>
-                  <li>FAQ</li>
-                  <li>Status of Vacancy Position</li>
-                  <li>Vacancies</li>
-                  <li>Tender</li>
-                  <li>MoU Signed with MoC</li>
-                  <li>RED</li>
+                  <li><a href="">Home</a></li>
+                  <li><a href="">FAQ</a></li>
+                  <li><a href="">Status of Vacancy Position</a></li>
+                  <li><a href="">Vacancies</a></li>
+                  <li><a href="">Tender</a></li>
+                  <li><a href="">MoU Signed with MoC</a></li>
+                  <li><a href="">RED</a></li>
                 </ul>
               </div>
               <div class="second-box-footer">
                 <ul>
-                  <li>ICC on Sexual Harassment</li>
-                  <li>Anti Ragging Committee</li>
-                  <li>Sitemap</li>
-                  <li>RTI</li>
-                  <li>Grievances</li>
-                  <li>Construction of Noida</li>
-                  <li>Campus</li>
+                  <li><a href="">ICC on Sexual Harassment</a></li>
+                  <li><a href="">Anti Ragging Committee</a></li>
+                  <li><a href="">Sitemap</a></li>
+                  <li><a href="">RTI</a></li>
+                  <li><a href="">Grievances</a></li>
+                  <li><a href="">Construction of Noida</a></li>
+                  <li><a href="">Campus</a></li>
                 </ul>
               </div>
               <div class="third-box-footer">
                 <ul>
-                  <li>Employee Corner</li>
-                  <li>Downloads</li>
-                  <li>Institute MOUs</li>
-                  <li>Contact Us</li>
-                  <li>Location</li>
+                  <li><a href="">Employee Corner</a></li>
+                  <li><a href="">Downloads</a></li>
+                  <li><a href="">Institute MOUs</a></li>
+                  <li><a href="">Contact Us</a></li>
+                  <li><a href="">Location</a></li>
                 </ul>
               </div>
             </div>
@@ -543,9 +550,8 @@
 
       var swiper4 = new Swiper(".mySwiper4", {
         slidesPerView: 4,
-        navigation: {
-          nextEl: "#last-next",
-          prevEl: "#last-prev",
+        autoplay: {
+          delay: 2000,
         },
       });
     </script>

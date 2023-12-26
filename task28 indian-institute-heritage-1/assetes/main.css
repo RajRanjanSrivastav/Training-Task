@@ -15,6 +15,9 @@
   background-color: #f0af36;
 }
 
+.wrapper .main-wrapper {
+  height: 160vh;
+}
 .wrapper .main-wrapper .main {
   background: linear-gradient(180deg, rgba(2, 0, 36, 0.8) 21%, rgba(78, 0, 96, 0.7) 56%), url(images/iih-img.png);
   background-repeat: no-repeat;
@@ -128,7 +131,7 @@
   margin: 0;
   padding: 10px 4px;
   display: flex;
-  font-weight: 600;
+  font-weight: 500;
   justify-content: space-between;
 }
 .wrapper .main-wrapper .main .third-nav ul li {
@@ -230,9 +233,6 @@
 .wrapper .main-wrapper .main-content .header-cards .row .vc-card .vc-content .vc-para span {
   width: 60px;
 }
-.wrapper .gallery {
-  margin-top: 16vw;
-}
 .wrapper .gallery .allType .gallery-top {
   border-radius: 10px;
   background: rgb(2, 0, 36);
@@ -280,6 +280,9 @@
 .wrapper .last-slider .mySwiper4 .swiper-wrapper .swiper-slide img {
   width: 190px;
 }
+.wrapper .last-slider .slider-btn {
+  display: none;
+}
 .wrapper footer {
   background-color: #2c0a3c;
 }
@@ -310,6 +313,30 @@
   list-style: none;
   line-height: 2;
 }
+.wrapper footer .footer-content ul li a {
+  color: white;
+  text-decoration: none;
+}
 .wrapper footer .copyright {
   background-color: #3f0738;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 2980px) {
+  .main-wrapper {
+    height: 150vh !important;
+  }
+  .video-img iframe {
+    height: 27vw;
+  }
+  .vc-content {
+    height: 21.4vw;
+  }
+  .vc-img-hold img {
+    height: 11.4vw;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 2980px) {
+  .main-wrapper {
+    height: 142vh !important;
+  }
 }/*# sourceMappingURL=main.css.map */

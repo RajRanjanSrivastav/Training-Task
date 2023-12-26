@@ -22,8 +22,10 @@ $pad-se: 8px;
 
 // index html
 .wrapper {
+  // font-family: "Open Sans";
   .main-wrapper {
-    // height: 158vh;
+    // border: 2px solid black;
+    height: 160vh;
     .main {
       background: linear-gradient(
           180deg,
@@ -34,6 +36,7 @@ $pad-se: 8px;
       background-repeat: no-repeat;
       background-size: cover;
       height: 56vw;
+      // border: 2px solid red;
       // navbar start
       .navbar-IIH {
         // first nav start
@@ -158,7 +161,7 @@ $pad-se: 8px;
           margin: 0;
           padding: 10px 4px;
           display: flex;
-          font-weight: 600;
+          font-weight: 500;
           justify-content: space-between;
 
           li {
@@ -207,6 +210,7 @@ $pad-se: 8px;
       .header-cards {
         .row {
           padding: 0 12px;
+
           .award {
             background: linear-gradient(
                 94deg,
@@ -228,11 +232,6 @@ $pad-se: 8px;
               position: relative;
               img {
                 width: 1020px;
-              }
-              .btn {
-                top: 5vw;
-                left: 3.4vw;
-                position: absolute;
               }
             }
             .award-content {
@@ -273,12 +272,17 @@ $pad-se: 8px;
               display: flex;
               flex-direction: column;
               justify-content: center;
+              //  img {
+              //   height: 11.4vw;
+              // }
 
               p {
                 margin: 0;
               }
             }
             .vc-content {
+              // height: 29vw;
+
               p {
                 margin: 0;
                 a {
@@ -301,7 +305,7 @@ $pad-se: 8px;
 
   // section gallery start
   .gallery {
-    margin-top: 16vw;
+    // margin-top: 16vw;
     .allType {
       .gallery-top {
         border-radius: 10px;
@@ -360,6 +364,9 @@ $pad-se: 8px;
     .mySwiper4 .swiper-wrapper .swiper-slide img {
       width: 190px;
     }
+    .slider-btn {
+      display: none;
+    }
   }
   // last slider end
 
@@ -391,16 +398,39 @@ $pad-se: 8px;
           font-size: 0.8rem;
           list-style: none;
           line-height: 2;
+          a {
+            color: $text-white;
+            text-decoration: none;
+          }
         }
-      }
-
-      .second-box-footer {
-        // border: 2px solid red;
       }
     }
 
     .copyright {
       background-color: #3f0738;
     }
+  }
+}
+
+// responsivness
+@media only screen and (min-width: 1400px) and (max-width: 2980px) {
+  .main-wrapper {
+    height: 150vh !important;
+  }
+  .video-img iframe {
+    height: 27vw;
+  }
+  .vc-content {
+    height: 21.4vw;
+  }
+
+  .vc-img-hold img {
+    height: 11.4vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 2980px) {
+  .main-wrapper {
+    height: 142vh !important;
   }
 }

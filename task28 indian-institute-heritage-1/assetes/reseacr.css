@@ -169,7 +169,6 @@
   margin: 0;
   padding: 10px 4px;
   display: flex;
-  font-weight: 600;
   justify-content: space-between;
 }
 .main .third-nav ul li {
@@ -214,6 +213,10 @@ footer .footer-content ul li {
   list-style: none;
   line-height: 2;
 }
+footer .footer-content ul li a {
+  color: white;
+  text-decoration: none;
+}
 footer .copyright {
   background-color: #3f0738;
 }
@@ -237,7 +240,7 @@ footer .copyright {
 .img-box {
   width: 100%;
   height: 20vw;
-  background-image: url(images/about-vc.svg);
+  background-image: url(images/about-vc.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -295,4 +298,9 @@ body {
 
 .mySwiper4 .swiper-wrapper .swiper-slide img {
   width: 190px;
+}
+
+/* slider btn */
+.slider-btn {
+  display: none;
 }
