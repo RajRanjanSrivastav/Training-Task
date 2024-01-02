@@ -24,8 +24,7 @@ $pad-se: 8px;
 .wrapper {
   // font-family: "Open Sans";
   .main-wrapper {
-    // border: 2px solid black;
-    height: 160vh;
+    margin-bottom: 12.2rem;
     .main {
       background: linear-gradient(
           180deg,
@@ -36,7 +35,7 @@ $pad-se: 8px;
       background-repeat: no-repeat;
       background-size: cover;
       height: 56vw;
-      // border: 2px solid red;
+    
       // navbar start
       .navbar-IIH {
         // first nav start
@@ -414,8 +413,9 @@ $pad-se: 8px;
 
 // responsivness
 @media only screen and (min-width: 1400px) and (max-width: 2980px) {
-  .main-wrapper {
-    height: 150vh !important;
+ 
+  .main-wrapper{
+    margin-bottom: 10rem !important;
   }
   .video-img iframe {
     height: 27vw;
@@ -429,8 +429,9 @@ $pad-se: 8px;
   }
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 2980px) {
-  .main-wrapper {
-    height: 142vh !important;
+@media only screen and (min-width: 1400px) and (max-width: 2980px) {
+  .main-wrapper{
+    margin-bottom: 9rem !important;
   }
 }
+

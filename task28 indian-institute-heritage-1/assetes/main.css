@@ -16,7 +16,7 @@
 }
 
 .wrapper .main-wrapper {
-  height: 160vh;
+  margin-bottom: 12.2rem;
 }
 .wrapper .main-wrapper .main {
   background: linear-gradient(180deg, rgba(2, 0, 36, 0.8) 21%, rgba(78, 0, 96, 0.7) 56%), url(images/iih-img.png);
@@ -180,11 +180,6 @@
 .wrapper .main-wrapper .main-content .header-cards .row .award .award-logo img {
   width: 1020px;
 }
-.wrapper .main-wrapper .main-content .header-cards .row .award .award-logo .btn {
-  top: 5vw;
-  left: 3.4vw;
-  position: absolute;
-}
 .wrapper .main-wrapper .main-content .header-cards .row .award .award-content .about p {
   text-transform: uppercase;
   margin: 0;
@@ -323,7 +318,7 @@
 
 @media only screen and (min-width: 1400px) and (max-width: 2980px) {
   .main-wrapper {
-    height: 150vh !important;
+    margin-bottom: 10rem !important;
   }
   .video-img iframe {
     height: 27vw;
@@ -335,8 +330,8 @@
     height: 11.4vw;
   }
 }
-@media only screen and (min-width: 1600px) and (max-width: 2980px) {
+@media only screen and (min-width: 1400px) and (max-width: 2980px) {
   .main-wrapper {
-    height: 142vh !important;
+    margin-bottom: 9rem !important;
   }
 }/*# sourceMappingURL=main.css.map */

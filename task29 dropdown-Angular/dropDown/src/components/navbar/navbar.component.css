@@ -1,0 +1,25 @@
+.navbar {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.item {
+  border: 2px solid black;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.item:hover + .itemul
+{
+    display: block;
+    cursor: pointer;
+}
+.item ul li {
+  border: 2px solid red;
+  list-style: none;
+}
+.item ul li a {
+  text-decoration: none;
+  color: black;
+}
+
