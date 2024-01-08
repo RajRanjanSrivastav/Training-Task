@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center bg-dark text-white p-4">
+      <h2>Play With Data</h2>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-6">
+      <div class="login-box col-6">
+        <h2>Login</h2>
+        <form [formGroup]="dataForm">
+          <div class="user-box">
+            <input
+              type="text"
+              name=""
+              required=""
+              [formControl]="name"
+              [(ngModel)]="nameData"
+            />
+            <label>Name</label>
+          </div>
+          <div class="user-box">
+            <input
+              type="email"
+              name=""
+              required=""
+              [formControl]="email"
+              [(ngModel)]="emailData"
+            />
+            <label>Email</label>
+          </div>
+          <a href="#" (click)="submit()" *ngIf="this.trck==true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+          <a href="#" (click)="update()" *ngIf="this.trck!=true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Update
+          </a>
+          
+        </form>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <table>
+        <tr>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let item of list;let i = index" class="list-item">
+          <td>{{ item.name }}</td>
+          <td>{{ item.email }}</td>
+          <td>
+            <button class="button-85" (click)="edit(i)">edit</button>
+            <button class="button-85 del" (click)="remove(item.id)">del</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
