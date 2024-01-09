@@ -1,0 +1,15 @@
+<header>
+    <h1 style="padding: 18px;">Lets' Play With Data.....</h1>
+    <div class="cnt">
+    <div class="btns">
+        <button [routerLink]="''">Banner</button>
+        <button [routerLink]="'table'">Show</button>
+        <button [routerLink]="'create'">Create</button>
+    </div>
+    <div class="search">
+        <input type="text" #search placeholder="search here with id">
+        <button [routerLink]="'find'" class="search-btn" (keypress)="findData(search.value)">Find</button>
+    </div>
+</div>
+</header>
+<router-outlet></router-outlet>

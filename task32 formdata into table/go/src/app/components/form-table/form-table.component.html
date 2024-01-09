@@ -1,0 +1,224 @@
+<div class="container-fluid bg-dark">
+  <div class="row">
+    <div class="col d-flex justify-content-between flex-row text-white p-4">
+      <h1></h1>
+      <h1>{{ title }}</h1>
+      <button class="button-33" *ngIf="flag==true; else elseBlock" (click)="toggel('form','table')">Add</button>
+      <ng-template #elseBlock><button class="button-33" (click)="toggel('form','table')">Show</button></ng-template>
+    </div>
+  </div>
+
+  <!-- form -->
+  <div class="row holder">
+    <div class="col-12" id="form">
+      <div class="form-body">
+        <div class="row">
+          <div class="form-holder">
+            <div class="form-content">
+              <div class="form-items">
+                <h3>Register Today</h3>
+                <p>Fill in the data below.</p>
+                <form class="requires-validation" [formGroup]="registerForm">
+                  <div class="col-md-12">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="name"
+                      placeholder="Full Name"
+                      required
+                      formControlName="name"
+                      [(ngModel)]="name"
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      class="form-control"
+                      type="email"
+                      name="email"
+                      placeholder="E-mail Address"
+                      required
+                      formControlName="email"
+                      [(ngModel)]="email"
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="number"
+                      placeholder="Phone no."
+                      required
+                      formControlName="phone"
+                      [(ngModel)]="phone"
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <select
+                      class="form-select mt-3"
+                      required
+                      formControlName="position"
+                      [(ngModel)]="pos"
+                    >
+                      <option selected disabled value="">Position</option>
+                      <option value="jweb">Junior Web Developer</option>
+                      <option value="sweb">Senior Web Developer</option>
+                      <option value="pmanager">Project Manager</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-12">
+                    <select
+                      class="form-select mt-3"
+                      required
+                      formControlName="country"
+                      [(ngModel)]="country"
+                    >
+                      <option selected disabled value="">State</option>
+                      <option value="jweb">INDIA</option>
+                      <option value="sweb">NEPAL</option>
+                      <option value="pmanager">PAKISTAN</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-12">
+                    <select
+                      class="form-select mt-3"
+                      required
+                      formControlName="country"
+                      [(ngModel)]="country"
+                    >
+                      <option selected disabled value="">City</option>
+                      <option value="jweb">INDIA</option>
+                      <option value="sweb">NEPAL</option>
+                      <option value="pmanager">PAKISTAN</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control text-area"
+                      formControlName="address"
+                      [(ngModel)]="address"
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                    <label class="mb-3 me-2" for="gender">Gender:</label>
+
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="gender"
+                      id="male"
+                      autocomplete="off"
+                      required
+                      formControlName="gender"
+                    />
+                    <label
+                      class="btn btn-sm btn-outline-secondary me-2"
+                      for="male"
+                      >Male</label
+                    >
+
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="gender"
+                      id="female"
+                      autocomplete="off"
+                      required
+                    />
+                    <label
+                      class="btn btn-sm btn-outline-secondary me-2"
+                      for="female"
+                      >Female</label
+                    >
+
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="gender"
+                      id="secret"
+                      autocomplete="off"
+                      required
+                    />
+                    <label class="btn btn-sm btn-outline-secondary" for="secret"
+                      >Secret</label
+                    >
+                    <div class="valid-feedback mv-up">
+                      You selected a gender!
+                    </div>
+                    <div class="invalid-feedback mv-up">
+                      Please select a gender!
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="invalidCheck"
+                      required
+                    />
+                    <label class="form-check-label"
+                      >I confirm that all data are correct</label
+                    >
+                    <div class="invalid-feedback">
+                      Please confirm that the entered data are all correct!
+                    </div>
+                  </div>
+
+                  <div class="form-button mt-3">
+                    <button
+                      id="submit"
+                      type="submit"
+                      class="btn btn-primary"
+                      (click)="onRegister()"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- table -->
+    <div class="col-12" id="table" style="display: none;">
+      <div class="table-cont">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone no.</th>
+            <th>Gender</th>
+            <th>Position</th>
+            <th>Country</th>
+            <th>Address</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>Raj</td>
+            <td>lala</td>
+            <td>7007500546</td>
+            <td>male</td>
+            <td>junior</td>
+            <td>india</td>
+            <td>vill. bardand po baghta kld</td>
+            <td>
+              <button class="button-33 mb-3">edit</button><br />
+              <button class="button-33 del">del</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

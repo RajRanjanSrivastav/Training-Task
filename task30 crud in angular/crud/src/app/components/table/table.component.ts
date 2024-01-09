@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { PostService } from '../../services/post.service';
+import { Component } from '@angular/core';
 import { Post } from '../../interface/post';
+import { PostService } from '../../services/post.service';
 import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-post',
+  selector: 'app-table',
   standalone: true,
   imports: [NgFor],
-  templateUrl: './post.component.html',
-  styleUrl: './post.component.css',
+  templateUrl: './table.component.html',
+  styleUrl: './table.component.css'
 })
-export class PostComponent implements OnInit {
+export class TableComponent {
   posts: Post[] = [];
   // item:Post | undefined;
   ngOnInit(): void {
@@ -40,5 +40,5 @@ export class PostComponent implements OnInit {
     this.posts = this.posts.filter((e) => e.id != id);
     console.log(this.posts);
   }
-  
+
 }
