@@ -3,8 +3,8 @@
     <div class="col d-flex justify-content-between flex-row text-white p-4">
       <h1></h1>
       <h1>{{ title }}</h1>
-      <button class="button-33" *ngIf="flag==true; else elseBlock" (click)="toggel('form','table')">Add</button>
-      <ng-template #elseBlock><button class="button-33" (click)="toggel('form','table')">Show</button></ng-template>
+      <button class="button-33" [hidden]="!flag" (click)="toggel('form','table')">Add</button>
+      <button class="button-33" [hidden]="flag" (click)="toggel('form','table')">Show</button>
     </div>
   </div>
 
@@ -18,7 +18,7 @@
               <div class="form-items">
                 <h3>Register Today</h3>
                 <p>Fill in the data below.</p>
-                <form class="requires-validation" [formGroup]="registerForm">
+                <form class="requires-validation" novalidate [formGroup]="userForm" (ngSubmit)="onRegister()">
                   <div class="col-md-12">
                     <input
                       class="form-control"
@@ -30,7 +30,11 @@
                       [(ngModel)]="name"
                     />
                   </div>
-
+                  <div class="error text-danger" *ngIf="userForm.controls['name'].errors as nameErrors">
+                    <div *ngIf="nameErrors['required']">Name is required</div>
+                  </div>
+                
+                  <!-- email -->
                   <div class="col-md-12">
                     <input
                       class="form-control"
@@ -40,9 +44,16 @@
                       required
                       formControlName="email"
                       [(ngModel)]="email"
+                      required
                     />
+                    
                   </div>
-
+                  <div class="error text-danger" *ngIf="userForm.controls['email'].errors as emailErrors">
+                    <div *ngIf="emailErrors['required']">Email is required</div>
+                    <div *ngIf="emailErrors['email']">Enter a valid email</div>
+                  </div>
+                  
+                  <!-- number -->
                   <div class="col-md-12">
                     <input
                       class="form-control"
@@ -54,7 +65,12 @@
                       [(ngModel)]="phone"
                     />
                   </div>
+                  <div class="error text-danger" *ngIf="userForm.controls['phone'].errors as phoneErrors">
+                    <div *ngIf="phoneErrors['required']">Number is required</div>
+                    <div *ngIf="phoneErrors['pattern']">Enter a valid number</div>
+                  </div>
 
+                  <!-- position -->
                   <div class="col-md-12">
                     <select
                       class="form-select mt-3"
@@ -68,44 +84,93 @@
                       <option value="pmanager">Project Manager</option>
                     </select>
                   </div>
-
-                  <div class="col-md-12">
-                    <select
-                      class="form-select mt-3"
-                      required
-                      formControlName="country"
-                      [(ngModel)]="country"
-                    >
-                      <option selected disabled value="">State</option>
-                      <option value="jweb">INDIA</option>
-                      <option value="sweb">NEPAL</option>
-                      <option value="pmanager">PAKISTAN</option>
-                    </select>
+                  <div class="error text-danger" *ngIf="userForm.controls['position'].errors as posErrors">
+                    <div *ngIf="posErrors['required']">Position is required</div>
                   </div>
 
                   <div class="col-md-12">
                     <select
                       class="form-select mt-3"
                       required
-                      formControlName="country"
-                      [(ngModel)]="country"
+                      formControlName="state"
+                      [(ngModel)]="state"
+                     
+                    >
+                      <option selected disabled value="">State</option>
+                      <option *ngFor="let item of stateData | keyvalue">{{item.key}}</option>
+                    </select>
+                  </div>
+                  <div class="error text-danger" *ngIf="userForm.controls['state'].errors as stateErrors">
+                    <div *ngIf="stateErrors['required']">State is required</div>
+                  
+                  </div>
+
+                  <!-- city -->
+                  <!-- <div class="col-md-12">
+                    <select
+                      class="form-select mt-3"
+                      required
+                      formControlName="city"
+                      [(ngModel)]="city"
+                      
                     >
                       <option selected disabled value="">City</option>
-                      <option value="jweb">INDIA</option>
-                      <option value="sweb">NEPAL</option>
-                      <option value="pmanager">PAKISTAN</option>
+                      <option value="">up</option>
+                      <option *ngFor="let item of stateData; index as i">{{i}}</option>
                     </select>
+                  </div>
+                  <div class="error text-danger" *ngIf="userForm.controls['city'].errors as cityErrors">
+                    <div *ngIf="cityErrors['required']">City is required</div>
+                  </div> -->
+
+                  <div class="col-md-12">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="street"
+                      placeholder="street Address"
+                      required
+                      formControlName="street"
+                      [(ngModel)]="street"
+                      required
+                    />
+                  </div>
+                  <div class="error text-danger" *ngIf="userForm.controls['street'].errors as streetErrors">
+                    <div *ngIf="streetErrors['required']">Street address is required</div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="zip"
+                      placeholder="pin code"
+                      required
+                      formControlName="zip"
+                      [(ngModel)]="zip"
+                      required
+                    />
+                  </div>
+                  <div class="error text-danger" *ngIf="userForm.controls['zip'].errors as zipErrors">
+                    <div *ngIf="zipErrors['required']">pincode is required</div>
+                    <div *ngIf="zipErrors['pattern']">Enter a vaild pincode</div>
+                    
                   </div>
 
                   <div class="col-md-12">
                     <textarea
                       class="form-control text-area"
                       formControlName="address"
+                      placeholder="Enter your address"
                       [(ngModel)]="address"
                     ></textarea>
                   </div>
+                  <div class="error text-danger" *ngIf="userForm.controls['address'].errors as addressErrors">
+                    <div *ngIf="addressErrors['required']">Address is required</div>
+                  </div>
+                  
 
-                  <div class="col-md-12 mt-3">
+                  <!-- <div class="col-md-12 mt-3">
                     <label class="mb-3 me-2" for="gender">Gender:</label>
 
                     <input
@@ -155,8 +220,11 @@
                       Please select a gender!
                     </div>
                   </div>
+                  <div class="error text-danger" *ngIf="userForm.controls['gender'].errors as genderErrors">
+                    <div *ngIf="genderErrors['required']">Gender is required</div>
+                  </div> -->
 
-                  <div class="form-check">
+                  <!-- <div class="form-check">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -167,17 +235,18 @@
                     <label class="form-check-label"
                       >I confirm that all data are correct</label
                     >
-                    <div class="invalid-feedback">
-                      Please confirm that the entered data are all correct!
-                    </div>
+          
                   </div>
+                  <div class="error text-danger" *ngIf="userForm.controls['name'].errors as nameErrors">
+                    <div *ngIf="nameErrors['required']">Fullname is required</div>
+                  </div> -->
 
                   <div class="form-button mt-3">
                     <button
                       id="submit"
                       type="submit"
-                      class="btn btn-primary"
-                      (click)="onRegister()"
+                      class="btn btn-success"
+                      [disabled]="!userForm.valid"
                     >
                       Register
                     </button>

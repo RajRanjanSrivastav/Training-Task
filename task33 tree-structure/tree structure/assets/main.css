@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li {
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px dotted #ccc;
+  width: 54%;
+  height: 20px;
+}
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px dotted #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child {
+  padding-top: 0;
+}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before {
+  border-right: 2px dotted #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px dotted #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree li a {
+  border: 1px dotted #ccc;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover,
+.tree li a:hover + ul li a {
+  /* background: #c8e4f8; */
+  border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover + ul li::after,
+.tree li a:hover + ul li::before,
+.tree li a:hover + ul::before,
+.tree li a:hover + ul ul::before {
+  border-color: #94a0b4;
+}
+
+.card-cont {
+  position: relative;
+}
+.img-cont {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  border: 4px solid rgb(3, 3, 87);
+}
+.parent {
+  background-color: rgb(3, 3, 78);
+  color: white;
+  line-height: 1;
+  padding: 18px 38px !important;
+  border-radius: 50px !important;
+}
+.conector-bottom::before {
+  height: 40px !important;
+}
+.conector-bottom {
+  padding: 20px 0 !important;
+}
+.conector-top {
+  padding: 20px 0 !important;
+}
+.conector-top::before {
+  display: none;
+}
+.top-bor::before {
+  width: 160% !important;
+}
+.top-bor::after {
+  width: 230% !important;
+}
+
+.tree p {
+  margin: 0;
+  padding: 0;
+}
+.last-child {
+  border: 1px dotted black;
+  border-radius: 25px;
+  /* background-color:#ADC9DE; */
+}
+
+.last-child-parent {
+  border-radius: 15px !important;
+}
+
+.top-bor-a {
+  background-color: #557daa;
+  color: white !important;
+  line-height: 0.9;
+  border-radius: 15px !important;
+  padding: 12px 14px !important;
+}
+.top-bor-a div p:nth-child(1){
+  font-weight: 700;
+}
+.last-child-parent {
+  background-color: #adc9de;
+  color: rgb(0, 0, 0) !important;
+  line-height: 0.9;
+}
+.last-child-parent div p:nth-child(1){
+  font-weight: 700;
+}
+.last-child a {
+  margin: 4px;
+  border-radius: 50px !important;
+  background-color: rgb(205, 205, 205) !important;
+  color: black !important;
+  line-height: 0.8;
+}
+.last-child a div p:nth-child(1){
+  font-weight: 700;
+}
+.last-child::before {
+  border-right: none !important;
+}
+.last-child::after {
+  border-left: none !important;
+}

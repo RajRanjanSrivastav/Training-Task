@@ -6,12 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class StatesService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    this.fetchData();
+   }
   data:any;
 
   fetchData()
   {
-    this.http.get("assets/db.json").subscribe((e)=>{
+    this.http.get("assets/t.json").subscribe((e)=>{
       this.data=e;
     });
   }
