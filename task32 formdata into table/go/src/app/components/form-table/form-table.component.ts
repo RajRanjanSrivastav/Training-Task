@@ -30,9 +30,10 @@ export class FormTableComponent implements OnInit {
   street = '';
   zip = '';
   address = '';
+
   cityArr = [];
   // userForm: any;
-
+  position = ['Option 1', 'Option 2', 'Option 3'];
   constructor(private stateServ: StatesService) {}
   ngOnInit(): void {
     setTimeout(() => {
@@ -52,7 +53,7 @@ export class FormTableComponent implements OnInit {
     gender: new FormControl('', [Validators.required]),
     position: new FormControl('', [Validators.required]),
     state: new FormControl('', [Validators.required]),
-    city: new FormControl('',[Validators.required]),
+    city: new FormControl('', [Validators.required]),
     street: new FormControl('', [Validators.required]),
     zip: new FormControl('', [
       Validators.required,
@@ -71,10 +72,29 @@ export class FormTableComponent implements OnInit {
     // this.country = '';
     // this.city = '';
     // this.address = '';
+    console.log(this.userForm.valid);
+
     console.log(this.userForm.value);
   }
 
   toggel(id1: any, id2: any) {
+    console.log(this.state);
+
+    // console.log(this.stateData[0]);
+
+    // this.stateData.map((e: any) => {
+    //   e.city.map((i: any) => {
+    //     console.log(i.name);
+    //   });
+    //   // console.log(e.city);
+    // });
+
+    // for(let i of this.stateData)
+    // {
+    //   console.log(i.state);
+
+    // }
+
     let form = document.getElementById(id1);
     let table = document.getElementById(id2);
 
@@ -87,5 +107,18 @@ export class FormTableComponent implements OnInit {
     }
 
     this.flag = !this.flag;
+  }
+
+  // end
+
+  getCity(e:any) {
+    console.log(e);
+    this.cityArr = this.stateData.find(((state: { state: any; })=>state.state===e)).city
+    console.log(this.cityArr);
+    this.cityArr.forEach((i)=>{
+      console.log(i);
+      
+    })
+    
   }
 }

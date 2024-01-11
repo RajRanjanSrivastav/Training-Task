@@ -13,7 +13,7 @@ export class StatesService {
 
   fetchData()
   {
-    this.http.get("assets/t.json").subscribe((e)=>{
+    this.http.get("assets/db.json").subscribe((e)=>{
       this.data=e;
     });
   }

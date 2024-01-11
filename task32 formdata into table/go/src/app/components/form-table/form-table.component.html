@@ -94,19 +94,18 @@
                       required
                       formControlName="state"
                       [(ngModel)]="state"
-                     
+                      (change)="getCity(state)"
                     >
                       <option selected disabled value="">State</option>
-                      <option *ngFor="let item of stateData | keyvalue">{{item.key}}</option>
+                      <option *ngFor="let item of stateData">{{item.state}}</option>
                     </select>
                   </div>
                   <div class="error text-danger" *ngIf="userForm.controls['state'].errors as stateErrors">
                     <div *ngIf="stateErrors['required']">State is required</div>
-                  
                   </div>
 
                   <!-- city -->
-                  <!-- <div class="col-md-12">
+                  <div class="col-md-12">
                     <select
                       class="form-select mt-3"
                       required
@@ -115,13 +114,12 @@
                       
                     >
                       <option selected disabled value="">City</option>
-                      <option value="">up</option>
-                      <option *ngFor="let item of stateData; index as i">{{i}}</option>
+                      <option *ngFor="let item of cityArr | keyvalue">{{item.value}}</option>
                     </select>
                   </div>
                   <div class="error text-danger" *ngIf="userForm.controls['city'].errors as cityErrors">
                     <div *ngIf="cityErrors['required']">City is required</div>
-                  </div> -->
+                  </div> 
 
                   <div class="col-md-12">
                     <input
@@ -170,7 +168,7 @@
                   </div>
                   
 
-                  <!-- <div class="col-md-12 mt-3">
+                  <div class="col-md-12 mt-3">
                     <label class="mb-3 me-2" for="gender">Gender:</label>
 
                     <input
@@ -222,7 +220,7 @@
                   </div>
                   <div class="error text-danger" *ngIf="userForm.controls['gender'].errors as genderErrors">
                     <div *ngIf="genderErrors['required']">Gender is required</div>
-                  </div> -->
+                  </div> 
 
                   <!-- <div class="form-check">
                     <input
@@ -246,7 +244,7 @@
                       id="submit"
                       type="submit"
                       class="btn btn-success"
-                      [disabled]="!userForm.valid"
+                      [disabled]="userForm.valid"
                     >
                       Register
                     </button>
