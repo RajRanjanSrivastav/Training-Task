@@ -3,14 +3,26 @@
     <div class="col d-flex justify-content-between flex-row text-white p-4">
       <h1></h1>
       <h1>{{ title }}</h1>
-      <button class="button-33" [hidden]="!flag" (click)="toggel('form','table')">Add</button>
-      <button class="button-33" [hidden]="flag" (click)="toggel('form','table')">Show</button>
+      <button
+        class="button-33"
+        [hidden]="flag"
+        (click)="toggel('table', 'form')"
+      >
+        Add
+      </button>
+      <button
+        class="button-33"
+        [hidden]="!flag"
+        (click)="toggel('table', 'form')"
+      >
+        Show
+      </button>
     </div>
   </div>
 
   <!-- form -->
   <div class="row holder">
-    <div class="col-12" id="form">
+    <div class="col-12" id="form"  style="display: none">
       <div class="form-body">
         <div class="row">
           <div class="form-holder">
@@ -18,7 +30,24 @@
               <div class="form-items">
                 <h3>Register Today</h3>
                 <p>Fill in the data below.</p>
-                <form class="requires-validation" novalidate [formGroup]="userForm" (ngSubmit)="onRegister()">
+                <form
+                  class="requires-validation"
+                  novalidate
+                  [formGroup]="userForm"
+
+                >
+                  <div class="col-md-12" id="id-num">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="id"
+                      placeholder="idnumber"
+                      required
+                      formControlName="idNum"
+                      [(ngModel)]="idNum"
+                    />
+                  </div>
+
                   <div class="col-md-12">
                     <input
                       class="form-control"
@@ -30,10 +59,15 @@
                       [(ngModel)]="name"
                     />
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['name'].errors as nameErrors">
-                    <div *ngIf="nameErrors['required']">Name is required</div>
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['name'].errors as nameErrors"
+                  >
+                    <div *ngIf="nameErrors['required'] && trakError">
+                      Name is required
+                    </div>
                   </div>
-                
+
                   <!-- email -->
                   <div class="col-md-12">
                     <input
@@ -45,14 +79,21 @@
                       formControlName="email"
                       [(ngModel)]="email"
                       required
+                      (change)="play()"
                     />
-                    
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['email'].errors as emailErrors">
-                    <div *ngIf="emailErrors['required']">Email is required</div>
-                    <div *ngIf="emailErrors['email']">Enter a valid email</div>
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['email'].errors as emailErrors"
+                  >
+                    <div *ngIf="emailErrors['required'] && trakError">
+                      Email is required
+                    </div>
+                    <div *ngIf="emailErrors['email'] && trakError">
+                      Enter a valid email
+                    </div>
                   </div>
-                  
+
                   <!-- number -->
                   <div class="col-md-12">
                     <input
@@ -63,11 +104,19 @@
                       required
                       formControlName="phone"
                       [(ngModel)]="phone"
+                      (change)="play()"
                     />
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['phone'].errors as phoneErrors">
-                    <div *ngIf="phoneErrors['required']">Number is required</div>
-                    <div *ngIf="phoneErrors['pattern']">Enter a valid number</div>
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['phone'].errors as phoneErrors"
+                  >
+                    <div *ngIf="phoneErrors['required'] && trakError">
+                      Number is required
+                    </div>
+                    <div *ngIf="phoneErrors['pattern'] && trakError">
+                      Enter a valid number
+                    </div>
                   </div>
 
                   <!-- position -->
@@ -77,15 +126,25 @@
                       required
                       formControlName="position"
                       [(ngModel)]="pos"
+                      (change)="play()"
                     >
                       <option selected disabled value="">Position</option>
-                      <option value="jweb">Junior Web Developer</option>
-                      <option value="sweb">Senior Web Developer</option>
-                      <option value="pmanager">Project Manager</option>
+                      <option value="Junior Web Developer">
+                        Junior Web Developer
+                      </option>
+                      <option value="Senior Web Developer">
+                        Senior Web Developer
+                      </option>
+                      <option value="Project Manager">Project Manager</option>
                     </select>
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['position'].errors as posErrors">
-                    <div *ngIf="posErrors['required']">Position is required</div>
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['position'].errors as posErrors"
+                  >
+                    <div *ngIf="posErrors['required'] && trakError">
+                      Position is required
+                    </div>
                   </div>
 
                   <div class="col-md-12">
@@ -95,13 +154,21 @@
                       formControlName="state"
                       [(ngModel)]="state"
                       (change)="getCity(state)"
+                      (change)="play()"
                     >
                       <option selected disabled value="">State</option>
-                      <option *ngFor="let item of stateData">{{item.state}}</option>
+                      <option *ngFor="let item of stateData">
+                        {{ item.state }}
+                      </option>
                     </select>
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['state'].errors as stateErrors">
-                    <div *ngIf="stateErrors['required']">State is required</div>
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['state'].errors as stateErrors"
+                  >
+                    <div *ngIf="stateErrors['required'] && trakError">
+                      State is required
+                    </div>
                   </div>
 
                   <!-- city -->
@@ -111,15 +178,22 @@
                       required
                       formControlName="city"
                       [(ngModel)]="city"
-                      
+                      (change)="play()"
                     >
                       <option selected disabled value="">City</option>
-                      <option *ngFor="let item of cityArr | keyvalue">{{item.value}}</option>
+                      <option *ngFor="let item of cityArr | keyvalue">
+                        {{ item.value }}
+                      </option>
                     </select>
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['city'].errors as cityErrors">
-                    <div *ngIf="cityErrors['required']">City is required</div>
-                  </div> 
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['city'].errors as cityErrors"
+                  >
+                    <div *ngIf="cityErrors['required'] && trakError">
+                      City is required
+                    </div>
+                  </div>
 
                   <div class="col-md-12">
                     <input
@@ -131,10 +205,16 @@
                       formControlName="street"
                       [(ngModel)]="street"
                       required
+                      (change)="play()"
                     />
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['street'].errors as streetErrors">
-                    <div *ngIf="streetErrors['required']">Street address is required</div>
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['street'].errors as streetErrors"
+                  >
+                    <div *ngIf="streetErrors['required'] && trakError">
+                      Street address is required
+                    </div>
                   </div>
 
                   <div class="col-md-12">
@@ -146,13 +226,19 @@
                       required
                       formControlName="zip"
                       [(ngModel)]="zip"
-                      required
+                      (change)="play()"
                     />
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['zip'].errors as zipErrors">
-                    <div *ngIf="zipErrors['required']">pincode is required</div>
-                    <div *ngIf="zipErrors['pattern']">Enter a vaild pincode</div>
-                    
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['zip'].errors as zipErrors"
+                  >
+                    <div *ngIf="zipErrors['required'] && trakError">
+                      pincode is required
+                    </div>
+                    <div *ngIf="zipErrors['pattern'] && trakError">
+                      Enter a vaild pincode
+                    </div>
                   </div>
 
                   <div class="col-md-12">
@@ -161,12 +247,17 @@
                       formControlName="address"
                       placeholder="Enter your address"
                       [(ngModel)]="address"
+                      (change)="play()"
                     ></textarea>
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['address'].errors as addressErrors">
-                    <div *ngIf="addressErrors['required']">Address is required</div>
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['address'].errors as addressErrors"
+                  >
+                    <div *ngIf="addressErrors['required'] && trakError">
+                      Address is required
+                    </div>
                   </div>
-                  
 
                   <div class="col-md-12 mt-3">
                     <label class="mb-3 me-2" for="gender">Gender:</label>
@@ -178,7 +269,10 @@
                       id="male"
                       autocomplete="off"
                       required
+                      value="Male"
                       formControlName="gender"
+                      [(ngModel)]="gender"
+                      (change)="play()"
                     />
                     <label
                       class="btn btn-sm btn-outline-secondary me-2"
@@ -193,6 +287,10 @@
                       id="female"
                       autocomplete="off"
                       required
+                      value="Female"
+                      formControlName="gender"
+                      [(ngModel)]="gender"
+                      (change)="play()"
                     />
                     <label
                       class="btn btn-sm btn-outline-secondary me-2"
@@ -207,46 +305,46 @@
                       id="secret"
                       autocomplete="off"
                       required
+                      value="Secret"
+                      formControlName="gender"
+                      [(ngModel)]="gender"
+                      (change)="play()"
                     />
                     <label class="btn btn-sm btn-outline-secondary" for="secret"
                       >Secret</label
                     >
-                    <div class="valid-feedback mv-up">
-                      You selected a gender!
-                    </div>
-                    <div class="invalid-feedback mv-up">
-                      Please select a gender!
+                  </div>
+                  <div
+                    class="error text-danger"
+                    *ngIf="userForm.controls['gender'].errors as genderErrors"
+                  >
+                    <div *ngIf="genderErrors['required'] && trakError">
+                      Gender is required
                     </div>
                   </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['gender'].errors as genderErrors">
-                    <div *ngIf="genderErrors['required']">Gender is required</div>
-                  </div> 
-
-                  <!-- <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="invalidCheck"
-                      required
-                    />
-                    <label class="form-check-label"
-                      >I confirm that all data are correct</label
-                    >
-          
-                  </div>
-                  <div class="error text-danger" *ngIf="userForm.controls['name'].errors as nameErrors">
-                    <div *ngIf="nameErrors['required']">Fullname is required</div>
-                  </div> -->
 
                   <div class="form-button mt-3">
                     <button
                       id="submit"
                       type="submit"
                       class="btn btn-success"
-                      [disabled]="userForm.valid"
+                      [disabled]="!userForm.valid"
+                      [hidden]="trackBtn"
+                      (click)="onRegister()"
                     >
                       Register
+                    </button>
+                  </div>
+
+                  <div class="form-button mt-3">
+                    <button
+                      id="submit"
+                      (click)="update()"
+                      class="btn btn-success"
+                      [disabled]="!userForm.valid"
+                      [hidden]="!trackBtn"
+                    >
+                      Update
                     </button>
                   </div>
                 </form>
@@ -258,7 +356,7 @@
     </div>
 
     <!-- table -->
-    <div class="col-12" id="table" style="display: none;">
+    <div class="col-12" id="table">
       <div class="table-cont">
         <table>
           <tr>
@@ -267,25 +365,40 @@
             <th>Phone no.</th>
             <th>Gender</th>
             <th>Position</th>
-            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Street</th>
+            <th>Pin Code</th>
             <th>Address</th>
             <th>Action</th>
           </tr>
-          <tr>
-            <td>Raj</td>
-            <td>lala</td>
-            <td>7007500546</td>
+          <tr *ngFor="let item of temp">
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phone }}</td>
             <td>male</td>
-            <td>junior</td>
-            <td>india</td>
-            <td>vill. bardand po baghta kld</td>
+            <td>{{ item.position }}</td>
+            <td>{{ item.state }}</td>
+            <td>{{ item.city }}</td>
+            <td>{{ item.street }}</td>
+            <td>{{ item.zip }}</td>
+            <td>{{ item.address }}</td>
             <td>
-              <button class="button-33 mb-3">edit</button><br />
-              <button class="button-33 del">del</button>
+              <button class="button-33 mb-3" (click)="edit(item.idNum)" (click)="toggel('table', 'form')">
+                edit</button
+              ><br />
+              <button class="button-33 del" (click)="remove({item})">
+                del
+              </button>
             </td>
           </tr>
         </table>
       </div>
     </div>
+  </div>
+
+  <!-- success modal -->
+  <div class="success-box" id="suc-box">
+    <p>Successful ✓</p>
   </div>
 </div>

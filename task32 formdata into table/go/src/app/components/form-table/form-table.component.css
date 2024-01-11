@@ -221,3 +221,23 @@ tr {
     background-color: rgb(118, 4, 4);
     transition: all linear 0.6s;
 }
+
+.success-box{
+  position: fixed;
+  background-color: rgb(55, 212, 60);
+  top: -80px;
+  font-size: 1.5rem;
+  padding: 12px;
+  border-radius: 50px;
+  text-shadow: 2px -2px 4px rgba(128, 0, 0, 1);
+  transition: all linear 1s;
+}
+.success-box>p{
+  margin: 0;
+}
+.show{
+  top: 18px;
+}
+#id-num{
+  visibility: hidden;
+}
