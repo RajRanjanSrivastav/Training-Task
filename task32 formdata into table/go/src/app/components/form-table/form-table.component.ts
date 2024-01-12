@@ -19,17 +19,8 @@ export class FormTableComponent implements OnInit {
   flag = false;
   trackBtn = false;
   title = 'REGISTRATION FORM';
-  name = '';
-  email = '';
-  phone = '';
-  gender = '';
-  pos = '';
   state = '';
-  city = '';
-  street = '';
-  zip = '';
-  address = '';
-  cityArr = [];
+  cityArr: any;
   idNum: number | undefined;
   temp: any = [];
   editList: any;
@@ -52,8 +43,8 @@ export class FormTableComponent implements OnInit {
   play() {
     this.trakError = true;
   }
-  // email = new FormControl('',[Validators.required,Validators.email]);
 
+  //  make a form instance
   userForm: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -71,55 +62,53 @@ export class FormTableComponent implements OnInit {
       Validators.pattern('[0-9]{6}'),
     ]),
     idNum: new FormControl(''),
-    address: new FormControl('', [Validators.required]),
+    termtick: new FormControl(false, [Validators.requiredTrue]),
+    feedback : new FormControl(false, [Validators.requiredTrue]),
+    feedText : new FormControl(''),
+    address: new FormControl('',[Validators.required]),
   });
 
-  // fucntion for empty the input field
-  emptyField() {
-    this.name = '';
-    this.email = '';
-    this.phone = '';
-    this.gender = '';
-    this.pos = '';
-    this.state = '';
-    this.city = '';
-    this.street = '';
-    this.zip = '';
-    this.address = '';
-  }
-
-  // fucntion for update the input field
-  updateBox(tempList: any) {
-    // console.log(tempList);
-    this.idNum = tempList.idNum;
-    this.name = tempList.name;
-    this.email = tempList.email;
-    this.phone = tempList.phone;
-    this.pos = tempList.position;
-    this.address = tempList.address;
-    this.state = tempList.state;
-    this.city = tempList.city;
-    this.street = tempList.street;
-    this.zip = tempList.zip;
-    this.gender = tempList.gender;
+  // for go to initial state
+  intialState(e: any) {
+    this.userForm = new FormGroup({
+      idNum: new FormControl(e.idNum),
+      name: new FormControl(e.name, [Validators.required]),
+      email: new FormControl(e.email, [Validators.required, Validators.email]),
+      phone: new FormControl(e.phone, [
+        Validators.required,
+        Validators.pattern('[0-9]{10}'),
+      ]),
+      gender: new FormControl(e.gender, [Validators.required]),
+      position: new FormControl(e.position, [Validators.required]),
+      state: new FormControl(e.state, [Validators.required]),
+      city: new FormControl(e.city, [Validators.required]),
+      street: new FormControl(e.street, [Validators.required]),
+      zip: new FormControl(e.zip, [
+        Validators.required,
+        Validators.pattern('[0-9]{6}'),
+      ]),
+      termtick: new FormControl(false, [Validators.requiredTrue]),
+      feedText : new FormControl(e.feedText),
+      address: new FormControl(e.address, [Validators.required]),
+    });
   }
 
   // fucntion for add the data in table
   onRegister() {
     // console.log('hjk');
     if (this.userForm.valid) {
-      this.emptyField();
       let tempId = Math.floor(Math.random() * 100 + 1);
       if (this.idNum != tempId) {
         this.idNum = tempId;
       }
-
+      document.getElementById('city-ele')!.style.display='none'
       let sucEle = document.getElementById('suc-box');
       sucEle!.classList.toggle('show');
       setTimeout(() => {
         sucEle!.classList.toggle('show');
       }, 2000);
       this.temp.push(this.userForm.value);
+      this.intialState('');
     }
 
     // console.log(this.temp);
@@ -128,65 +117,66 @@ export class FormTableComponent implements OnInit {
   }
 
   // this fucntion for show/hide
-  toggel(id1: any, id2: any) {
-    let form = document.getElementById(id1);
-    let table = document.getElementById(id2);
-
-    if (this.flag == false) {
-      table!.style.display = 'block';
-      form!.style.display = 'none';
-    } else {
-      table!.style.display = 'none';
-      form!.style.display = 'block';
-    }
-
+  toggel() {
     this.flag = !this.flag;
   }
 
-  // end
-
-  // this fucntion for find the cities crorresponding to state
-  getCity(e: any) {
-    this.cityArr = this.stateData.find(
-      (state: { state: any }) => state.state === e
-    ).city;
+  feedTrack=true;
+  feedbacktoggel()
+  {
+     this.feedTrack=!this.feedTrack;
   }
 
+  // this fucntion for find the cities crorresponding to state
+  getCity(e: any,eleid:any) {
+    document.getElementById(eleid)!.style.display='block'
+    this.stateData.forEach((tempState: any) => {
+      if (tempState.state === e) {
+        this.cityArr = tempState.city;
+        return;
+      }
+    });
+  }
+
+  //for edit
   edit(id: any) {
-   
     this.temp.forEach((e: any, index: any) => {
-  ;
       if (e.idNum == id) {
-    
         this.indexUpdate = index;
         this.editList = e;
       }
     });
-    // console.log(this.editList);
-
-    this.updateBox(this.editList);
+    this.intialState(this.editList);
     this.trackBtn = !this.trackBtn;
   }
 
   // for update the element
   update() {
     if (this.userForm.valid) {
-      this.emptyField();
+      this.temp[this.indexUpdate] = this.userForm.value;
+      this.intialState('');
       this.trackBtn = !this.trackBtn;
+      document.getElementById('city-ele')!.style.display='none'
       let sucEle = document.getElementById('suc-box');
       sucEle!.classList.toggle('show');
       setTimeout(() => {
         sucEle!.classList.toggle('show');
       }, 2000);
       // console.log(this.userForm.value);
-      this.temp[this.indexUpdate] = this.userForm.value;
     }
   }
 
   // for remove the element
   remove(e: any) {
-    // console.log(e.item);
-    // console.log(this.temp);
-    this.temp = this.temp.filter((j: any) => j != e.item);
+    // this.temp = this.temp.filter((j: any) => j != e.item);
+
+    // without using any built in function
+    let itemHolder: any[] = []; //for holding remaning items
+    this.temp.forEach((j: any) => {
+      if (j != e.item) {
+        itemHolder.push(j);
+      }
+    });
+    this.temp = itemHolder;
   }
 }
