@@ -10,7 +10,7 @@ import { NgFor, NgIf } from '@angular/common';
   templateUrl: './main-form.component.html',
   styleUrl: './main-form.component.css',
 })
-export class MainFormComponent{
+export class MainFormComponent {
   index = 0;
   nameData = '';
   emailData = '';
@@ -25,7 +25,10 @@ export class MainFormComponent{
   });
 
   submit() {
+    console.log(this.temp);
     this.temp = this.dataForm.value;
+    console.log(this.temp);
+
     this.temp.id = this.getID();
     this.list.push(this.temp);
     console.log(this.list);
@@ -33,7 +36,7 @@ export class MainFormComponent{
     this.emailData = '';
   }
   getID() {
-    return Math.floor(Math.random()*100);
+    return Math.floor(Math.random() * 100);
   }
 
   // for delete item
@@ -49,7 +52,6 @@ export class MainFormComponent{
     this.temp = this.list[id];
     this.nameData = this.temp.name;
     this.emailData = this.temp.email;
-    
   }
 
   // for update
@@ -62,8 +64,4 @@ export class MainFormComponent{
     this.temp = this.dataForm.value;
     this.list[this.index] = this.temp;
   }
-
-
-  
-  
 }

@@ -63,9 +63,9 @@ export class FormTableComponent implements OnInit {
     ]),
     idNum: new FormControl(''),
     termtick: new FormControl(false, [Validators.requiredTrue]),
-    feedback : new FormControl(false, [Validators.requiredTrue]),
-    feedText : new FormControl(''),
-    address: new FormControl('',[Validators.required]),
+    feedback: new FormControl(false, [Validators.requiredTrue]),
+    feedText: new FormControl(''),
+    address: new FormControl('', [Validators.required]),
   });
 
   // for go to initial state
@@ -87,8 +87,9 @@ export class FormTableComponent implements OnInit {
         Validators.required,
         Validators.pattern('[0-9]{6}'),
       ]),
-      termtick: new FormControl(false, [Validators.requiredTrue]),
-      feedText : new FormControl(e.feedText),
+      termtick: new FormControl(e.termtick, [Validators.requiredTrue]),
+      feedback: new FormControl(e.feedback, [Validators.requiredTrue]),
+      feedText: new FormControl(e.feedText),
       address: new FormControl(e.address, [Validators.required]),
     });
   }
@@ -101,7 +102,7 @@ export class FormTableComponent implements OnInit {
       if (this.idNum != tempId) {
         this.idNum = tempId;
       }
-      document.getElementById('city-ele')!.style.display='none'
+      document.getElementById('city-ele')!.style.display = 'none';
       let sucEle = document.getElementById('suc-box');
       sucEle!.classList.toggle('show');
       setTimeout(() => {
@@ -109,6 +110,8 @@ export class FormTableComponent implements OnInit {
       }, 2000);
       this.temp.push(this.userForm.value);
       this.intialState('');
+    } else {
+      alert('All fields are required');
     }
 
     // console.log(this.temp);
@@ -121,15 +124,14 @@ export class FormTableComponent implements OnInit {
     this.flag = !this.flag;
   }
 
-  feedTrack=true;
-  feedbacktoggel()
-  {
-     this.feedTrack=!this.feedTrack;
+  feedTrack = true;
+  feedbacktoggel() {
+    this.feedTrack = !this.feedTrack;
   }
 
   // this fucntion for find the cities crorresponding to state
-  getCity(e: any,eleid:any) {
-    document.getElementById(eleid)!.style.display='block'
+  getCity(e: any, eleid: any) {
+    document.getElementById(eleid)!.style.display = 'block'; // use directive --
     this.stateData.forEach((tempState: any) => {
       if (tempState.state === e) {
         this.cityArr = tempState.city;
@@ -146,6 +148,8 @@ export class FormTableComponent implements OnInit {
         this.editList = e;
       }
     });
+    console.log(this.editList);
+
     this.intialState(this.editList);
     this.trackBtn = !this.trackBtn;
   }
@@ -156,7 +160,7 @@ export class FormTableComponent implements OnInit {
       this.temp[this.indexUpdate] = this.userForm.value;
       this.intialState('');
       this.trackBtn = !this.trackBtn;
-      document.getElementById('city-ele')!.style.display='none'
+      document.getElementById('city-ele')!.style.display = 'none';
       let sucEle = document.getElementById('suc-box');
       sucEle!.classList.toggle('show');
       setTimeout(() => {

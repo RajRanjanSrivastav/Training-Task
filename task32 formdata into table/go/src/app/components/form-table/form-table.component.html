@@ -1,7 +1,9 @@
 <div class="container-fluid bg-dark">
   <div class="row">
     <div class="col d-flex justify-content-between flex-row text-white p-4">
-      <h1></h1>
+      <button class="button-33" [hidden]="!flag" (click)="toggel()">
+        cancel
+      </button>
       <h1>{{ title }}</h1>
       <button class="button-33" [hidden]="flag" (click)="toggel()">Add</button>
       <button class="button-33" [hidden]="!flag" (click)="toggel()">
@@ -12,7 +14,7 @@
 
   <!-- form -->
   <div class="row holder">
-    <div class="col-12" id="form" [hidden]="!flag">
+    <div class="col-12" id="form" [hidden]="!flag"> 
       <div class="form-body">
         <div class="row">
           <div class="form-holder">
@@ -338,7 +340,10 @@
                     </div>
                   </div>
 
-                  <div class="col-12 mt-3">
+                  <div class="col-12 mt-4">
+                    <p class="mb-0">Please give us your valuable feedback</p>
+                  </div>
+                  <div class="col-12 mt-2">
                     <input
                       type="checkbox"
                       class="check-box"

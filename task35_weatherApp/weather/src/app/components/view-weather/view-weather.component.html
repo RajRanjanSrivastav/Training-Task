@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col text-center">
+      <input
+        type="text"
+        placeholder="enter your city name"
+        #city
+        class="p-3 rounded"
+      />
+      <button (click)="search(city.value)" class="button-33 ms-3">
+        Search
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-center m-5 bg-dark">
+      <h2 class="text-white">{{ data.name }}</h2>
+    </div>
+  </div>
+  <!-- cards -->
+  <div class="row justify-content-center">
+    <!-- Wind speed -->
+    <div class="col-3">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h4 class="card-title text-center m-2">Wind Speed</h4>
+          <div class="data">
+            <p class="fs-6 fw-bolder">Deg : <span class="ms-3">{{data.wind.deg}}</span></p>
+            <p class="fs-6 fw-bolder">Speed : <span class="ms-3">{{data.wind.speed}} m/s</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h4 class="card-title text-center m-2">OverAll</h4>
+          <div class="data">
+            <p class="fs-6 fw-bolder">Temperature : <span class="ms-3">{{data.main.temp}} °C</span></p>
+            <p class="fs-6 fw-bolder">Humidity : <span class="ms-3">{{data.main.humidity}} g/m3</span></p>
+            <p class="fs-6 fw-bolder">Pressure : <span class="ms-3">{{data.main.pressure}} mb</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h4 class="card-title text-center m-2">Weather</h4>
+          <div class="data text-center">
+                <h3>{{data.weather[0].main}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

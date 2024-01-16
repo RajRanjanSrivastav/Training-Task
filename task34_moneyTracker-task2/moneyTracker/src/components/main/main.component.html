@@ -1,0 +1,133 @@
+<body>
+  <!-- partial:index.partial.html -->
+
+  <section>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+    <span></span> <span></span> <span></span> <span></span> <span></span>
+
+    <div class="signin">
+      <div class="content">
+        <h2>Total Amount</h2>
+        <h2>{{ total }}</h2>
+
+        <div class="form">
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="inputBox mb-3">
+              <input type="number" formControlName="amount" /> <i>Amount</i>
+            </div>
+            <div
+              class="error text-danger"
+              *ngIf="userForm.controls?.['amount']?.touched"
+            >
+              <div *ngIf="userForm.controls?.['amount']?.errors?.['required']">
+                Amount is required
+              </div>
+            </div>
+
+            <div class="inputBox mb-3">
+              <input type="text" formControlName="fw" /> <i>From/Where</i>
+            </div>
+            <div
+              class="error text-danger"
+              *ngIf="userForm.controls?.['fw']?.touched"
+            >
+              <div *ngIf="userForm.controls?.['fw']?.errors?.['required']">
+                Field is required
+              </div>
+            </div>
+
+            <div class="inputBox"> 
+              <input
+                type="submit"
+                name=""
+                id=""
+                class="button-88"
+                value="ADD"
+                
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- table -->
+
+    <div class="table-cont">
+      <table class="me-2">
+        <tr>
+          <th colspan="2" class="bg-white text-center text-success">
+            Credit Amount
+          </th>
+        </tr>
+
+        <tr *ngFor="let item of temppov">
+          <td class="text-center text-success">{{ item.amount }}</td>
+          <td class="text-center text-success">{{ item.fw }}</td>
+        </tr>
+      </table>
+      <table class="ms-2">
+        <tr>
+          <th colspan="2" class="bg-white text-center text-danger">
+            Expence Amount
+          </th>
+        </tr>
+
+        <tr *ngFor="let item of tempneg">
+          <td class="text-center text-danger">{{ item.amount }}</td>
+          <td class="text-center text-danger">{{ item.fw }}</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+</body>
