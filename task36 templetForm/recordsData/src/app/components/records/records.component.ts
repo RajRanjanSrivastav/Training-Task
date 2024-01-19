@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-records',
   templateUrl: './records.component.html',
@@ -9,7 +8,11 @@ import { NgFor } from '@angular/common';
 export class RecordsComponent {
   flag = true;
   delTrack = true;
-  // strarr: { htmlContent: string }[] = [];
+  updTrack = true;
+  updIndex: any;
+  userarr: any = [];
+  mainIndex: any;
+  show = false;
 
   public userData: any = [
     {
@@ -28,12 +31,43 @@ export class RecordsComponent {
     },
   ];
 
-  userarr: any = [];
-  strarr = ['h'];
-  mainIndex: any;
-
   toggel() {
+    // console.log(this.userData);
+    // this.userData[0].proDetail.push({
+    //   proId: this.uique(),
+    //   term: 0,
+    //   proname: 'raj ranjan',
+    //   marks: 0,
+    // })
+    // this.userData=[
+    //   {
+    //     userid: this.uique(),
+    //     name: '',
+    //     className: '',
+    //     section: '',
+    //     proDetail: [
+    //       {
+    //         proId: this.uique(),
+    //         term: 0,
+    //         proname: '',
+    //         marks: 0,
+    //       },
+    //     ],
+    //   },
+    // ];
+    // console.log(this.userData);
+
     this.flag = !this.flag;
+
+    let arr = [1, 'a', 3, 44, 'e', 'c', 1];
+
+    let charArr = arr.filter((e) => typeof e === 'string');
+    let numArr = arr.filter((e) => typeof e === 'number');
+
+    charArr.sort();
+    numArr.sort();
+    arr = numArr.concat(charArr);
+    // console.log(arr);
   }
 
   uique() {
@@ -46,22 +80,61 @@ export class RecordsComponent {
   // for submitting the form
   submitForm(form: NgForm) {
     if (form.valid) {
-      console.log(form.value, 'andar');
-      this.userarr.push(form.value);
-      form.reset();
-      this.toggel();
+      this.userData = [
+        {
+          userid: this.uique(),
+          name: '',
+          className: '',
+          section: '',
+          proDetail: [
+            {
+              proId: this.uique(),
+              term: 0,
+              proname: '',
+              marks: 0,
+            },
+          ],
+        },
+      ];
+      this.show = true;
+      setTimeout(() => {
+        this.show = false;
+      }, 2000);
+
+      // for submit
+      if (this.updTrack) {
+        this.userarr.push(form.value);
+        form.reset();
+        this.toggel();
+      }
+
+      // work for update
+      else {
+        this.updTrack = true;
+        this.update(form.value);
+        form.reset();
+      }
     } else {
       alert('please enter all the fields correctly');
     }
   }
 
-  
+  // click event for addMore is handle here if any one try to click without form validation
+  handleClick(index: any, valid: any) {
+    if (valid) {
+      this.addMore(index);
+    }
+
+    // for alert if any one click the add more button without validation
+    else {
+      alert('Please fill all the fields');
+    }
+  }
 
   //for add more project details cards
-  addMore(id: any) {
+  addMore(index: any) {
     this.delTrack = false;
-    console.log(id);
-    this.userData[id].proDetail.push({
+    this.userData[0].proDetail.push({
       proId: this.uique(),
       term: 0,
       proname: '',
@@ -81,12 +154,48 @@ export class RecordsComponent {
     this.userData[contIdx].proDetail = temp;
   }
 
-
   // this is for edit the data of student
-  edit(id:any){
-    console.log(id);
-    
+  edit(index: any) {
+    console.log(this.userarr, 'userarray');
+    console.log(this.userData, 'userdata');
+
+    this.updTrack = false;
+    this.updIndex = index;
+    this.toggel();
+    this.userData.name = this.userarr[index].name;
+    this.userData.className = this.userarr[index].class;
+    this.userData.section = this.userarr[index].section;
+    let proArr = this.userData[index].proDetail;
+
+    for (let i = 0; i < proArr.length; i++) {
+      let pro = `pro_${i}`;
+      let term = `term_${i}`;
+      let mark = `marks_${i}`;
+      this.userData[index].proDetail[i].proname = this.userarr[index][pro];
+      this.userData[index].proDetail[i].term = this.userarr[index][term];
+      this.userData[index].proDetail[i].marks = this.userarr[index][mark];
+    }
   }
+
+  // for update the details
+  update(val: any) {
+    this.userarr[this.updIndex].name = val.name;
+    this.userarr[this.updIndex].class = val.class;
+    this.userarr[this.updIndex].section = val.section;
+    let proArr = this.userData[this.updIndex].proDetail;
+
+    for (let i = 0; i < proArr.length; i++) {
+      let pro = `pro_${i}`;
+      let term = `term_${i}`;
+      let mark = `marks_${i}`;
+      this.userarr[this.updIndex][pro] = val[pro];
+      this.userarr[this.updIndex][term] = val[term];
+      this.userarr[this.updIndex][mark] = val[mark];
+    }
+
+    this.toggel();
+  }
+
   // this is remove function from table
   remove(id: any) {
     let temp = [];
