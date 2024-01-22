@@ -6,72 +6,39 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./records.component.css'],
 })
 export class RecordsComponent {
-  flag = true;
-  delTrack = true;
-  updTrack = true;
-  updIndex: any;
-  userarr: any = [];
+  flag = true; //for toggel the page
+  delTrack = true; //delete for neste form
+  updTrack = true; //trak to show which btn---(submit/update)
+  updIndex: any; //which one is going for update
+  tableData: any = []; //show in table
   mainIndex: any;
   show = false;
 
-  public userData: any = [
-    {
-      userid: this.uique(),
-      name: '',
-      className: '',
-      section: '',
-      proDetail: [
-        {
-          proId: this.uique(),
-          term: 0,
-          proname: '',
-          marks: 0,
-        },
-      ],
-    },
-  ];
+  public formData: any = {
+    name: '',
+    className: '',
+    section: '',
+    proDetail: [
+      {
+        term: 0,
+        proname: '',
+        marks: 0,
+      },
+    ],
+  };
 
   toggel() {
-    // console.log(this.userData);
-    // this.userData[0].proDetail.push({
-    //   proId: this.uique(),
-    //   term: 0,
-    //   proname: 'raj ranjan',
-    //   marks: 0,
-    // })
-    // this.userData=[
-    //   {
-    //     userid: this.uique(),
-    //     name: '',
-    //     className: '',
-    //     section: '',
-    //     proDetail: [
-    //       {
-    //         proId: this.uique(),
-    //         term: 0,
-    //         proname: '',
-    //         marks: 0,
-    //       },
-    //     ],
-    //   },
-    // ];
-    // console.log(this.userData);
-
     this.flag = !this.flag;
 
-    let arr = [1, 'a', 3, 44, 'e', 'c', 1];
+    // let arr = [1, 'a', 3, 44, 'e', 'c', 1];
 
-    let charArr = arr.filter((e) => typeof e === 'string');
-    let numArr = arr.filter((e) => typeof e === 'number');
+    // let charArr = arr.filter((e) => typeof e === 'string');
+    // let numArr = arr.filter((e) => typeof e === 'number');
 
-    charArr.sort();
-    numArr.sort();
-    arr = numArr.concat(charArr);
+    // charArr.sort();
+    // numArr.sort();
+    // arr = numArr.concat(charArr);
     // console.log(arr);
-  }
-
-  uique() {
-    return Math.floor(Math.random() * 100 + 1);
   }
 
   track(item: any, index: number) {
@@ -79,23 +46,9 @@ export class RecordsComponent {
   }
   // for submitting the form
   submitForm(form: NgForm) {
+    // console.log(form.value,"kya hai");
+
     if (form.valid) {
-      this.userData = [
-        {
-          userid: this.uique(),
-          name: '',
-          className: '',
-          section: '',
-          proDetail: [
-            {
-              proId: this.uique(),
-              term: 0,
-              proname: '',
-              marks: 0,
-            },
-          ],
-        },
-      ];
       this.show = true;
       setTimeout(() => {
         this.show = false;
@@ -103,16 +56,38 @@ export class RecordsComponent {
 
       // for submit
       if (this.updTrack) {
-        this.userarr.push(form.value);
-        form.reset();
-        this.toggel();
+        this.tableData.push(this.formData);
+        (this.formData = {
+          name: '',
+          className: '',
+          section: '',
+          proDetail: [
+            {
+              term: 0,
+              proname: '',
+              marks: 0,
+            },
+          ],
+        }),
+          this.toggel();
       }
 
       // work for update
       else {
         this.updTrack = true;
-        this.update(form.value);
-        form.reset();
+        this.update(this.formData);
+        this.formData = {
+          name: '',
+          className: '',
+          section: '',
+          proDetail: [
+            {
+              term: 0,
+              proname: '',
+              marks: 0,
+            },
+          ],
+        };
       }
     } else {
       alert('please enter all the fields correctly');
@@ -134,8 +109,7 @@ export class RecordsComponent {
   //for add more project details cards
   addMore(index: any) {
     this.delTrack = false;
-    this.userData[0].proDetail.push({
-      proId: this.uique(),
+    this.formData.proDetail.push({
       term: 0,
       proname: '',
       marks: 0,
@@ -145,65 +119,53 @@ export class RecordsComponent {
   // this is for deleting the project details card
   delMore(cardIdx: any, contIdx: any) {
     let temp = [];
-    let loop = this.userData[contIdx].proDetail;
+    let loop = this.formData.proDetail;
     for (let i = 0; i < loop.length; i++) {
       if (i != cardIdx) {
         temp.push(loop[i]);
       }
     }
-    this.userData[contIdx].proDetail = temp;
+    this.formData.proDetail = temp;
   }
 
   // this is for edit the data of student
   edit(index: any) {
-    console.log(this.userarr, 'userarray');
-    console.log(this.userData, 'userdata');
-
-    this.updTrack = false;
-    this.updIndex = index;
-    this.toggel();
-    this.userData.name = this.userarr[index].name;
-    this.userData.className = this.userarr[index].class;
-    this.userData.section = this.userarr[index].section;
-    let proArr = this.userData[index].proDetail;
-
-    for (let i = 0; i < proArr.length; i++) {
-      let pro = `pro_${i}`;
-      let term = `term_${i}`;
-      let mark = `marks_${i}`;
-      this.userData[index].proDetail[i].proname = this.userarr[index][pro];
-      this.userData[index].proDetail[i].term = this.userarr[index][term];
-      this.userData[index].proDetail[i].marks = this.userarr[index][mark];
-    }
+    this.formData = this.tableData[index];
+    this.updTrack = false; //track for show submit and update button
+    this.updIndex = index; //which one is going for update
+    this.toggel(); //page change
   }
 
   // for update the details
   update(val: any) {
-    this.userarr[this.updIndex].name = val.name;
-    this.userarr[this.updIndex].class = val.class;
-    this.userarr[this.updIndex].section = val.section;
-    let proArr = this.userData[this.updIndex].proDetail;
-
-    for (let i = 0; i < proArr.length; i++) {
-      let pro = `pro_${i}`;
-      let term = `term_${i}`;
-      let mark = `marks_${i}`;
-      this.userarr[this.updIndex][pro] = val[pro];
-      this.userarr[this.updIndex][term] = val[term];
-      this.userarr[this.updIndex][mark] = val[mark];
-    }
-
+    this.tableData[this.updIndex] = val;
     this.toggel();
   }
 
   // this is remove function from table
-  remove(id: any) {
+  remove(index: any) {
     let temp = [];
-    for (let i = 0; i < this.userarr.length; i++) {
-      if (i != id) {
-        temp.push(this.userarr[i]);
+    for (let i = 0; i < this.tableData.length; i++) {
+      if (i != index) {
+        temp.push(this.tableData[i]);
       }
     }
-    this.userarr = temp;
+    this.tableData = temp;
+
+    if (this.updIndex == index) {
+      this.updTrack = true;
+      this.formData = {
+        name: '',
+        className: '',
+        section: '',
+        proDetail: [
+          {
+            term: 0,
+            proname: '',
+            marks: 0,
+          },
+        ],
+      };
+    }
   }
 }

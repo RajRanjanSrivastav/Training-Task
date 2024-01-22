@@ -29,7 +29,6 @@
       <!-- main form  strt-->
       <div
         class="main"
-        *ngFor="let mainForm of userData; let mainIndex = index; trackBy: track"
       >
         <div class="row pt-4 justify-content-around align-items-center">
           <div class="col-2">
@@ -39,7 +38,7 @@
               #name="ngModel"
               name="name"
               placeholder="enter your name"
-              [(ngModel)]="userData[mainIndex].name"
+              [(ngModel)]="formData.name"
               required
             />
             <div *ngIf="!name?.valid && name?.touched" class="text-danger">
@@ -52,7 +51,7 @@
               type="text"
               name="class"
               placeholder="enter your class name"
-              [(ngModel)]="userData[mainIndex].className"
+              [(ngModel)]="formData.className"
               required
               #class="ngModel"
             />
@@ -66,7 +65,7 @@
               type="text"
               name="section"
               placeholder="enter your section"
-              [(ngModel)]="userData[mainIndex].section"
+              [(ngModel)]="formData.section"
               required
               #section="ngModel"
             />
@@ -115,11 +114,14 @@
           <div class="row mt-4 flex-wrap" id="card-cont">
             <div
               class="col-4 mt-3 justify-content-center"
+              ngModelGroup="proDetail"
+              
               *ngFor="
-                let ele of userData[mainIndex].proDetail;
+                let ele of formData.proDetail;
                 let proindex = index;
                 trackBy: track
               "
+              
             >
               <div class="card">
                 <div class="card-body d-flex flex-column">
@@ -217,9 +219,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of userarr; let itemIndex = index">
+          <tr *ngFor="let item of tableData; let itemIndex = index">
             <td>{{ item.name }}</td>
-            <td>{{ item.class }}</td>
+            <td>{{ item.className }}</td>
             <td>{{ item.section }}</td>
             <td class="d-flex">
               <button
