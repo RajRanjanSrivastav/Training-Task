@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [HttpClient],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
