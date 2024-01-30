@@ -1,9 +1,52 @@
+.dashboard{
+    background-color: #d8d8d8;
+}
+
 .text textarea{
-    min-width: 32vw;
+    min-width: 100%;
+    max-height: 140px;
     border-radius: 18px;
+    border: 2px solid black;
+}
+
+.post-card{
+    padding: 10px;
+    border-radius: 26px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .actionBtn{
-    background-color: rgb(67, 219, 140);
+    background-color:#9e48f9;
+    min-width: 100px;
+    border: none;
+    color: white;
+    font-weight: 600;
     border-radius: 20px;
+    transition: all linear 0.4s;
+
+}
+.actionBtn:hover{
+    background-color: #8719fd;
+}
+.danger{
+    background-color: rgb(249, 60, 60);
+    transition: all linear 0.4s;
+}
+.danger:hover{
+    background-color: rgb(242, 13, 13);
+}
+
+
+.card-cont{
+    border: 2px solid black;
+    border-radius: 18px;
+    height: 76vh;
+}
+
+.ownBlog{
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
 }

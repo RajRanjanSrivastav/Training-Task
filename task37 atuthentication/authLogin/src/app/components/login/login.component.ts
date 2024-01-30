@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit  {
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private auth: AuthService, private router: Router,private http: HttpClient) {}
   ngOnInit(): void {
     this.auth.flag=false;
   }
@@ -37,6 +38,10 @@ export class LoginComponent implements OnInit  {
     console.log(form.valid);
 
     let data: any;
+
+    this.http.post('http://localhost:4500/api/v1/adduser/new',form.value).subscribe((e)=>{
+      console.log(e);
+    })
 
     // Get the existing data
     let existing = JSON.parse(localStorage.getItem('data')!);

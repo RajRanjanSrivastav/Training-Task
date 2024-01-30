@@ -43,7 +43,7 @@ body {
 /* publication start */
 .publi-col {
   border-radius: 21px;
-  background-image: url(/images/solid-color-image.png);
+  background-image: url(../assets/images/solid-color-image.png);
 }
 
 .publi-row {
@@ -153,12 +153,19 @@ body {
 }
 
 .img-stories {
-  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./images/bird.jpeg);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 .succes-btn {
-  position: absolute;
-  bottom: 51px;
-  left: 111px;
+  margin-bottom: 3rem;
 }
 /* stories end */
 .earth {
@@ -175,7 +182,7 @@ body {
 /* slider */
 .slider-col {
   min-height: 100%;
-  background: url(/images/meeting.jpeg) rgba(0, 0, 0, 0.4);
+  background: url(./images/back.jpg) rgba(0, 0, 0, 0.4);
   background-size: cover;
   background-blend-mode: multiply;
   padding: 2.2rem;
@@ -231,6 +238,11 @@ body {
   .viewAll {
     padding: 10px 20px;
     width: 35%;
+  }
+
+  .img-stories{
+    width: 18rem;
+    height: 18rem;
   }
 }
 /* responsiveness end */
