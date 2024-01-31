@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserData } from 'src/app/models/user-data';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -9,12 +10,15 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit  {
-  constructor(private auth: AuthService, private router: Router,private http: HttpClient) {}
+export class LoginComponent implements OnInit {
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private http: HttpClient
+  ) {}
   ngOnInit(): void {
-    this.auth.flag=false;
+    this.auth.flag = false;
   }
-
 
   register: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -35,24 +39,30 @@ export class LoginComponent implements OnInit  {
 
   //function for registration
   onRegister(form: any) {
-    console.log(form.valid);
+    let data:UserData={
+      name: form.value.name,
+      email: form.value.email,
+      password: form.value.password,
+      blog:[{
+         id: Date.now(),
+         thought:'',
+      }]
+    };
 
-    let data: any;
-
-    this.http.post('http://localhost:4500/api/v1/adduser/new',form.value).subscribe((e)=>{
-      console.log(e);
-    })
+    this.http.post('http://localhost:3000/user',data).subscribe((e)=>{
+      // console.log(e); 
+    });
 
     // Get the existing data
-    let existing = JSON.parse(localStorage.getItem('data')!);
+    // let existing = JSON.parse(localStorage.getItem('data')!);
 
     // If no existing data, create an array
     // Otherwise, convert the localStorage string to an array
-    data = existing ? existing : [];
+    // data = existing ? existing : [];
 
-    data.push(form.value);
+    // data.push(form.value);
     // Save back to localStorage
-    localStorage.setItem('data', JSON.stringify(data));
+    // localStorage.setItem('data', JSON.stringify(data));
 
     // reset the form
     this.register.reset();
@@ -65,7 +75,6 @@ export class LoginComponent implements OnInit  {
     } else {
       alert('Your user-name or password is incorect');
     }
-
     form.reset();
   }
 }

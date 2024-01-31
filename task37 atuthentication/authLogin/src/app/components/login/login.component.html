@@ -3,7 +3,7 @@
   
     <div class="signup">
       <form [formGroup]="register" (ngSubmit)="onRegister(register)">
-        <label for="chk" aria-hidden="true">Sign up</label>
+        <label for="chk">Sign up</label>
         <input type="text" name="name" placeholder="User name" formControlName="name"/>
         <input type="email" name="email" placeholder="Email" formControlName="email" />
         <input type="password" name="password" placeholder="Password" formControlName="password" />

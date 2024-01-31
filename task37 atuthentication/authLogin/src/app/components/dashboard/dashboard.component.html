@@ -17,14 +17,21 @@
     <div class="row justify-content-around">
       <div class="col-5">
         <h2 class="text-center p-2">Create your BLOG</h2>
-        <form action="">
-          <div class="d-flex flex-column card post-card">     
+        <form [formGroup]="blogText" (ngSubmit)="postThought(blogText)">
+          <div class="d-flex flex-column card post-card">
             <div class="text">
-              <textarea name="" id="" cols="30" rows="10" class="p-4"></textarea>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                class="p-4"
+                formControlName="thought"
+              ></textarea>
             </div>
             <button
               type="submit"
-              class="p-2 mt-4  actionBtn"
+              class="p-2 mt-4 actionBtn"
               style="max-width: 10vw"
             >
               Post
@@ -35,15 +42,21 @@
 
       <div class="col-6">
         <h2 class="text-center p-2">Your BLOGS</h2>
+
         <div class="card-cont p-4">
-          <div class="card ownBlog">
-            <p>yhan par text aye lorem60 ga</p>
-            <div class="action">
-              <button class="actionBtn p-2 me-4 mt-2">Edit</button>
-              <button class="actionBtn danger p-2 mt-2">Delete</button>
+          <div class="card ownBlog" [hidden]="!dataFlag">
+            no Data found
+          </div>
+          <div *ngFor="let item of blogData">
+            <div class="card ownBlog mt-2">
+              <p>{{item.thought}}</p>
+              <div class="action">
+                <button class="actionBtn p-2 me-4 mt-2">Edit</button>
+                <button class="actionBtn danger p-2 mt-2">Delete</button>
+              </div>
             </div>
           </div>
-
+          
         </div>
       </div>
     </div>
