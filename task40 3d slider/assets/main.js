@@ -1,4 +1,5 @@
-// for small slider start
+
+
 window.addEventListener("load", () => {
   var carousels = document.querySelectorAll(".carousel");
 
@@ -52,6 +53,8 @@ function carousel(root) {
       if (t.classList.contains("next")) {
         let eleBtn = document.getElementById("nextBtn");
         eleBtn.click();
+        
+
         currImage++;
       } else {
         let eleBtn = document.getElementById("prevBtn");
