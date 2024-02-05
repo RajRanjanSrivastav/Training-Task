@@ -1,8 +1,16 @@
 {
   "user": [
     {
-      "name": "raj lala",
-      "id": "3453"
+      "id": "ab18",
+      "name": "lala",
+      "email": "lala@gmail.com",
+      "password": "lala123",
+      "blog": [
+        {
+          "id": 1706877154932,
+          "thought": null
+        }
+      ]
     }
   ]
 }

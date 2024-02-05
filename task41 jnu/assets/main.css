@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --mainColor: #27245d;
+  --secondy: #a60a32;
+  --back: #e9e9e9;
+  --hoverColor: rgb(211, 211, 211);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.first-nav {
+  background-color: var(--mainColor);
+}
+
+.navbar-first-ul li a {
+  font-size: 13px;
+  position: relative;
+}
+.navbar-first-ul li a:hover {
+  color: var(--hoverColor);
+}
+.navbar-first-ul li a::after {
+  content: "";
+  width: 2px;
+  height: 14px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 3px;
+  right: -26px;
+}
+
+.navbar-first-ul li:last-child a:first-child::after {
+  display: none;
+}
+
+.navbar-sec-ul li a {
+  font-size: 13px;
+  position: relative;
+}
+.navbar-sec-ul li a:hover {
+  color: var(--hoverColor);
+}
+
+.navbar-sec-ul li a::after {
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 1px;
+  right: -28px;
+}
+.navbar-sec-ul li:last-child a:first-child::after {
+  display: none;
+}
+
+.second-nav {
+  /* border: 2px solid black; */
+  border-bottom: 2px solid white;
+  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+}
+.second-nav ul li a {
+  border-bottom: 2px solid rgb(255, 255, 255);
+  padding-bottom: 24px;
+  color: black;
+  font-weight: 400;
+  transition: all linear 0.4s;
+}
+.second-nav ul li a:hover {
+  border-bottom: 2px solid rgb(0, 0, 0);
+
+  color: rgb(71, 71, 71);
+}
+
+.search {
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 5px;
+  max-width: 220px;
+}
+.search input {
+  border: none;
+  outline: none;
+}
+
+/* first slider start */
+.slider1-cont {
+  position: relative;
+}
+
+.slider-img-cont {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 11;
+  background-image: url(./images/cover-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.schoolText-cont {
+  height: 100%;
+  position: relative;
+}
+.schoolText {
+  line-height: 1.1;
+  position: absolute;
+  top: 31%;
+  left: 10vw;
+  font-size: 3.4vw;
+}
+
+.viewNotice {
+  background-color: var(--back);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice-cont {
+  display: flex;
+  align-items: center;
+  min-width: 80%;
+}
+.SCSS-notice {
+  position: relative;
+}
+.SCSS-notice::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 14px;
+  right: -22px;
+  top: 6px;
+  background-color: rgb(68, 67, 67);
+}
+.notice {
+  color: white;
+  background-color: var(--secondy);
+}
+.view a {
+  margin-right: 10px;
+  font-weight: 700;
+  border-bottom: 1px solid black;
+  color: black;
+}
+.view a:hover {
+  color: rgb(67, 67, 67);
+}
+
+/* marquee */
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%; /* Start offscreen */
+  animation: marqueeAnimation 15s linear infinite; /* Adjust duration */
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-180%);
+  }
+}
+
+/* marquee end */
+
+/* first rgb(57, 56, 56)r end */
+
+/* about */
+.about-img-cont{
+  width: 280px;
+}
+.about-img {
+  min-width: 100%;
+  height: 100%;
+  background-image: url('./images/college.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+.about-text {
+  width: 280px;
+  height: 100%;
+  font-size: 20px;
+  position: relative;
+}
+.about-text p{
+  line-height: 1;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 30%;
+  right: 42px;
+}
+.scss-text {
+  letter-spacing: 1px;
+}
+.school-heading {
+  letter-spacing: 1px;
+}
+.inception-text {
+  line-height: 1.3;
+}
+.read-more {
+  border-bottom: 1px solid black;
+}
+.form-cont {
+  background-color: var(--back);
+}
+.form-text {
+  color: white;
+  background-color: var(--secondy);
+}
+.form-para {
+  display: flex;
+}
+.form-para div:first-child {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+}
+.form-para div:last-child {
+  width: 80%;
+  margin-left: 10px;
+}
+.form-para p {
+  margin: 0;
+  margin-top: 2px;
+}
+
+/* certificates  start*/
+
+.certi {
+  background-image: url(./images/back-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 0 51px;
+  padding-right: 90px;
+}
+
+.certi-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.certi-img img {
+  position: absolute;
+  top: -74px;
+}
+.talk-text {
+  padding-bottom: 42px;
+}
+.talk-text p {
+  margin: 4px;
+}
+.time-cont {
+  color: #efb068;
+  background-color: #705752;
+  display: inline-block;
+}
+
+.computer-img-cont,
+.certi-img-cont {
+  width: 260px;
+}
+.computer-img {
+  width: 130%;
+  height: 130%;
+  margin-top: -72px;
+  position: relative;
+}
+
+.Research-btn {
+  background-color: var(--secondy);
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-0%, -50%);
+}
+.Research-btn span {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+/* photo galler start */
+
+.mySwiper2 {
+  height: 25vh !important;
+}
+
+/* photo galler end */
+
+/* footer */
+
+footer {
+  background-color: var(--mainColor);
+}
+
+.bottom-footer {
+  background-color: #1e1b46;
+}
+.bottom-footer p {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-ul li a {
+  position: relative;
+}
+.footer-ul li a:hover {
+  color: var(--hoverColor);
+}
+.footer-ul li a::after {
+  content: "";
+  width: 2px;
+  height: 18px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 4px;
+  right: -14px;
+}
+.footer-ul li:last-child a:first-child::after {
+  display: none;
+}
+
+/* slider css */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

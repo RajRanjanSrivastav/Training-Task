@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserData } from 'src/app/models/user-data';
@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private http: HttpClient
   ) {}
+
   ngOnInit(): void {
     this.auth.flag = false;
   }
@@ -39,42 +40,58 @@ export class LoginComponent implements OnInit {
 
   //function for registration
   onRegister(form: any) {
-    let data:UserData={
-      name: form.value.name,
-      email: form.value.email,
-      password: form.value.password,
-      blog:[{
-         id: Date.now(),
-         thought:'',
-      }]
-    };
+    console.log(form.valid);
 
-    this.http.post('http://localhost:3000/user',data).subscribe((e)=>{
-      // console.log(e); 
-    });
+    if (form.valid) {
+      let data: UserData = {
+        name: form.value.name,
+        email: form.value.email,
+        password: form.value.password,
+        blog: [
+          {
+            id: Date.now(),
+            thought: '',
+          },
+        ],
+      };
 
-    // Get the existing data
-    // let existing = JSON.parse(localStorage.getItem('data')!);
-
-    // If no existing data, create an array
-    // Otherwise, convert the localStorage string to an array
-    // data = existing ? existing : [];
-
-    // data.push(form.value);
-    // Save back to localStorage
-    // localStorage.setItem('data', JSON.stringify(data));
-
-    // reset the form
+      this.auth.addUser(data);
+    } else {
+      alert('Please fill all details correctly');
+    }
     this.register.reset();
   }
 
   //fucntion for login
   onLogin(form: any) {
-    if (this.auth.authUser(form.value)) {
-      this.router.navigate(['/dashboard']);
-    } else {
-      alert('Your user-name or password is incorect');
-    }
+    let value = form.value;
+    this.auth.getAllUser().subscribe((e) => {
+      console.log(e);
+      
+      let data = e;
+      let match = false;
+      for (let i = 0; i < data.length; i++) {
+        if (
+          value.email == data[i].email &&
+          value.password == data[i].password
+        ) {
+          sessionStorage.setItem(
+            'sessionData',
+            JSON.stringify({ id: data[i].id, name: data[i].name })
+          );
+          match = true;
+          break;
+        }
+      }
+
+      if (match) {
+        this.auth.flag=true;
+        this.router.navigate(['/dashboard']);
+      } else {
+        alert('Your user-name or password is incorect');
+      }
+    });
+
     form.reset();
   }
 }

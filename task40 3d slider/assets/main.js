@@ -42,6 +42,8 @@ function carousel(root) {
   }
 
   function setupNavigation() {
+    
+  
     nav.addEventListener("click", onClick, true);
 
     function onClick(e) {

@@ -7,8 +7,8 @@
           <a href="" class="text-white fs-4">Blog</a>
         </div>
         <div class="user d-flex text-white">
-          <div class="name mx-2 fs-4">Raj</div>
-          <div class="out mx-2 fs-4">Logout</div>
+          <div class="name mx-2 fs-4">{{this.userName}}</div>
+          <button class="out mx-2 actionBtn" (click)="logOut()">Logout</button>
         </div>
       </div>
     </div>
@@ -47,12 +47,12 @@
           <div class="card ownBlog" [hidden]="!dataFlag">
             no Data found
           </div>
-          <div *ngFor="let item of blogData">
+          <div *ngFor="let item of blogData.blog.slice(1); let i=index">
             <div class="card ownBlog mt-2">
               <p>{{item.thought}}</p>
               <div class="action">
                 <button class="actionBtn p-2 me-4 mt-2">Edit</button>
-                <button class="actionBtn danger p-2 mt-2">Delete</button>
+                <button class="actionBtn danger p-2 mt-2" (click)="removeThought(i)">Delete</button>
               </div>
             </div>
           </div>
