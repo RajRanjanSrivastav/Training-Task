@@ -1,0 +1,205 @@
+<div class="row">
+  <div class="col">
+    <div class="eleven">
+      <h1>The Tasks</h1>
+    </div>
+  </div>
+</div>
+<!-- <h2>{{timeVal |date:'HH:mm'}}</h2> -->
+<section class="taskTable px-5">
+  <div class="container-fluid">
+    <!-- addbtn & addFroms works -->
+
+    <div class="row mb-5 pe-5">
+      <div class="col d-flex justify-content-end">
+        <button
+          type="button"
+          class="button-20"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add More
+        </button>
+      </div>
+    </div>
+
+    <!-- model start -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Tasks Form</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              (click)="formReset()"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- form start -->
+            <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="your-name" class="form-label fw-bold"
+                    >Task Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="taskName"
+                    name="taskName"
+                    placeholder="Please enter your task name"
+                    required
+                    formControlName="taskname"
+                  />
+
+                  <div *ngIf="taskForm.controls?.['taskname']?.touched">
+                    <div
+                      class="error text-danger"
+                      *ngIf="taskForm.controls?.['taskname']?.errors"
+                    >
+                      Please enter the task name
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="your-surname" class="form-label fw-bold"
+                    >Type</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="type"
+                    name="type"
+                    placeholder="Please enter the type of task"
+                    required
+                    formControlName="type"
+                  />
+                  <div *ngIf="taskForm.controls?.['type']?.touched">
+                    <div
+                      class="error text-danger"
+                      *ngIf="taskForm.controls?.['type']?.errors"
+                    >
+                      Please enter the type of task
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="your-email" class="form-label fw-bold"
+                    >Assign Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="assignDate"
+                    name="assignDate"
+                    required
+                    placeholder="Please enter the Assign date"
+                    formControlName="assign"
+                  />
+                  <div *ngIf="taskForm.controls?.['assign']?.touched">
+                    <div
+                      class="error text-danger"
+                      *ngIf="taskForm.controls?.['assign']?.errors"
+                    >
+                      Please enter the Assign date
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="your-subject" class="form-label fw-bold"
+                    >Deadline Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="deadline"
+                    name="deadline"
+                    required
+                    placeholder="Please enter the Deadline date"
+                    formControlName="deadline"
+                  />
+                  <div *ngIf="taskForm.controls?.['deadline']?.touched">
+                    <div
+                      class="error text-danger"
+                      *ngIf="taskForm.controls?.['deadline']?.errors"
+                    >
+                      Please enter the deadline date
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button
+                        type="submit"
+                        class="button-20 w-100 fw-bold"
+                        data-bs-dismiss="modal"
+                      >
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- form end -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model end -->
+
+    <!-- tables -->
+    <div class="row">
+      <div class="col fixTableHead">
+        <table class="table table-hover">
+          <thead>
+            <tr class="trow">
+              <th scope="col">S no.</th>
+              <th scope="col">Task Name</th>
+              <th scope="col">Assign Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">DeadLine Date</th>
+              <th scope="col">Type</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let data of taskArr; index as i;">
+              <th scope="row">{{i+1}}</th>
+              <td>{{data['name']}}</td>
+              <td>{{data['assign']}}</td>
+              <td>{{data['time']['hours']}}:{{data['time']['minutes']}}</td>
+              <td>{{data['deadline']}}</td>
+              <td>{{data['type']}}</td>
+              <td></td>
+              <td>
+                <button class="button-20">Edit</button>
+              </td>
+            </tr>
+
+          </tbody>
+          <tfoot>
+            <tr class="tfoot">
+              <td colspan="12" class="text-center fw-bold">Total Tasks: 4</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Button trigger modal -->
