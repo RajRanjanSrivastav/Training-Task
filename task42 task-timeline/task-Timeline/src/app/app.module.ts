@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight.directive';
 import { MakingTasksComponent } from './components/making-tasks/making-tasks.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    MakingTasksComponent
+    MakingTasksComponent,
+    LoginComponent
   ],
   imports: [
     FormsModule,

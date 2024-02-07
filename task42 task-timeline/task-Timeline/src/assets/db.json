@@ -1,26 +1,114 @@
 {
   "data": [
     {
-      "id": 1707218173037,
-      "name": "money Tracker",
-      "assign": "2024-02-06",
-      "deadline": "2024-02-08",
-      "type": "learning",
+      "id": "1707290738581",
+      "name": "Car-racing",
+      "assign": "2024-02-08",
+      "deadline": "2024-02-09",
+      "type": "Demo",
+      "status": "complete",
       "time": {
-        "hours": 16,
-        "minutes": 16
+        "hours": 12,
+        "minutes": 56
       }
     },
     {
-      "id": 1707219852007,
-      "name": "money Tracker",
-      "assign": "2024-02-09",
-      "deadline": "2024-02-09",
-      "type": "Demo",
+      "id": "1707291229889",
+      "name": "bike racing",
+      "assign": "2024-02-01",
+      "deadline": "2024-02-18",
+      "type": "learning",
+      "status": "complete",
       "time": {
-        "hours": 17,
-        "minutes": 17
+        "hours": 13,
+        "minutes": 3
       }
+    },
+    {
+      "id": "1707291451136",
+      "name": "money Tracker",
+      "assign": "2024-02-06",
+      "deadline": "2024-02-09",
+      "type": "learning",
+      "status": "complete",
+      "time": {
+        "hours": 13,
+        "minutes": 7
+      }
+    },
+    {
+      "id": "1707301004312",
+      "name": "Farzi",
+      "assign": "2024-02-07",
+      "deadline": "2024-02-14",
+      "type": "Farzi task",
+      "status": "done",
+      "time": {
+        "hours": 15,
+        "minutes": 46
+      }
+    },
+    {
+      "id": "1707301379391",
+      "name": "Farzi",
+      "assign": "2024-02-07",
+      "deadline": "2024-02-14",
+      "type": "Farzi task",
+      "status": "incomplet",
+      "time": {
+        "hours": 15,
+        "minutes": 52
+      }
+    },
+    {
+      "id": "1707302936673",
+      "name": "module",
+      "assign": "2024-02-07",
+      "deadline": "2024-02-10",
+      "type": "learning",
+      "status": "due",
+      "time": {
+        "hours": 16,
+        "minutes": 18
+      }
+    },
+    {
+      "id": "1707302959554",
+      "name": "component",
+      "assign": "2024-02-07",
+      "deadline": "2024-02-08",
+      "type": "due",
+      "status": "due",
+      "time": {
+        "hours": 16,
+        "minutes": 19
+      }
+    },
+    {
+      "id": "1707302985459",
+      "name": "directive",
+      "assign": "2024-02-07",
+      "deadline": "2024-02-08",
+      "type": "learning",
+      "status": "due",
+      "time": {
+        "hours": 16,
+        "minutes": 19
+      }
+    }
+  ],
+  "user": [
+    {
+      "id": "1707296170753",
+      "name": "raj ranjan srivastav",
+      "email": "srivastavrajranjan75@gmail.com",
+      "password": "raj123"
+    },
+    {
+      "id": "1707301620062",
+      "name": null,
+      "email": null,
+      "password": null
     }
   ]
 }

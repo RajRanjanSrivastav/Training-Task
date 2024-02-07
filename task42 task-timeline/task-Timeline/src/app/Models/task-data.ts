@@ -6,5 +6,6 @@ export interface TaskData {
    assign:String,
    deadline:String,
    type:String,
+   status:String,
    time:Time,
 }

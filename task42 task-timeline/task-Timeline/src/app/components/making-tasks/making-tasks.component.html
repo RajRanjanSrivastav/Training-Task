@@ -14,12 +14,21 @@
       <div class="col d-flex justify-content-end">
         <button
           type="button"
-          class="button-20"
+          class="button-20 me-2"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
           Add More
         </button>
+
+        <button
+          type="button"
+          class="button-20 ms-2 bg-danger"
+          (click)="logout()"
+        >
+          Logout
+        </button>
+        
       </div>
     </div>
 
@@ -60,6 +69,7 @@
                     placeholder="Please enter your task name"
                     required
                     formControlName="taskname"
+                    [(ngModel)]="name"
                   />
 
                   <div *ngIf="taskForm.controls?.['taskname']?.touched">
@@ -83,6 +93,7 @@
                     placeholder="Please enter the type of task"
                     required
                     formControlName="type"
+                    [(ngModel)]="type"
                   />
                   <div *ngIf="taskForm.controls?.['type']?.touched">
                     <div
@@ -105,6 +116,7 @@
                     required
                     placeholder="Please enter the Assign date"
                     formControlName="assign"
+                    [(ngModel)]="assign"
                   />
                   <div *ngIf="taskForm.controls?.['assign']?.touched">
                     <div
@@ -127,6 +139,7 @@
                     required
                     placeholder="Please enter the Deadline date"
                     formControlName="deadline"
+                    [(ngModel)]="deadline"
                   />
                   <div *ngIf="taskForm.controls?.['deadline']?.touched">
                     <div
@@ -134,6 +147,29 @@
                       *ngIf="taskForm.controls?.['deadline']?.errors"
                     >
                       Please enter the deadline date
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="your-subject" class="form-label fw-bold"
+                    >Status</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="deadline"
+                    name="deadline"
+                    required
+                    placeholder="Please enter the Deadline date"
+                    formControlName="status"
+                    [(ngModel)]="status"
+                  />
+                  <div *ngIf="taskForm.controls?.['status']?.touched">
+                    <div
+                      class="error text-danger"
+                      *ngIf="taskForm.controls?.['status']?.errors"
+                    >
+                      Please enter the Status
                     </div>
                   </div>
                 </div>
@@ -145,6 +181,7 @@
                         type="submit"
                         class="button-20 w-100 fw-bold"
                         data-bs-dismiss="modal"
+                        [disabled]= "!taskForm.valid"
                       >
                         Send
                       </button>
@@ -173,27 +210,34 @@
               <th scope="col">DeadLine Date</th>
               <th scope="col">Type</th>
               <th scope="col">Status</th>
+
               <th scope="col">Action</th>
             </tr>
           </thead>
-          <tbody >
-            <tr *ngFor="let data of taskArr; index as i;">
-              <th scope="row">{{i+1}}</th>
-              <td>{{data['name']}}</td>
-              <td>{{data['assign']}}</td>
-              <td>{{data['time']['hours']}}:{{data['time']['minutes']}}</td>
-              <td>{{data['deadline']}}</td>
-              <td>{{data['type']}}</td>
-              <td></td>
+          <tbody>
+            <tr *ngFor="let data of taskArr; index as i" class="backColor">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ data["name"] }}</td>
+              <td>{{ data["assign"] }}</td>
+              <td>{{ data["time"]["hours"] }}:{{ data["time"]["minutes"] }}</td>
+              <td>{{ data["deadline"] }}</td>
+              <td>{{ data["type"] }}</td>
+              <td>{{ data["status"] }}</td>
               <td>
-                <button class="button-20">Edit</button>
+                <button
+                  class="button-20"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  (click)="editData(i)"
+                >
+                  Edit
+                </button>
               </td>
             </tr>
-
           </tbody>
           <tfoot>
             <tr class="tfoot">
-              <td colspan="12" class="text-center fw-bold">Total Tasks: 4</td>
+              <td colspan="12" class="text-center fw-bold">Total Tasks : {{this.totalTask}}</td>
             </tr>
           </tfoot>
         </table>
