@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.dp{
+    padding: 0 40px;
+}
+
+:root{
+    --back:rgb(230, 230, 230);
+}
+
+.wrapper{
+    background: var(--back);
+}
+
+/* section who we are */
+.energy-cont{
+    width: 43.4vw;
+    height: 30vw;
+    position: relative;
+}
+.img-cont-who
+{
+    width: 90%;
+    height: 90%;
+}
+.energy{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 40%;
+}
+.energy p{
+    margin: 0;
+}
+
+
+/* our-solutions */
+.solutions-img-cont
+{
+    background:url('../images/Windmill.jpg'), blue;
+}
+.card>img{
+height: 18rem;
+}
+
+
+/* lets shine */
+.shine{
+    padding: 140px 0;
+    background: url('../images/Windmill.jpg');
+}

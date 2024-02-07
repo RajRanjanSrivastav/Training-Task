@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     this.auth.flag = false;
   }
 
-  register: FormGroup = new FormGroup({
+  register = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     ]),
   });
 
-  login: FormGroup = new FormGroup({
+  login = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
       Validators.required,
@@ -39,8 +39,11 @@ export class LoginComponent implements OnInit {
   });
 
   //function for registration
-  onRegister(form: any) {
+  onRegister() {
+    let form = this.register;
     console.log(form.valid);
+    console.log(this.register);
+    
 
     if (form.valid) {
       let match = false;
@@ -60,11 +63,13 @@ export class LoginComponent implements OnInit {
           alert('this email is alerady exist.');
         } 
         else {
+          console.log(form);
+          
           let data: UserData = {
             id: `${Date.now()}`,
-            name: form.value.name,
-            email: form.value.email,
-            password: form.value.password,
+            name: form.value.name!,
+            email: form.value.email!,
+            password: form.value.password!,
           };
           let sucEle = document.getElementById('suc-box');
           sucEle!.classList.toggle('show');
@@ -85,6 +90,7 @@ export class LoginComponent implements OnInit {
   //fucntion for login
   onLogin(form: any) {
     let value = form.value;
+    // this.http.post('https://dev.kreatetechnologies.com/jbvnl-api/')
     this.auth.getAllUser().subscribe((e) => {
       let data = e;
       let match = false;
