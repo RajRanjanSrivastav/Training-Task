@@ -28,7 +28,7 @@ export class TasksTrackService {
   addUser(userData:UserData)
   {
     return this.http.post(this.api+'user',userData).subscribe((e)=>{
-      console.log(e,"post se");
+      console.log(e,"post se",userData);
     })
   }
 

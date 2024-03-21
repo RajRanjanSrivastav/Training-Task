@@ -39,15 +39,17 @@ export class LoginComponent implements OnInit {
   });
 
   //function for registration
-  onRegister() {
-    let form = this.register;
-    console.log(form.valid);
-    console.log(this.register);
+  onRegister(formVal:any) {
+    // let form = this.register;
+    let fomrValue = formVal.value;
+    console.log(fomrValue,"just chek")
+    // console.log(form.valid);
+    // console.log(this.register);
     
 
-    if (form.valid) {
+    if (formVal.valid) {
       let match = false;
-      let value = form.value;
+      let value = fomrValue;
       this.auth.getAllUser().subscribe((e) => {
         let data = e;
         for (let i = 0; i < data.length; i++) {
@@ -63,13 +65,13 @@ export class LoginComponent implements OnInit {
           alert('this email is alerady exist.');
         } 
         else {
-          console.log(form);
+          console.log(fomrValue,"just checking for form");
           
           let data: UserData = {
             id: `${Date.now()}`,
-            name: form.value.name!,
-            email: form.value.email!,
-            password: form.value.password!,
+            name: fomrValue.name!,
+            email: fomrValue.email!,
+            password: fomrValue.password!,
           };
           let sucEle = document.getElementById('suc-box');
           sucEle!.classList.toggle('show');
@@ -77,6 +79,8 @@ export class LoginComponent implements OnInit {
             sucEle!.classList.toggle('show');
           }, 2000);
   
+          console.log(data,"aya ki nahi");
+          
           this.auth.addUser(data);
         }
       });

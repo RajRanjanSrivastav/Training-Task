@@ -117,6 +117,7 @@
                     placeholder="Please enter the Assign date"
                     formControlName="assign"
                     [(ngModel)]="assign"
+                    (click)="chekcRange()"
                   />
                   <div *ngIf="taskForm.controls?.['assign']?.touched">
                     <div
@@ -127,7 +128,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12" [hidden]="deadlineTrack">
                   <label for="your-subject" class="form-label fw-bold"
                     >Deadline Date</label
                   >
@@ -140,6 +141,9 @@
                     placeholder="Please enter the Deadline date"
                     formControlName="deadline"
                     [(ngModel)]="deadline"
+                    [min]="assign"
+                    
+                   
                   />
                   <div *ngIf="taskForm.controls?.['deadline']?.touched">
                     <div

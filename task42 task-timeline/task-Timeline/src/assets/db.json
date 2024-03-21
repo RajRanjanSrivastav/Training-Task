@@ -83,18 +83,6 @@
         "hours": 16,
         "minutes": 19
       }
-    },
-    {
-      "id": "1707302985459",
-      "name": "directive",
-      "assign": "2024-02-07",
-      "deadline": "2024-02-08",
-      "type": "learning",
-      "status": "due",
-      "time": {
-        "hours": 16,
-        "minutes": 19
-      }
     }
   ],
   "user": [
@@ -105,34 +93,10 @@
       "password": "raj123"
     },
     {
-      "id": "1707301620062",
-      "name": null,
-      "email": null,
-      "password": null
-    },
-    {
-      "id": "1707308280163",
-      "name": null,
-      "email": null,
-      "password": null
-    },
-    {
-      "id": "1707308380268",
-      "name": null,
-      "email": null,
-      "password": null
-    },
-    {
-      "id": "1707308650741",
-      "name": null,
-      "email": null,
-      "password": null
-    },
-    {
-      "id": "1707308809177",
-      "name": null,
-      "email": null,
-      "password": null
+      "id": "1710307891040",
+      "name": "lala",
+      "email": "lala@gmail.com",
+      "password": "lala1234"
     }
   ]
 }

@@ -13,12 +13,13 @@ export class MakingTasksComponent implements OnInit {
   constructor(private taskServ: TasksTrackService, private router: Router) {}
   ngOnInit() {
     this.getTaskList();
+    
   }
 
- public getTaskList(){
+  public getTaskList() {
     this.taskServ.getData().subscribe((e) => {
       this.taskArr = e;
-      this.totalTask=e.length;
+      this.totalTask = e.length;
       console.log(this.taskArr);
     });
   }
@@ -43,15 +44,22 @@ export class MakingTasksComponent implements OnInit {
   name: any;
   type: any;
   assign: any;
+  deadlineTrack = true;
   deadline: any;
   status: any;
-  totalTask=0;
+  totalTask = 0;
+
+  chekcRange() {
+    console.log('kj');
+    this.deadlineTrack = false;
+    console.log(this.deadlineTrack);
+  }
 
   taskForm = new FormGroup({
     taskname: new FormControl('', [Validators.required]),
     type: new FormControl('', [Validators.required]),
     assign: new FormControl('', [Validators.required]),
-    deadline: new FormControl('', [Validators.required,]),
+    deadline: new FormControl('', [Validators.required]),
     status: new FormControl('', [Validators.required]),
   });
 
@@ -100,9 +108,7 @@ export class MakingTasksComponent implements OnInit {
     this.formReset();
 
     this.taskServ.getData().subscribe((e) => {
-
       this.taskArr = e;
-
     });
   }
 
@@ -127,7 +133,7 @@ export class MakingTasksComponent implements OnInit {
   // logout
   logout() {
     sessionStorage.clear();
-    sessionStorage.setItem('flag','false');
+    sessionStorage.setItem('flag', 'false');
     this.router.navigate(['/']);
   }
 }
