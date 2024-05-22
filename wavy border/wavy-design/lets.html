@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .svg-cont {
+      position: relative;
+      margin-top: 200px;
+    }
+
+    .cir1 {
+      position: absolute;
+      border: 2px solid black;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      bottom: 16px;
+      left: 14.4vw;
+    }
+    .cir1::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 4vw;
+      background-color: black;
+      top: 10vw;
+      left: 5vw;
+    }
+    .rec-box1 {
+      position: absolute;
+      border: 2px solid rgb(0, 0, 0);
+      height: 10vw;
+      width: 20vw;
+      top: 14vw;
+      left: -4vw;
+    }
+
+    .cir2 {
+      position: absolute;
+      border: 2px solid black;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      top: 14px;
+      left: 34.4vw;
+    }
+    .cir2::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 4vw;
+      background-color: black;
+      top: -4vw;
+      left: 5vw;
+    }
+    .rec-box2 {
+      position: absolute;
+      border: 2px solid rgb(0, 0, 0);
+      height: 10vw;
+      width: 20vw;
+      top: -14.2vw;
+      left: -4vw;
+    }
+    .cir3 {
+      position: absolute;
+      border: 2px solid black;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      bottom: 16px;
+      left: 54.2vw;
+    }
+    .rec-box3 {
+      position: absolute;
+      border: 2px solid rgb(0, 0, 0);
+      height: 10vw;
+      width: 20vw;
+      top: 14vw;
+      left: -4vw;
+    }
+    .cir3::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 4vw;
+      background-color: black;
+      top: 10vw;
+      left: 5vw;
+    }
+    .cir4 {
+      position: absolute;
+      border: 2px solid black;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      top: 14px;
+      right: 14.4vw;
+    }
+    .cir4::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 4vw;
+      background-color: black;
+      top: -4vw;
+      left: 5vw;
+    }
+    .rec-box4 {
+      position: absolute;
+      border: 2px solid rgb(0, 0, 0);
+      height: 10vw;
+      width: 20vw;
+      top: -14.2vw;
+      left: -4vw;
+    }
+  </style>
+  <body>
+    <div class="svg-cont">
+      <img src="./assets/images/4.svg" alt="svg-border" />
+      <div class="cir1">
+        <div class="rec-box1">dgf</div>
+      </div>
+      <div class="cir2">
+        <div class="rec-box2">dgf</div>
+      </div>
+      <div class="cir3">
+        <div class="rec-box3">dgf</div>
+      </div>
+      <div class="cir4">
+        <div class="rec-box4">dgf</div>
+      </div>
+    </div>
+  </body>
+</html>

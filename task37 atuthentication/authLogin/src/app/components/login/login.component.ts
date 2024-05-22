@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
   onLogin(form: any) {
     let value = form.value;
     this.auth.getAllUser().subscribe((e) => {
-      console.log(e);
+      console.log(e,"check");
       
       let data = e;
       let match = false;

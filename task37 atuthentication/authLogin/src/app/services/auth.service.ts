@@ -22,7 +22,10 @@ export class AuthService {
   // for get all the user
   getAllUser(): Observable<any> {
     return this.http.get(this.apiUrl);
+    // return this.http.get(`http://192.168.100.29:5001/getcountryinfo`);
+    
   }
+
   getAllBlog(id:any): Observable<any> {  
     return this.http.get(this.apiUrl + '/' + id);
   }

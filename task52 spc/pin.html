@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pin Image with GSAP ScrollTrigger</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        height: 300vh; /* Increased height for demonstration */
+    }
+    .spacer {
+        height: 100vh; /* Space for scrolling */
+    }
+    .trigger {
+        height: 100vh; /* Height of the trigger */
+        background-color: #f0f0f0;
+        border-bottom: 2px solid #ccc;
+    }
+    .pinned-image {
+        position: fixed; /* Position the image fixed */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px; /* Adjust width as needed */
+        opacity: 0; /* Initially hide the image */
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="spacer"></div>
+    <div class="trigger"></div>
+    <div class="spacer"></div>
+</div>
+
+<img src="assets/Mask Group 22.png" alt="Pinned Image" class="pinned-image">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Pin the image when scrolling enters the trigger
+    ScrollTrigger.create({
+        trigger: ".trigger",
+        start: "top top",
+        end: "bottom top",
+        onEnter: () => gsap.to(".pinned-image", {opacity: 1}),
+        onLeaveBack: () => gsap.to(".pinned-image", {opacity: 0}),
+        toggleActions: "play none none none" // Play the animation when entering the trigger, and none for other directions
+    });
+</script>
+
+</body>
+</html>
